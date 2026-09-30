@@ -19,7 +19,7 @@ python3 build.py carousels    # all carousel slides
 - **Reel:** add a function to `content/reels.py` that returns `{"id", "duration", "elements", "sfx"}` and append it to `REELS`. Helpers: `T()` text, `P()` pill, `M()` monitor strip, `SHOCK()` charge→shock with flash and shake, `endcard()`. Text marked `*like this*` renders in the accent colour.
 - **Carousel:** add a dict to `content/carousels.py`. The block types are listed at the top of `engine/carousel.py`.
 - **Rhythms** (`engine/ecg.py`): sinus, first_degree, svt, afib, aflutter, vt, torsades, vfib, asystole, mobitz1, mobitz2, chb, paced (capture on/off), hyperk (stages 1–3), cpr, and `sequence` to chain them (e.g. SVT → adenosine pause → sinus).
-- **Logo:** drop a transparent `assets/logo.png` and it replaces the built-in wordmark everywhere.
+- **Logo:** `assets/icon.png` is the official ACLSMED icon. It's used in the header wordmark, the reel end cards and the carousel CTA slide.
 
 Brand: Red `#EF4444`, Navy `#05081A`, Cyan `#00DCC8`, monitor green `#00E640`. Fonts: Outfit, DM Sans, JetBrains Mono (OFL, in `fonts/`).
 

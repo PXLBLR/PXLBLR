@@ -12,7 +12,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 from . import ecg
-from .brand import CYAN, DIM, NAVY, NAVY_2, NAVY_3, RED, WHITE, YELLOW, font, logo_mark, pill, text_block
+from .brand import CYAN, DIM, NAVY, NAVY_2, NAVY_3, RED, WHITE, YELLOW, font, icon, logo_mark, pill, text_block
 
 W, H = 1080, 1350
 X0, X1 = 72, 1008
@@ -81,8 +81,8 @@ class Slide:
         self.y += self.paste(im) + gap
 
     def chrome(self):
-        lg = logo_mark(40)
-        self.img.paste(lg, (X0, 62), lg)
+        lg = logo_mark(54)
+        self.img.paste(lg, (X0, 52), lg)
         f = font(26, "bold", "mono")
         c = f"{self.idx + 1:02d}/{self.total:02d}"
         self.d.text((X1 - f.getlength(c), 70), c, font=f, fill=DIM)
@@ -242,7 +242,9 @@ class Slide:
             self.y += 104
 
     def cta(self):
-        self.y = 250
+        ic = icon(150)
+        self.img.paste(ic, (X0, 170), ic)
+        self.y = 340
         self.text("Save this.\nShare it with your *code team.*", 80, "extrabold", gap=40, line_gap=1.08)
         p = pill("FOLLOW  @ACLSMED", 44, pad=(34, 18))
         self.y += self.paste(p, x=X0) + 44

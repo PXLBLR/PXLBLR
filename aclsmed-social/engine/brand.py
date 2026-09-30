@@ -150,24 +150,26 @@ def pill(txt, size=34, fg=WHITE, bg=RED, pad=(26, 12), weight="bold", family="di
     return img
 
 
+def icon(size=64, radius=0.22):
+    """ACLSMED app icon (assets/icon.png) with app-style rounded corners."""
+    im = Image.open(ASSETS / "icon.png").convert("RGBA").resize((size, size), Image.LANCZOS)
+    mask = Image.new("L", (size * 4, size * 4), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, size * 4 - 1, size * 4 - 1), radius=int(size * 4 * radius), fill=255)
+    im.putalpha(mask.resize((size, size), Image.LANCZOS))
+    return im
+
+
 def logo_mark(height=54):
-    """Wordmark: heart-line glyph + ACLSMED. Uses assets/logo.png if the user drops one in."""
-    custom = ASSETS / "logo.png"
-    if custom.exists():
-        im = Image.open(custom).convert("RGBA")
-        return im.resize((int(im.width * height / im.height), height), Image.LANCZOS)
-    f = font(int(height * 0.78), "black")
+    """ACLSMED icon + wordmark."""
+    f = font(int(height * 0.74), "black")
     tw = text_w("ACLSMED", f)
-    glyph_w = int(height * 1.15)
-    img = Image.new("RGBA", (glyph_w + 14 + tw + 10, height + 8), (0, 0, 0, 0))
+    gap = int(height * 0.28)
+    img = Image.new("RGBA", (height + gap + tw + 10, height), (0, 0, 0, 0))
+    ic = icon(height)
+    img.paste(ic, (0, 0), ic)
     d = ImageDraw.Draw(img)
-    d.rounded_rectangle((0, 2, glyph_w, height + 2), radius=int(height * 0.28), fill=RED)
-    cy = height // 2 + 2
-    u = glyph_w / 10
-    pts = [(1.2 * u, cy), (3.4 * u, cy), (4.2 * u, cy - height * 0.30), (5.2 * u, cy + height * 0.28),
-           (6.0 * u, cy - height * 0.08), (6.6 * u, cy), (8.8 * u, cy)]
-    d.line(pts, fill=WHITE, width=max(3, height // 12), joint="curve")
     l, t, r, b = f.getbbox("ACLSMED")
-    d.text((glyph_w + 14 - l, (height + 8 - (b - t)) // 2 - t), "ACLS", font=f, fill=WHITE)
-    d.text((glyph_w + 14 - l + f.getlength("ACLS"), (height + 8 - (b - t)) // 2 - t), "MED", font=f, fill=RED)
+    y = (height - (b - t)) // 2 - t
+    d.text((height + gap - l, y), "ACLS", font=f, fill=WHITE)
+    d.text((height + gap - l + f.getlength("ACLS"), y), "MED", font=f, fill=RED)
     return img

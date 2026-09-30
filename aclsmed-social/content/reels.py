@@ -34,17 +34,18 @@ def SHOCK(at, charge=True):
 
 
 def logo(dur):
-    return {"type": "logo", "t": (0, dur), "y": 178, "h": 44, "anim": "none", "fade_in": 0}
+    return {"type": "logo", "t": (0, dur), "y": 164, "h": 66, "anim": "none", "fade_in": 0}
 
 
 def endcard(s, e, ask="Save this for your next *megacode*."):
     return [
         {"type": "box", "t": (s, e), "rect": (60, 330, 1020, 1470), "fill": (8, 12, 30, 245),
          "outline": RED, "width": 4, "anim": "up", "y": 330, "x": 60},
-        T(ask, (s + 0.1, e), 440, 76, max_w=840, anim="pop"),
-        P("FOLLOW  @ACLSMED", (s + 0.5, e), 760, size=44, anim="pop", sfx=[(0, "pop", 0.8)]),
-        T("New megacode drill every day.", (s + 0.7, e), 880, 44, weight="medium", family="body", color=DIM),
-        T("Practice real megacodes on the\n*ACLSMED simulator*  ·  link in bio", (s + 0.9, e), 1030, 48,
+        {"type": "icon", "t": (s + 0.05, e), "y": 370, "h": 170, "anim": "pop", "sfx": [(0, "pop", 0.6)]},
+        T(ask, (s + 0.15, e), 585, 70, max_w=840, anim="pop"),
+        P("FOLLOW  @ACLSMED", (s + 0.5, e), 820, size=44, anim="pop", sfx=[(0, "pop", 0.8)]),
+        T("New megacode drill every day.", (s + 0.7, e), 930, 44, weight="medium", family="body", color=DIM),
+        T("Practice real megacodes on the\n*ACLSMED simulator*  ·  link in bio", (s + 0.9, e), 1060, 48,
           weight="semibold", family="body", accent=CYAN),
         T("Educational only · Follow your institution's protocols · AHA 2025", (s + 1.1, e), 1360, 28,
           weight="regular", family="body", color=DIM, max_w=880),

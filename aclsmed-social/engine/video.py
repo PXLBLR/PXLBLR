@@ -13,7 +13,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 from . import ecg, sfx
-from .brand import CYAN, ECG_GREEN, NAVY, NAVY_2, NAVY_3, RED, WHITE, YELLOW, font, logo_mark, pill, text_block
+from .brand import CYAN, ECG_GREEN, NAVY, NAVY_2, NAVY_3, RED, WHITE, YELLOW, font, icon, logo_mark, pill, text_block
 
 W, H, FPS = 1080, 1920, 30
 SAFE_TOP, SAFE_BOTTOM = 250, 1480  # keep key content clear of IG UI chrome
@@ -114,6 +114,8 @@ class Reel:
                        weight=el.get("weight", "extrabold"))
         elif t == "logo":
             img = logo_mark(el.get("h", 46))
+        elif t == "icon":
+            img = icon(el.get("h", 150))
         elif t == "box":
             x0, y0, x1, y1 = el["rect"]
             img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
@@ -285,7 +287,7 @@ class Reel:
             ty = el["type"]
             if ty in ("ecg", "capno"):
                 self.draw_monitor(fr, d, el, t)
-            elif ty in ("text", "pill", "logo", "box"):
+            elif ty in ("text", "pill", "logo", "icon", "box"):
                 self.draw_layer_el(fr, el, t)
             elif ty == "countdown":
                 self.draw_countdown(d, el, t)
