@@ -248,11 +248,137 @@ def sequence(dur, parts=()):
     return np.concatenate(ys)[: int(dur * FS) + 1], rs
 
 
+def beats(dur, hr=72, pr=0.16, qrs_w=0.08, wide=False, r_amp=1.0, p_amp=0.17, t_amp=0.28, t_w=0.055, qt=None,
+          st=0.0, u_amp=0.0, delta=False, j_amp=0.0, alternans=0.0, p_after=False, seed=31, start=0.25):
+    """General-purpose conducted rhythm with morphology knobs (ST shift, U waves, delta wave, Osborn J wave,
+    electrical alternans, retrograde P)."""
+    t = _t(dur)
+    y = _wander(t, seed)
+    rr = 60 / hr
+    qt = qt or min(0.42, 0.40 * np.sqrt(rr))
+    rs, b, k = [], start, 0
+    while b < dur + 1:
+        q = b + (0.11 if delta else pr)
+        amp = r_amp * (1 - alternans if k % 2 else 1)
+        if p_amp and not p_after:
+            y += _p(t, b + 0.05, p_amp)
+        if delta:
+            y += _g(t, q - 0.045, 0.024, 0.32 * amp)
+        y += _qrs(t, q, qrs_w, amp, wide=wide)
+        if p_after:
+            y += _p(t, q + 0.12, -0.12)
+        if j_amp:
+            y += _g(t, q + qrs_w * 0.55 + 0.02, 0.022, j_amp)
+        if st:  # plateau from the J point into the T wave
+            j0, j1 = q + qrs_w * 0.55, q + qt - 0.14
+            y += st / (1 + np.exp(np.clip(-(t - j0) / 0.006, -60, 60))) / (1 + np.exp(np.clip((t - j1) / 0.03, -60, 60)))
+        y += _twave(t, q + qt - 0.12, t_amp * (amp / r_amp if alternans else 1), t_w)
+        if u_amp:
+            y += _g(t, q + qt + 0.06, 0.045, u_amp)
+        rs.append(q)
+        b += rr
+        k += 1
+    return y, [r for r in rs if r < dur]
+
+
+def junctional(dur, hr=48):
+    return beats(dur, hr=hr, p_amp=0.0, p_after=True, seed=32)
+
+
+def aivr(dur, hr=72):
+    t = _t(dur)
+    y = _wander(t, 33)
+    rs, q = [], 0.3
+    while q < dur + 1:
+        y += _qrs(t, q, 0.15, 1.0, wide=True) + _twave(t, q + 0.34, -0.3, 0.075)
+        rs.append(q)
+        q += 60 / hr
+    return y, [r for r in rs if r < dur]
+
+
+def pvcs(dur, hr=78, every=3, ron_t=False):
+    """Sinus with a PVC replacing every Nth beat; ron_t lands it on the preceding T wave then runs VT."""
+    t = _t(dur)
+    y = _wander(t, 34)
+    rr = 60 / hr
+    rs, b, k = [], 0.25, 0
+    while b < dur + 1:
+        q = b + 0.16
+        if k % every == every - 1:
+            early = q - (0.36 if ron_t else 0.24)
+            y += _qrs(t, early, 0.16, 1.25, wide=True) + _twave(t, early + 0.32, -0.45, 0.08)
+            rs.append(early)
+            if ron_t:
+                vt_y, vt_r = vt(max(0.1, dur - early - 0.4), hr=190)
+                i0 = int((early + 0.4) * FS)
+                n = min(vt_y.size, y.size - i0)
+                y[i0:i0 + n] += vt_y[:n]
+                rs += [early + 0.4 + r for r in vt_r]
+                break
+            b += rr * 1.6
+        else:
+            y += _p(t, b + 0.05) + _qrs(t, q, 0.08) + _twave(t, q + 0.26)
+            rs.append(q)
+            b += rr
+        k += 1
+    return y, [r for r in rs if r < dur]
+
+
+def preexcited_af(dur, seed=35):
+    """Irregular, very fast, wide and bizarre complexes of varying width (AF over an accessory pathway)."""
+    t = _t(dur)
+    rng = np.random.default_rng(seed)
+    y = _wander(t, seed, 0.01)
+    rs, q = [], 0.2
+    while q < dur + 1:
+        w = rng.uniform(0.09, 0.16)
+        a = rng.uniform(0.75, 1.45)
+        y += _g(t, q - 0.03, 0.03, 0.3 * a) + _qrs(t, q, w, a, wide=True) + _twave(t, q + 0.2, -0.25 * a, 0.05)
+        rs.append(q)
+        q += rng.uniform(0.22, 0.42)
+    return y, [r for r in rs if r < dur]
+
+
+def artifact(dur, hr=80, start_noise=1.0, seed=36):
+    """Motion artifact that mimics VF, with the patient's normal QRS marching through it."""
+    y, rs = sinus(dur, hr=hr, seed=seed)
+    t = _t(dur)
+    rng = np.random.default_rng(seed)
+    noise = sum(np.sin(2 * np.pi * f * t + rng.uniform(0, 6)) for f in rng.uniform(4, 9, 5))
+    noise = 0.55 * noise / np.abs(noise).max() + rng.normal(0, 0.05, t.size)
+    y = y + noise * (t > start_noise)
+    return y, rs
+
+
+def brugada(dur, hr=70):
+    """V1-style type 1 Brugada: rSR' with coved ST elevation into an inverted T."""
+    t = _t(dur)
+    y = _wander(t, 37)
+    rr = 60 / hr
+    rs, b = [], 0.25
+    while b < dur + 1:
+        q = b + 0.16
+        y += (_p(t, b + 0.05, 0.1) + _g(t, q - 0.02, 0.012, 0.25) + _g(t, q + 0.02, 0.014, -0.35)
+              + _g(t, q + 0.065, 0.022, 0.75) + _g(t, q + 0.14, 0.055, 0.42) + _g(t, q + 0.29, 0.05, -0.32))
+        rs.append(q)
+        b += rr
+    return y, [r for r in rs if r < dur]
+
+
+def fine_vs_asystole(dur, gain_up_at=3.0):
+    """Fine VF that looks flat until the gain is turned up."""
+    y, _ = vfib(dur, coarse=False, seed=38)
+    t = _t(dur)
+    scale = np.where(t < gain_up_at, 0.12, 1.0)
+    return y * scale, []
+
+
 RHYTHMS = {
     "sinus": sinus, "first_degree": first_degree, "svt": svt, "afib": afib, "aflutter": aflutter,
     "vt": vt, "torsades": torsades, "vfib": vfib, "asystole": asystole, "mobitz1": mobitz1,
     "mobitz2": mobitz2, "chb": chb, "paced": paced, "hyperk": hyperk, "cpr": cpr_artifact,
-    "sequence": sequence,
+    "sequence": sequence, "beats": beats, "junctional": junctional, "aivr": aivr, "pvcs": pvcs,
+    "preexcited_af": preexcited_af, "artifact": artifact, "brugada": brugada, "fine_vs_asystole": fine_vs_asystole,
 }
 
 
