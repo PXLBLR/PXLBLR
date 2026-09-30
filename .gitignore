@@ -1,0 +1,4 @@
+aclsmed-social/out/preview/
+__pycache__/
+*.pyc
+*.wav
