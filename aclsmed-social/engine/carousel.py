@@ -153,6 +153,12 @@ class Slide:
             self.cta()
         elif k == "pairs":
             self.pairs(b[1], b[2])
+        elif k == "devices":
+            self.devices(*b[1:])
+        elif k == "scenario":
+            self.scenario(b[1], b[2])
+        elif k == "leadcta":
+            self.leadcta(*b[1:])
 
     def rows(self, rows, heads=None):
         for name, clue, fix in rows:
@@ -240,6 +246,89 @@ class Slide:
                                 shadow=False)
                 self.img.paste(im, (int(x + 8), int(self.y + 46 - im.height / 2)), im)
             self.y += 104
+
+    def devices(self, rhythm="sinus", kw=None, readout="HR 72", active="VF", color=(97, 255, 170)):
+        """Instructor iPad (portrait) driving a Monitor iPad (landscape): a schematic, not a screenshot."""
+        top, h = self.y, 360
+        d = self.d
+        # instructor iPad
+        ix0, iw = X0 + 10, 230
+        d.rounded_rectangle((ix0, top, ix0 + iw, top + h), radius=26, fill=(22, 27, 34), outline=(70, 78, 92), width=4)
+        d.rounded_rectangle((ix0 + 14, top + 14, ix0 + iw - 14, top + h - 14), radius=14, fill=(13, 17, 23))
+        d.text((ix0 + 28, top + 28), "INSTRUCTOR", font=font(20, "bold", "mono"), fill=DIM)
+        chips = ["NSR", "BRADY", "VF", "VT", "PEA", "ASYS"]
+        for i, c in enumerate(chips):
+            cx, cy = ix0 + 28 + (i % 2) * 92, top + 70 + (i // 2) * 62
+            on = c == active
+            d.rounded_rectangle((cx, cy, cx + 82, cy + 48), radius=10, fill=RED if on else (22, 27, 34),
+                                outline=(60, 68, 82), width=2)
+            f = font(20, "bold", "body")
+            d.text((cx + 41 - f.getlength(c) / 2, cy + 12), c, font=f, fill=WHITE)
+        d.rounded_rectangle((ix0 + 28, top + 270, ix0 + iw - 28, top + 320), radius=10, fill=(0, 120, 255))
+        f = font(22, "bold", "body")
+        d.text((ix0 + iw / 2 - f.getlength("PLAY NOW") / 2, top + 282), "PLAY NOW", font=f, fill=WHITE)
+        # arrow
+        ax0, ax1, ay = ix0 + iw + 18, ix0 + iw + 92, top + h / 2
+        d.line([(ax0, ay), (ax1 - 14, ay)], fill=CYAN, width=6)
+        d.polygon([(ax1, ay), (ax1 - 22, ay - 14), (ax1 - 22, ay + 14)], fill=CYAN)
+        f = font(18, "bold", "mono")
+        d.text(((ax0 + ax1) / 2 - f.getlength("LIVE") / 2, ay - 40), "LIVE", font=f, fill=CYAN)
+        # monitor iPad
+        mx0 = ax1 + 18
+        mw, mh = X1 - mx0, 300
+        mt = top + (h - mh) / 2
+        d.rounded_rectangle((mx0, mt, mx0 + mw, mt + mh), radius=26, fill=(22, 27, 34), outline=(70, 78, 92), width=4)
+        sx0, sy0, sx1, sy1 = mx0 + 14, mt + 14, mx0 + mw - 14, mt + mh - 14
+        d.rounded_rectangle((sx0, sy0, sx1, sy1), radius=12, fill=(15, 16, 18))
+        d.text((sx0 + 14, sy0 + 10), "MONITOR", font=font(18, "bold", "mono"), fill=DIM)
+        rf = font(40, "black")
+        d.text((sx1 - 14 - rf.getlength(readout), sy0 + 6), readout, font=rf, fill=color)
+        sig, _ = ecg.make(rhythm, 3.0, **(kw or {}))
+        n = int(sx1 - sx0 - 28)
+        xs = np.linspace(0, sig.size - 1, n).astype(int)
+        base = sy0 + (sy1 - sy0) * 0.62
+        pts = [(sx0 + 14 + i, float(np.clip(base - sig[j] * 60, sy0 + 60, sy1 - 40))) for i, j in enumerate(xs)]
+        for wdt, k in ((8, 0.18), (3, 1.0)):
+            d.line(pts, fill=_mix(color, (15, 16, 18), k), width=wdt, joint="curve")
+        for i, (lab, col) in enumerate((("CHARGE", (255, 196, 0)), ("SHOCK", (242, 48, 83)), ("PACER", (60, 70, 90)))):
+            bx = sx0 + 14 + i * 120
+            d.rounded_rectangle((bx, sy1 - 34, bx + 108, sy1 - 8), radius=8, fill=col)
+            f = font(16, "bold", "body")
+            d.text((bx + 54 - f.getlength(lab) / 2, sy1 - 31), lab, font=f, fill=NAVY if i == 0 else WHITE)
+        self.y = top + h + 30
+
+    def scenario(self, instructor, team):
+        for tag, txt, col in (("INSTRUCTOR iPAD", instructor, CYAN), ("TEAM ON THE MONITOR", team, RED)):
+            p = pill(tag, 24, fg=NAVY if col == CYAN else WHITE, bg=col, pad=(16, 7))
+            im = text_block(txt, 36, CW - 60, color=WHITE, accent=col, weight="semibold", family="body",
+                            align="left", line_gap=1.28, shadow=False)
+            h = p.height + im.height + 50
+            top = self.y
+            self.d.rounded_rectangle((X0, top, X1, top + h), radius=18, fill=_mix(col, NAVY, 0.08),
+                                     outline=_mix(col, NAVY, 0.45), width=2)
+            self.img.paste(p, (X0 + 22, int(top + 18)), p)
+            self.img.paste(im, (X0 + 12, int(top + 28 + p.height)), im)
+            self.y = top + h + 16
+
+    def leadcta(self, keyword, promise, fine):
+        ic = icon(120)
+        self.img.paste(ic, (X0, 160), ic)
+        self.y = 310
+        self.text("Want to run these\nwith your team?", 78, "extrabold", gap=34, line_gap=1.06)
+        # comment bubble
+        top = self.y
+        d = self.d
+        d.rounded_rectangle((X0, top, X1, top + 190), radius=34, fill=(20, 26, 48), outline=CYAN, width=4)
+        d.polygon([(X0 + 70, top + 188), (X0 + 120, top + 188), (X0 + 60, top + 236)], fill=(20, 26, 48))
+        d.line([(X0 + 70, top + 190), (X0 + 60, top + 234), (X0 + 120, top + 190)], fill=CYAN, width=4)
+        f1 = font(52, "bold", "body")
+        f2 = font(104, "black")
+        base = top + 132
+        d.text((X0 + 44, base), "Comment", font=f1, fill=(214, 222, 236), anchor="ls")
+        d.text((X0 + 44 + f1.getlength("Comment  "), base), keyword, font=f2, fill=RED, anchor="ls")
+        self.y = top + 270
+        self.text(promise, 42, "semibold", "body", accent=CYAN, gap=30, line_gap=1.3)
+        self.text(fine, 26, "regular", "body", color=DIM, line_gap=1.3)
 
     def cta(self):
         ic = icon(150)
