@@ -75,16 +75,32 @@ def _fake_clip(path, duration, seed):
                    input=raw, check=True)
 
 
-def load(path):
-    """Decode to float32 stereo (2, n) at the engine sample rate."""
+def load(path, circular=False, hp=35.0):
+    """Decode to float stereo (2, n) at the engine sample rate, high-passed at `hp` Hz.
+
+    Generated clips can carry inaudible sub-bass/DC that skews loudness matching and reads as rumble.
+    Looping beds are filtered circularly so their own loop point stays seamless.
+    """
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-f", "f32le", "-ac", "2", "-ar", str(SR), "-"],
                          capture_output=True, check=True).stdout
     x = np.frombuffer(raw, "<f4").reshape(-1, 2).T.astype(np.float64)
-    return x
+    from .audio import band
+    return np.stack([band(ch, hp, 20000, order=6, circular=circular) for ch in x])
 
 
 def rms_norm(x, db=-20.0):
     r = np.sqrt(np.mean(x ** 2)) + 1e-12
+    return x * (10 ** (db / 20) / r)
+
+
+def active_norm(x, db=-20.0, floor_db=-30.0):
+    """Match loudness over the audible part only (frames within 30 dB of the loudest), so short
+    one-shots with silence around them aren't over-boosted."""
+    n = int(0.05 * SR)
+    k = max(1, x.shape[1] // n)
+    fr = np.sqrt(np.mean(x[:, :k * n].reshape(2, k, n) ** 2, axis=(0, 2))) + 1e-12
+    act = fr[fr > fr.max() * 10 ** (floor_db / 20)]
+    r = np.sqrt(np.mean(act ** 2))
     return x * (10 ** (db / 20) / r)
 
 
@@ -143,14 +159,14 @@ def lean(spec):
     return out
 
 
-def render(scene, spec, fake=False):
+def render(scene, spec, fake=False, raw=False):
     """spec = {"beds": [...], "events": [...]} (see scenes/el_audio.py). Returns a mastered (2, N) mix."""
     buf = np.zeros((2, N))
     for bed in spec["beds"]:
         clips = []
         for v in range(bed.get("variants", 2)):
             p = generate(scene, f"{bed['tag']}_{v}", bed["text"], 30.0, bed.get("influence", 0.35), loop=True, fake=fake)
-            clips.append(rms_norm(load(p)))
+            clips.append(rms_norm(load(p, circular=True, hp=bed.get("hp", 35.0))))
         x = bed_loop(clips)
         if "env" in bed:
             x = x * bed["env"](T)[None, :]
@@ -162,7 +178,10 @@ def render(scene, spec, fake=False):
         clips = []
         for v in range(ev.get("variants", 1)):
             p = generate(scene, f"{ev['tag']}_{v}", ev["text"], ev["dur"], ev.get("influence", 0.45), fake=fake)
-            clips.append(fade_edges(rms_norm(load(p), -20.0)))
+            x = load(p)
+            if np.abs(x).max() < 0.01:
+                raise RuntimeError(f"{scene}/{ev['tag']}_{v} came back silent; change its prompt and regenerate")
+            clips.append(fade_edges(active_norm(x, -20.0)))
         for i, hit in enumerate(ev["at"]):
             t0, gdb, pan = hit[0], hit[1] if len(hit) > 1 else 0.0, hit[2] if len(hit) > 2 else 0.0
             sig = clips[i % len(clips)]
@@ -171,7 +190,7 @@ def render(scene, spec, fake=False):
                 sweep(buf, sig, t0 - ev.get("lead", 0.0), g, pan, hit[3])
             else:
                 place(buf, sig, t0 - ev.get("lead", 0.0), g, pan)
-    return master(buf, rms_db=-19.0)
+    return buf if raw else master(buf, rms_db=-19.0)
 
 
 def plan(scene, spec):

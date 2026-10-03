@@ -1,0 +1,93 @@
+{
+  "fireplace_0": {
+    "duration_seconds": 30.0,
+    "hash": "2f95d69e9a9d",
+    "loop": true,
+    "prompt_influence": 0.35,
+    "text": "A warm cozy fireplace crackling and popping in a quiet wooden room, close and intimate, logs burning steadily. No wind, no rain. No music, no voices, no speech."
+  },
+  "fireplace_1": {
+    "duration_seconds": 30.0,
+    "hash": "2f95d69e9a9d",
+    "loop": true,
+    "prompt_influence": 0.35,
+    "text": "A warm cozy fireplace crackling and popping in a quiet wooden room, close and intimate, logs burning steadily. No wind, no rain. No music, no voices, no speech."
+  },
+  "meow_0": {
+    "duration_seconds": 1.5,
+    "hash": "276616f4b487",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A cat waking up with a big yawn and a soft sleepy meow."
+  },
+  "page_0": {
+    "duration_seconds": 1.0,
+    "hash": "dddeb90b248c",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Turning one page of an old book, soft paper rustle."
+  },
+  "page_1": {
+    "duration_seconds": 1.0,
+    "hash": "dddeb90b248c",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Turning one page of an old book, soft paper rustle."
+  },
+  "page_2": {
+    "duration_seconds": 1.0,
+    "hash": "dddeb90b248c",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Turning one page of an old book, soft paper rustle."
+  },
+  "quill_0": {
+    "duration_seconds": 4.0,
+    "hash": "c8cdb9751182",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A quill pen writing on parchment paper, gentle scratching."
+  },
+  "quill_1": {
+    "duration_seconds": 4.0,
+    "hash": "c8cdb9751182",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A quill pen writing on parchment paper, gentle scratching."
+  },
+  "snore_0": {
+    "duration_seconds": 2.0,
+    "hash": "de82a94d62cf",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A tiny cute soft snore, gentle and sleepy."
+  },
+  "snore_1": {
+    "duration_seconds": 2.0,
+    "hash": "de82a94d62cf",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A tiny cute soft snore, gentle and sleepy."
+  },
+  "thunder_0": {
+    "duration_seconds": 6.0,
+    "hash": "bcc4b13d2d94",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Distant soft rolling thunder heard from indoors, muffled and gentle."
+  },
+  "tick_0": {
+    "duration_seconds": 0.5,
+    "hash": "f78dcf983b2a",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "One crisp, clear tick of an old wooden pendulum clock, close up, dry."
+  },
+  "tick_1": {
+    "duration_seconds": 0.5,
+    "hash": "f78dcf983b2a",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "One crisp, clear tick of an old wooden pendulum clock, close up, dry."
+  }
+}

@@ -139,19 +139,19 @@ def cabin():
     from scenes.cabin import SLEIGH_T, SLED_P
     return {
         "beds": [
-            dict(tag="snow", db=0, text=f"Quiet snowy winter night outdoors, very soft wind, gentle snowfall hush, peaceful. {QUIET}"),
+            dict(tag="snow", db=0, influence=0.5, text=f"Gentle steady winter wind blowing softly over fresh snow at night, light airy whoosh through pine trees, calm and peaceful, clearly audible. {QUIET}"),
             dict(tag="hearth", db=-12, pan=0.1, text=f"A fireplace crackling inside a log cabin, heard muffled from outside. {QUIET}"),
         ],
         "events": [
-            dict(tag="sleigh", db=-6, dur=14.0, text="Sleigh bells jingling rhythmically as a horse-drawn sleigh passes by in the distance.",
+            dict(tag="sleigh", db=2, dur=14.0, text="Sleigh bells jingling rhythmically as a horse-drawn sleigh passes by in the distance.",
                  at=[(SLEIGH_T[0], 0, 0.8, -0.8)]),
-            dict(tag="sled", db=-9, dur=2.6, variants=2, text="A wooden sled sliding fast down a snowy hill, swoosh through powder.",
+            dict(tag="sled", db=-3.5, dur=2.6, variants=2, text="A wooden sled sliding fast down a snowy hill, swoosh through powder.",
                  at=[(c * SLED_P, 0, 0.7) for c in range(4)]),
-            dict(tag="snowsteps", db=-15, dur=11.0, variants=2, text="Slow footsteps crunching uphill through fresh snow, dragging a sled.",
+            dict(tag="snowsteps", db=-8, dur=11.0, variants=2, text="Slow footsteps crunching uphill through fresh snow, dragging a sled.",
                  at=[(c * SLED_P + 4.0, 0, 0.6) for c in range(4)]),
-            dict(tag="pat", db=-17, dur=0.6, variants=3, text="Hands patting packed snow on a snowman, soft muffled thump.",
+            dict(tag="pat", db=-2.5, dur=0.6, variants=3, text="Hands patting packed snow on a snowman, soft muffled thump.",
                  at=[(2 * k + 0.05, 0, -0.45) for k in range(30)]),
-            dict(tag="hop", db=-16, dur=0.6, variants=2, text="A small hop landing in fresh snow, soft crunch.",
+            dict(tag="hop", db=-6, dur=0.6, variants=2, text="A small hop landing in fresh snow, soft crunch.",
                  at=[(4 * k + 2.0, 0, -0.25) for k in range(15)]),
         ],
     }
@@ -165,13 +165,13 @@ def aurora():
             dict(tag="fire", db=-10, pan=-0.3, text=f"A small campfire crackling outdoors in freezing cold air. {QUIET}"),
         ],
         "events": [
-            dict(tag="ice", db=-10, dur=3.0, variants=3, text="A frozen lake making eerie singing 'pew' sounds as the ice shifts, echoing laser-like tones.",
+            dict(tag="ice", db=-4.5, dur=3.0, variants=3, text="A frozen lake making eerie singing 'pew' sounds as the ice shifts, echoing laser-like tones.",
                  at=[(t, 0, p) for t, p in ((4.1, -0.6), (11.7, 0.5), (19.3, -0.2), (26.8, 0.7), (33.2, -0.7), (41.5, 0.3), (50.4, -0.4), (56.9, 0.6))]),
-            dict(tag="penguins", db=-9, dur=2.5, text="A few penguins squawking and honking as they waddle past.",
+            dict(tag="penguins", db=-3, dur=2.5, text="A few penguins squawking and honking as they waddle past.",
                  at=[(14.2, 0, 0.3, -0.3), (44.2, 0, 0.3, -0.3)]),
-            dict(tag="star", db=-8, dur=2.5, text="A magical twinkling shimmer, like a shooting star sparkling across the sky.", at=[(STAR_T, 0, 0.3)]),
-            dict(tag="fish_out", db=-9, dur=1.2, text="A fish being pulled up out of an ice-fishing hole, splash of icy water.", at=[(FISH_T, 0, 0.45)]),
-            dict(tag="fish_in", db=-10, dur=1.0, text="A small fish dropping back into an ice hole with a splash.", at=[(FISH_T + 1.5, 0, 0.4)]),
+            dict(tag="star", db=0, dur=2.5, text="A magical twinkling shimmer, like a shooting star sparkling across the sky.", at=[(STAR_T, 0, 0.3)]),
+            dict(tag="fish_out", db=0, dur=1.2, text="A fish being pulled up out of an ice-fishing hole, splash of icy water.", at=[(FISH_T, 0, 0.45)]),
+            dict(tag="fish_in", db=1.5, dur=1.0, text="A small fish dropping back into an ice hole with a splash.", at=[(FISH_T + 1.5, 0, 0.4)]),
         ],
     }
 
@@ -180,19 +180,19 @@ def library():
     from scenes.library import THUNDER_T, CAT_T
     return {
         "beds": [
-            dict(tag="fireplace", db=0, pan=0.2, text=f"A warm cozy fireplace crackling and popping in a quiet wooden room, close and intimate, logs burning steadily. No wind, no rain. {QUIET}"),
+            dict(tag="fireplace", db=0, pan=0.2, hp=90.0, text=f"A warm cozy fireplace crackling and popping in a quiet wooden room, close and intimate, logs burning steadily. No wind, no rain. {QUIET}"),
         ],
         "events": [
-            dict(tag="tick", db=-17, dur=0.5, variants=2, text="A single tick of an old pendulum clock in a quiet room.",
+            dict(tag="tick", db=-2, dur=0.5, variants=2, text="One crisp, clear tick of an old wooden pendulum clock, close up, dry.",
                  at=[(k + 0.5, 0, 0.35) for k in range(60)]),
             dict(tag="quill", db=-17, dur=4.0, variants=2, text="A quill pen writing on parchment paper, gentle scratching.",
                  at=[(6 * k, 0, -0.3) for k in range(10)]),
-            dict(tag="page", db=-11, dur=1.0, variants=3, text="Turning one page of an old book, soft paper rustle.",
+            dict(tag="page", db=-12, dur=1.0, variants=3, text="Turning one page of an old book, soft paper rustle.",
                  at=[(10 * k, 0, 0.1) for k in range(6)] + [(12 * k + 2, -1, 0.4) for k in range(5)]),
-            dict(tag="snore", db=-21, dur=2.0, variants=2, text="A tiny cute soft snore, gentle and sleepy.",
+            dict(tag="snore", db=-16, dur=2.0, variants=2, text="A tiny cute soft snore, gentle and sleepy.",
                  at=[(3 * k + 0.3, 0, 0.7) for k in range(20)]),
-            dict(tag="thunder", db=-9, dur=6.0, text="Distant soft rolling thunder heard from indoors, muffled and gentle.", at=[(THUNDER_T, 0, 0.0)]),
-            dict(tag="meow", db=-10, dur=1.5, text="A cat waking up with a big yawn and a soft sleepy meow.", at=[(CAT_T[0] + 0.4, 0, 0.15)]),
+            dict(tag="thunder", db=-11, dur=6.0, text="Distant soft rolling thunder heard from indoors, muffled and gentle.", at=[(THUNDER_T, 0, 0.0)]),
+            dict(tag="meow", db=-6, dur=1.5, text="A cat waking up with a big yawn and a soft sleepy meow.", at=[(CAT_T[0] + 0.4, 0, 0.15)]),
         ],
     }
 

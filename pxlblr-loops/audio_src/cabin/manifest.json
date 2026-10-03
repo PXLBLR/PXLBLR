@@ -1,0 +1,100 @@
+{
+  "hearth_0": {
+    "duration_seconds": 30.0,
+    "hash": "cf5d59b81a0f",
+    "loop": true,
+    "prompt_influence": 0.35,
+    "text": "A fireplace crackling inside a log cabin, heard muffled from outside. No music, no voices, no speech."
+  },
+  "hearth_1": {
+    "duration_seconds": 30.0,
+    "hash": "cf5d59b81a0f",
+    "loop": true,
+    "prompt_influence": 0.35,
+    "text": "A fireplace crackling inside a log cabin, heard muffled from outside. No music, no voices, no speech."
+  },
+  "hop_0": {
+    "duration_seconds": 0.6,
+    "hash": "0888070897f0",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A small hop landing in fresh snow, soft crunch."
+  },
+  "hop_1": {
+    "duration_seconds": 0.6,
+    "hash": "0888070897f0",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A small hop landing in fresh snow, soft crunch."
+  },
+  "pat_0": {
+    "duration_seconds": 0.6,
+    "hash": "00dc1f1d74ac",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Hands patting packed snow on a snowman, soft muffled thump."
+  },
+  "pat_1": {
+    "duration_seconds": 0.6,
+    "hash": "00dc1f1d74ac",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Hands patting packed snow on a snowman, soft muffled thump."
+  },
+  "pat_2": {
+    "duration_seconds": 0.6,
+    "hash": "00dc1f1d74ac",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Hands patting packed snow on a snowman, soft muffled thump."
+  },
+  "sled_0": {
+    "duration_seconds": 2.6,
+    "hash": "f4fbe4ecefee",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A wooden sled sliding fast down a snowy hill, swoosh through powder."
+  },
+  "sled_1": {
+    "duration_seconds": 2.6,
+    "hash": "f4fbe4ecefee",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "A wooden sled sliding fast down a snowy hill, swoosh through powder."
+  },
+  "sleigh_0": {
+    "duration_seconds": 14.0,
+    "hash": "82fa5227c584",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Sleigh bells jingling rhythmically as a horse-drawn sleigh passes by in the distance."
+  },
+  "snow_0": {
+    "duration_seconds": 30.0,
+    "hash": "b5ff3b321c99",
+    "loop": true,
+    "prompt_influence": 0.5,
+    "text": "Gentle steady winter wind blowing softly over fresh snow at night, light airy whoosh through pine trees, calm and peaceful, clearly audible. No music, no voices, no speech."
+  },
+  "snow_1": {
+    "duration_seconds": 30.0,
+    "hash": "b5ff3b321c99",
+    "loop": true,
+    "prompt_influence": 0.5,
+    "text": "Gentle steady winter wind blowing softly over fresh snow at night, light airy whoosh through pine trees, calm and peaceful, clearly audible. No music, no voices, no speech."
+  },
+  "snowsteps_0": {
+    "duration_seconds": 11.0,
+    "hash": "4315561d4405",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Slow footsteps crunching uphill through fresh snow, dragging a sled."
+  },
+  "snowsteps_1": {
+    "duration_seconds": 11.0,
+    "hash": "4315561d4405",
+    "loop": false,
+    "prompt_influence": 0.45,
+    "text": "Slow footsteps crunching uphill through fresh snow, dragging a sled."
+  }
+}
