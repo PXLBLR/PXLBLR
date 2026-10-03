@@ -4,6 +4,8 @@
   python3 build.py video beach        # 1920x1080 30 fps 60 s mp4 with ambience -> out/
   python3 build.py video all
   python3 build.py audio library      # re-mix only the soundtrack into the existing mp4
+  python3 build.py eleven all --plan  # how many seconds of ElevenLabs audio a build would request
+  ELEVENLABS_API_KEY=sk_... python3 build.py eleven all   # generate (cached) + mix + swap into the mp4s
 """
 import os
 import subprocess
@@ -102,8 +104,39 @@ def audio_only(name):
     print("re-muxed", mp4)
 
 
+def eleven(name, fake=False, dry=False, lean=False):
+    """Build the ElevenLabs soundtrack for a scene and swap it into the existing mp4."""
+    from engine import eleven as E, audio
+    from scenes.el_audio import SPECS
+    spec = SPECS[name]()
+    if lean:
+        spec = E.lean(spec)
+    if dry:
+        print(f"{name}: {E.plan(name, spec):.0f} s of audio requested (cached clips are free)")
+        return
+    mix = E.render(name, spec, fake=fake)
+    wav = os.path.join(OUT, f"{name}.wav")
+    audio.write_wav(wav, mix)
+    if fake:
+        print("fake mix ok", name, mix.shape, float(abs(mix).max()))
+        return
+    title = {"pumpkin": "PumpkinPatch", "lake": "AutumnLake", "ramen": "RainyRamen", "cabin": "ChristmasCabin",
+             "aurora": "NorthernLights", "library": "TreehouseLibrary"}.get(name, name.capitalize())
+    mp4 = os.path.join(OUT, f"PXLBLR_NinjaBloks_{title}_1min_1080p.mp4")
+    tmp = mp4 + ".tmp.mp4"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+                    "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", tmp], check=True)
+    os.replace(tmp, mp4)
+    print("ElevenLabs soundtrack ->", mp4)
+
+
 if __name__ == "__main__":
     mode, name = sys.argv[1], sys.argv[2]
+    if mode == "eleven":
+        names = ["beach", "dino", "pumpkin", "lake", "ramen", "cabin", "aurora", "library"] if name == "all" else [name]
+        for n in names:
+            eleven(n, fake="--fake" in sys.argv, dry="--plan" in sys.argv, lean="--lean" in sys.argv)
+        sys.exit(0)
     names = ["beach", "dino", "pumpkin", "lake", "ramen", "cabin", "aurora", "library"] if name == "all" else [name]
     for n in names:
         {"preview": preview, "video": video, "audio": audio_only}[mode](n)

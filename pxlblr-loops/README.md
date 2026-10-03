@@ -24,3 +24,21 @@ python3 build.py video beach     # 60 s 1080p mp4 with audio (or: dino, pumpkin,
 - **Brand props.** `scenes/common.py` holds the PXLBLR / NINJA-BLOKS signpost and the corner bug.
 - **The loop.** Every animation uses `wave()` or `cyc()`, which assert that their period divides 60 s, so frame 1800 equals frame 0. `build.py preview` prints the seam diff, which should be 0.0.
 - **Audio.** `engine/audio.py` builds the ambience beds in the frequency domain over exactly one loop length, so they loop with no click. Event SFX (gulls, poks, roar, splashes, footfalls) are placed on the frame where the action happens and panned to its position on screen.
+
+## ElevenLabs soundtracks
+
+`engine/eleven.py` and `scenes/el_audio.py` replace the synthesized audio with ElevenLabs Sound Effects:
+
+- **Beds:** two 30 s takes generated with `loop=true` and cross-faded A → B → A, so the 60 s loop is seamless and doesn't repeat every 30 s.
+- **Events:** one-shots placed on the exact frame of the on-screen action and panned to it, using the same timings as the visuals.
+- **Cache:** every clip is saved to `audio_src/<scene>/` with its prompt in `manifest.json`, so rebuilding a mix never re-spends credits. Change a prompt and only that clip is regenerated.
+
+```bash
+python3 build.py eleven all --plan            # seconds requested (40 credits per second)
+python3 build.py eleven all --plan --lean     # one take per sound, about half the cost
+export ELEVENLABS_API_KEY=sk_...              # secret key, not the key ID; set it as an environment variable, never commit it
+python3 build.py eleven all [--lean]          # generate, mix, and swap the new audio into the mp4s (video untouched)
+python3 build.py eleven all --fake            # offline test with stand-in clips (written to out/audio_src_fake, never used in real builds)
+```
+
+Full build: about 1,137 s, roughly 45,500 credits. Lean build: about 598 s, roughly 23,900 credits.

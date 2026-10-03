@@ -2,3 +2,6 @@ aclsmed-social/out/preview/
 __pycache__/
 *.pyc
 *.wav
+
+# ElevenLabs offline test clips (never committed)
+pxlblr-loops/out/audio_src_fake/
