@@ -24,6 +24,15 @@ def scene(name):
     if name == "dino":
         from scenes.dino import Dino
         return Dino()
+    if name == "pumpkin":
+        from scenes.pumpkin import Pumpkin
+        return Pumpkin()
+    if name == "lake":
+        from scenes.lake import Lake
+        return Lake()
+    if name == "ramen":
+        from scenes.ramen import Ramen
+        return Ramen()
     raise SystemExit(f"unknown scene {name}")
 
 
@@ -50,7 +59,8 @@ def video(name):
     wav = os.path.join(OUT, f"{name}.wav")
     from engine import audio
     audio.write_wav(wav, sc.audio())
-    mp4 = os.path.join(OUT, f"PXLBLR_NinjaBloks_{name.capitalize()}_1min_1080p.mp4")
+    title = {"pumpkin": "PumpkinPatch", "lake": "AutumnLake", "ramen": "RainyRamen"}.get(name, name.capitalize())
+    mp4 = os.path.join(OUT, f"PXLBLR_NinjaBloks_{title}_1min_1080p.mp4")
     cmd = ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W*S}x{H*S}", "-r", str(FPS),
            "-i", "-", "-i", wav, "-c:v", "libx264", "-preset", "slow", "-crf", "14", "-tune", "animation",
            "-pix_fmt", "yuv420p", "-profile:v", "high", "-x264-params", "keyint=60",
@@ -67,6 +77,6 @@ def video(name):
 
 if __name__ == "__main__":
     mode, name = sys.argv[1], sys.argv[2]
-    names = ["beach", "dino"] if name == "all" else [name]
+    names = ["beach", "dino", "pumpkin", "lake", "ramen"] if name == "all" else [name]
     for n in names:
         (preview if mode == "preview" else video)(n)

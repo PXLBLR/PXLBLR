@@ -2,8 +2,10 @@
 
 Procedural pixel-art loop engine for the PXLBLR YouTube background videos. It renders 1080p30 seamless loops with ambience and SFX that are synced to what happens on screen.
 
-- **Samples:** `out/PXLBLR_NinjaBloks_Beach_1min_1080p.mp4` and `out/PXLBLR_NinjaBloks_Dino_1min_1080p.mp4`
-- **Brief for Gemini:** [`PROMPT_GEMINI.md`](PROMPT_GEMINI.md)
+- **Samples:**
+  - Beach and Dino Valley: `out/PXLBLR_NinjaBloks_Beach_1min_1080p.mp4`, `out/PXLBLR_NinjaBloks_Dino_1min_1080p.mp4`
+  - Season pack: `out/PXLBLR_NinjaBloks_PumpkinPatch_1min_1080p.mp4`, `out/PXLBLR_NinjaBloks_AutumnLake_1min_1080p.mp4`, `out/PXLBLR_NinjaBloks_RainyRamen_1min_1080p.mp4`
+- **Briefs for Gemini:** [`PROMPT_GEMINI.md`](PROMPT_GEMINI.md) (Beach and Dino Valley) and [`PROMPT_GEMINI_SEASON_PACK.md`](PROMPT_GEMINI_SEASON_PACK.md) (Pumpkin Patch, Autumn Lake, Rainy Ramen)
 - **Stills:** `out/preview/*_sheet.png` (contact sheets) and `out/preview/compare_*.png` (old draft vs new)
 
 ## Rebuild
@@ -11,7 +13,7 @@ Procedural pixel-art loop engine for the PXLBLR YouTube background videos. It re
 ```bash
 pip install pillow numpy
 python3 build.py preview beach   # stills + contact sheet + loop-seam check, ~2 s
-python3 build.py video beach     # 60 s 1080p mp4 with audio (or: dino, all)
+python3 build.py video beach     # 60 s 1080p mp4 with audio (or: dino, pumpkin, lake, ramen, all)
 ```
 
 ## How it works
