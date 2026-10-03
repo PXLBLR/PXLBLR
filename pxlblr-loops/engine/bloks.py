@@ -8,7 +8,7 @@ catch-lights, blush, nub arms and feet. 28x28 art pixels (140x140 on screen).
 import numpy as np
 from functools import lru_cache
 from PIL import Image, ImageDraw
-from .px import sprite, rgba, hx, INK, flip, outline, _shift
+from .px import sprite, rgba, hx, INK, flip, outline, _shift, wave
 
 BLOKS = {
     #          light        body        shade       band        band shade  blush
@@ -168,3 +168,22 @@ def blok_icon():
     ]
     c = BLOKS["red"]
     return sprite(rows, dict(c, K=INK, S=GOLD, W="#ffffff", E=INK))
+
+
+def draw_scarf(frame, x, y, t, flipx=False, col="#ec4a35", stripe="#ffffff"):
+    """Winter scarf wrapped under the mouth, one end hanging and swaying (2 s)."""
+    d = frame.draw()
+    x, y = int(round(x)), int(round(y))
+    y0 = y + TOP + 21
+    d.rectangle([x + 3, y0, x + 23, y0 + 2], fill=rgba(col))
+    for sx in range(x + 5, x + 23, 4):
+        d.line([sx, y0, sx, y0 + 2], fill=rgba(stripe))
+    d.line([x + 3, y0 - 1, x + 23, y0 - 1], fill=rgba(INK))
+    d.line([x + 3, y0 + 3, x + 23, y0 + 3], fill=rgba(INK))
+    ex = x + 6 if not flipx else x + 18
+    sw = round(wave(t, 2, x * 0.1))
+    for i in range(7):
+        d.line([ex + sw * (i > 3), y0 + 3 + i, ex + 2 + sw * (i > 3), y0 + 3 + i], fill=rgba(stripe if i % 3 == 2 else col))
+        d.point((ex - 1 + sw * (i > 3), y0 + 3 + i), fill=rgba(INK))
+        d.point((ex + 3 + sw * (i > 3), y0 + 3 + i), fill=rgba(INK))
+    d.line([ex + sw, y0 + 10, ex + 2 + sw, y0 + 10], fill=rgba(INK))

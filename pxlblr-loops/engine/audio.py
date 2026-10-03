@@ -444,3 +444,123 @@ def slow_am(seed, lo=0.3, hi=4.0, depth=0.4):
 def pk(x, peak=1.0):
     """Peak-normalise a one-shot so scene gains read as real levels."""
     return x * peak / (np.max(np.abs(x)) + 1e-12)
+
+
+# ---------------------------------------------------------------- winter / cosy pack one-shots
+def jingle(seed=0, dur=6.0, rate=9.0):
+    """Sleigh bells: clusters of tiny metallic bells shaken at `rate` per second."""
+    r = np.random.default_rng(seed)
+    n = int(SR * dur)
+    out = np.zeros(n + SR)
+    m = int(SR * 0.35)
+    s = np.arange(m) / SR
+    for t0 in np.arange(0, dur, 1 / rate):
+        for _ in range(r.integers(3, 7)):
+            f = r.uniform(2600, 5200)
+            b = sum(np.sin(2 * np.pi * f * k * s + r.uniform(0, 6)) / k ** 1.5 for k in (1, 2.76, 5.4))
+            k0 = int((t0 + r.uniform(0, 0.03)) * SR)
+            out[k0:k0 + m] += b * np.exp(-s * r.uniform(14, 24)) * r.uniform(0.3, 1)
+    env = np.interp(np.arange(len(out)) / SR, [0, dur * 0.25, dur * 0.75, dur + 1], [0, 1, 1, 0])
+    return reverb(band(out * env, 1800, 12000), 1.5, 0.35, seed)
+
+
+def crunch(seed=0):
+    r = np.random.default_rng(seed)
+    n = int(SR * 0.16)
+    s = np.linspace(0, 1, n)
+    grains = (r.random(n) < 0.08) * r.uniform(0.3, 1, n)
+    x = band(grains + r.normal(size=n) * 0.2, 700, 6000)
+    return x * np.interp(s, [0, 0.1, 0.6, 1], [0, 1, 0.6, 0])
+
+
+def ice_ping(seed=0):
+    """The eerie 'pew' of a frozen lake: a fast descending chirp with a long tail."""
+    r = np.random.default_rng(seed)
+    n = int(SR * 0.9)
+    s = np.arange(n) / SR
+    f = 300 + r.uniform(1800, 2600) * np.exp(-s * r.uniform(5, 8))
+    x = tone(f, (1, 0.25)) * np.exp(-s * 3.5) * (1 - np.exp(-s * 600))
+    return reverb(x, 3.0, 0.5, seed, lp=6000)
+
+
+def squawk(seed=0):
+    r = np.random.default_rng(seed)
+    n = int(SR * 0.28)
+    s = np.linspace(0, 1, n)
+    f0 = r.uniform(380, 460) * (1 + 0.25 * np.sin(np.pi * s))
+    x = tone(f0, [1 / k ** 0.8 for k in range(1, 18)]) * (0.7 + 0.3 * np.sin(2 * np.pi * 40 * s * 0.28))
+    x = band(x, 500, 2400) * 1.5 + band(x, 2600, 4000) * 0.3
+    return reverb(x * np.interp(s, [0, 0.06, 0.7, 1], [0, 1, 0.8, 0]), 1.2, 0.3, seed)
+
+
+def shimmer(seed=0, dur=1.6):
+    r = np.random.default_rng(seed)
+    n = int(SR * dur)
+    out = np.zeros(n)
+    for i in range(14):
+        m = int(SR * 0.6)
+        s = np.arange(m) / SR
+        f = 5200 - i * 230 + r.uniform(-60, 60)
+        k0 = int(i * (dur - 0.6) / 14 * SR)
+        out[k0:k0 + m] += np.sin(2 * np.pi * f * s) * np.exp(-s * 7) * (1 - np.exp(-s * 900))
+    return reverb(out, 2.4, 0.5, seed)
+
+
+def thunder(seed=0, dur=7.0):
+    r = np.random.default_rng(seed)
+    n = int(SR * dur)
+    s = np.linspace(0, 1, n)
+    x = band(r.normal(size=n), 25, 220) * 1.6 + band(r.normal(size=n), 200, 1200) * 0.35
+    am = np.clip(band(r.normal(size=n), 0.5, 7), -3, 3)
+    am = 0.6 + 0.4 * am / (np.max(np.abs(am)) + 1e-9)
+    env = np.interp(s, [0, 0.03, 0.12, 0.35, 1], [0, 0.7, 1, 0.55, 0])
+    return reverb(x * am * env, 3.0, 0.4, seed, lp=1500)
+
+
+def tick(seed=0, hi=True):
+    n = int(SR * 0.06)
+    s = np.arange(n) / SR
+    f = 3200 if hi else 2500
+    x = (np.sin(2 * np.pi * f * s) + 0.5 * np.sin(2 * np.pi * f * 1.6 * s)) * np.exp(-s * 140)
+    x += band(np.random.default_rng(seed).normal(size=n), 2000, 7000) * np.exp(-s * 300) * 0.5
+    return reverb(x, 0.6, 0.25, seed)
+
+
+def page_turn(seed=0):
+    r = np.random.default_rng(seed)
+    n = int(SR * 0.45)
+    s = np.linspace(0, 1, n)
+    x = band(r.normal(size=n), 1200, 9000) * np.interp(s, [0, 0.2, 0.5, 0.8, 1], [0, 0.6, 1, 0.3, 0])
+    x += band((r.random(n) < 0.01) * 1.0, 1500, 7000) * 2
+    return x
+
+
+def meow(seed=0):
+    n = int(SR * 0.9)
+    s = np.linspace(0, 1, n)
+    f0 = np.interp(s, [0, 0.3, 1], [420, 640, 380])
+    x = tone(f0, [1 / k for k in range(1, 16)])
+    form = band(x, 600, 1100) * np.interp(s, [0, 0.5, 1], [0.4, 1, 0.5]) + band(x, 1500, 2800) * np.interp(s, [0, 0.5, 1], [1, 0.6, 0.3])
+    return reverb(form * np.interp(s, [0, 0.1, 0.7, 1], [0, 1, 0.8, 0]), 0.8, 0.25, seed)
+
+
+def purr_bed(seed=0, rate=26.0):
+    """Circular purr: low noise pulsed at ~26 Hz, breathing in and out every 3 s."""
+    x = colored(1.0, 40, 400, seed=seed)
+    pulse = 0.5 + 0.5 * np.sin(2 * np.pi * rate * T) ** 8
+    breath = 0.6 + 0.4 * np.sin(2 * np.pi * T / 3.0)
+    return x * pulse * breath
+
+
+def snore(seed=0, dur=1.6):
+    r = np.random.default_rng(seed)
+    n = int(SR * dur)
+    s = np.linspace(0, 1, n)
+    x = band(r.normal(size=n), 80, 700) * (0.6 + 0.4 * np.sin(2 * np.pi * 32 * s * dur))
+    return x * np.sin(np.pi * s) ** 2
+
+
+def thud(seed=0):
+    n = int(SR * 0.2)
+    s = np.arange(n) / SR
+    return tone(np.full(n, 110.0)) * np.exp(-s * 30) + band(np.random.default_rng(seed).normal(size=n), 200, 2500) * np.exp(-s * 40) * 0.5

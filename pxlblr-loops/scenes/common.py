@@ -78,3 +78,44 @@ def draw_bug(frame, x=5, y=5):
 
 def shadow_ellipse(frame, cx, cy, rx, ry, col):
     frame.draw().ellipse([cx - rx, cy - ry, cx + rx, cy + ry], fill=rgba(col))
+
+
+class Snow:
+    """Looping snowfall: each layer falls a whole number of screen heights per minute and sways."""
+
+    def __init__(self, seed=0, layers=((90, 1, "#c8d4f0", 12, 3), (60, 1, "#e8eeff", 18, 4), (26, 2, "#ffffff", 26, 5))):
+        from engine.px import DUR
+        r = np.random.default_rng(seed)
+        self.layers = []
+        for (n, size, col, k, sway) in layers:
+            pts = [(r.uniform(0, W), r.uniform(0, H), r.choice([2, 3, 4, 5]), r.uniform(0, 6.28)) for _ in range(n)]
+            self.layers.append((pts, size, col, H * k / DUR, sway))
+
+    def draw(self, frame, t, layer, x0=0, x1=W):
+        from engine.px import wave
+        d = frame.draw()
+        pts, size, col, vy, sway = self.layers[layer]
+        for (x, y, p, ph) in pts:
+            yy = (y + vy * t) % H
+            xx = (x + sway * wave(t, p, ph) + yy * 0.08) % W
+            if x0 <= xx < x1:
+                if size == 1:
+                    d.point((xx, yy), fill=rgba(col))
+                else:
+                    d.rectangle([xx, yy, xx + 1, yy + 1], fill=rgba(col))
+
+
+@lru_cache(maxsize=None)
+def snowy_sign():
+    """The brand signpost with snow piled on both planks."""
+    s = sign().copy()
+    a = np.array(s)
+    m = a[..., 3] > 0
+    from engine.px import _shift
+    top = m & ~_shift(m, 1, 0)
+    ys, xs = np.nonzero(top)
+    for y, x in zip(ys, xs):
+        if y < 26 and abs(x - s.width // 2) > 2:
+            a[max(0, y - 1), x] = rgba("#ffffff")
+            a[y, x] = rgba("#e2ecff")
+    return outline(_pad(Image.fromarray(a, "RGBA")))
