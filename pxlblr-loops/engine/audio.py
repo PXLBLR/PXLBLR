@@ -564,3 +564,55 @@ def thud(seed=0):
     n = int(SR * 0.2)
     s = np.arange(n) / SR
     return tone(np.full(n, 110.0)) * np.exp(-s * 30) + band(np.random.default_rng(seed).normal(size=n), 200, 2500) * np.exp(-s * 40) * 0.5
+
+
+def fire_bed(seed=0, pan=0.4):
+    """Warm indoor fireplace, circular over the loop. Returns (left, right).
+
+    Layers: low breathing roar, soft flame flutter, fine crackles, bigger wood pops
+    (some doubled), occasional sap hiss and an ember settling now and then.
+    """
+    r = np.random.default_rng(seed)
+    flick = colored(0.0, 0.15, 1.6, seed=seed + 1)
+    flick = 0.75 + 0.25 * np.tanh(flick)
+    roar = colored(0.9, 90, 450, seed=seed + 2) * flick
+    flutter = colored(0.7, 180, 1500, seed=seed + 3) * flick ** 2
+
+    def pops(sd, rate, lo, hi, dmin, dmax, doubles=0.0):
+        rr = np.random.default_rng(sd)
+        out = np.zeros(N)
+        k = rr.poisson(rate * DUR)
+        for t0 in rr.uniform(0, DUR, k):
+            for rep in range(2 if rr.random() < doubles else 1):
+                m = int(SR * rr.uniform(dmin, dmax))
+                burst = rr.normal(size=m) * np.exp(-np.arange(m) / (m / 4)) * rr.uniform(0.25, 1.0) ** 1.5
+                idx = (int((t0 + rep * rr.uniform(0.03, 0.09)) * SR) + np.arange(m)) % N
+                out[idx] += burst
+        out = band(out, lo, hi, circular=True)
+        out /= np.sqrt(np.mean(out ** 2)) + 1e-9
+        return np.tanh(out / 4) * 4
+
+    side = []
+    for ch in (0, 1):
+        crackle = pops(seed + 10 + ch, 14.0, 1200, 9000, 0.0015, 0.006)
+        wood = pops(seed + 20 + ch, 0.9, 350, 3800, 0.012, 0.05, doubles=0.3)
+        side.append(crackle * 0.55 + wood * 0.45)
+    hiss = np.zeros(N)
+    for t0 in r.uniform(0, DUR, 3):
+        m = int(SR * r.uniform(0.5, 1.3))
+        s = np.linspace(0, 1, m)
+        seg = band(r.normal(size=m), 3000, 8000) * np.sin(np.pi * s) ** 2
+        idx = (int(t0 * SR) + np.arange(m)) % N
+        hiss[idx] += seg
+    hiss /= np.sqrt(np.mean(hiss ** 2)) + 1e-9
+    settle = np.zeros(N)
+    for t0 in r.uniform(0, DUR, 2):
+        x = thud(int(t0 * 10)) * 0.6 + band(r.normal(size=int(SR * 0.2)), 300, 2500) * np.exp(-np.arange(int(SR * 0.2)) / SR * 25) * 0.4
+        idx = (int(t0 * SR) + np.arange(len(x))) % N
+        settle[idx] += x
+    settle /= np.max(np.abs(settle)) + 1e-9
+    body = roar * 0.10 + flutter * 0.07 + hiss * 0.03 + settle * 0.12
+    gl, gr = np.cos((pan + 1) * np.pi / 4), np.sin((pan + 1) * np.pi / 4)
+    left = body * gl + side[0] * 0.42 * gl
+    right = body * gr + side[1] * 0.42 * gr
+    return left, right

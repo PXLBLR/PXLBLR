@@ -225,11 +225,14 @@ Snow falls in three parallax layers: a far one behind the cabin, and a mid and a
 
 ### Sound
 
-**Ambience**
+**Ambience: the warm fireplace is the only bed.** No wind, no rain hiss, no roof rumble and no low drone. The rain is visual only. The fireplace sits slightly right, where it is on screen, and is built from:
 
-- rain on the window and roof, softened as if heard from indoors;
-- fireplace crackle and a low rumble on the right;
-- a soft cat purr while the cat sleeps.
+- fine wood crackles that lead the mix;
+- bigger wood pops, some of them doubled;
+- a soft, warm flame flutter in the 150–600 Hz range;
+- a light low body that never turns into a rumble;
+- a gentle sap hiss now and then;
+- an occasional soft thunk of embers settling.
 
 **SFX**
 
@@ -260,7 +263,7 @@ Snow falls in three parallax layers: a far one behind the cabin, and a mid and a
    |---|---|
    | Cabin | Sleigh every 7–10 min. Pink sleds continuously. |
    | Ice camp | Shooting star every 5–8 min. Penguins every 2–4 min. Fish caught every 6–9 min. Lake pings at random, a few per minute. |
-   | Library | Lightning every 8–12 min, at most. Page turns continuously. |
+   | Library | Lightning every 8–12 min, at most. Page turns continuously. The fireplace bed runs the whole hour and evolves slowly, with no audible 60 s repeat. |
 
    Never put a headline event on a fixed 60 s beat.
 4. **Make the audio a separate, non-repeating 60-minute track.**

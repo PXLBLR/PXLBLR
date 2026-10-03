@@ -412,17 +412,10 @@ class Library:
         from engine import audio as A
         T = A.T
         buf = np.zeros((2, A.N))
-        rl, rr = A.rain_bed(1001, 55), A.rain_bed(1002, 55)
-        rl = A.band(rl, 250, 7000, circular=True); rr = A.band(rr, 250, 7000, circular=True)
-        roof = A.colored(1.0, 80, 900, seed=1003) * 0.5
-        fire = A.crackle_bed(1004, 6.0)
-        fire_low = A.colored(1.4, 50, 300, seed=1005) * (0.8 + 0.2 * np.sin(TAU * T / 0.75))
-        purr = A.purr_bed(1006)
-        quiet = np.ones(A.N)
-        quiet[int(CAT_T[0] * A.SR):int(CAT_T[1] * A.SR)] = 0
-        quiet = np.convolve(quiet, np.ones(4800) / 4800, mode="same")
-        buf[0] += rl * 0.20 + roof * 0.10 + fire * 0.04 + fire_low * 0.04 + purr * quiet * 0.05
-        buf[1] += rr * 0.16 + roof * 0.10 + fire * 0.09 + fire_low * 0.07 + purr * quiet * 0.06
+        # the room's only ambience bed: a warm fireplace on the right (no rain hiss, no wind)
+        fl, fr = A.fire_bed(1004, pan=0.25)
+        buf[0] += fl
+        buf[1] += fr
         for k in range(60):
             A.place(buf, A.pk(A.tick(k, hi=k % 2 == 0)), k + 0.5, 0.35, pan=0.35)
         for k in range(10):

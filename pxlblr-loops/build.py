@@ -3,6 +3,7 @@
   python3 build.py preview beach      # contact sheet + full-res stills -> out/preview/
   python3 build.py video beach        # 1920x1080 30 fps 60 s mp4 with ambience -> out/
   python3 build.py video all
+  python3 build.py audio library      # re-mix only the soundtrack into the existing mp4
 """
 import os
 import subprocess
@@ -85,8 +86,24 @@ def video(name):
     print("wrote", mp4)
 
 
+def audio_only(name):
+    """Re-mix just the soundtrack and swap it into the existing mp4 (video stream copied untouched)."""
+    sc = scene(name)
+    from engine import audio
+    wav = os.path.join(OUT, f"{name}.wav")
+    audio.write_wav(wav, sc.audio())
+    title = {"pumpkin": "PumpkinPatch", "lake": "AutumnLake", "ramen": "RainyRamen", "cabin": "ChristmasCabin",
+             "aurora": "NorthernLights", "library": "TreehouseLibrary"}.get(name, name.capitalize())
+    mp4 = os.path.join(OUT, f"PXLBLR_NinjaBloks_{title}_1min_1080p.mp4")
+    tmp = mp4 + ".tmp.mp4"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", mp4, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+                    "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", tmp], check=True)
+    os.replace(tmp, mp4)
+    print("re-muxed", mp4)
+
+
 if __name__ == "__main__":
     mode, name = sys.argv[1], sys.argv[2]
     names = ["beach", "dino", "pumpkin", "lake", "ramen", "cabin", "aurora", "library"] if name == "all" else [name]
     for n in names:
-        (preview if mode == "preview" else video)(n)
+        {"preview": preview, "video": video, "audio": audio_only}[mode](n)
