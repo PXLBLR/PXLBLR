@@ -60,7 +60,9 @@
     "status": "approved"
   },
   "R3_torsades_v2": {
-    "status": "pending re-review (Mg added after Oct 12 sign-off)"
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
   },
   "C2_stable_vs_unstable_tachy_v2": {
     "reviewer": "Mikko Figueroa, RN",
@@ -68,6 +70,11 @@
     "status": "approved"
   },
   "C6_megacode_mistakes_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "SIM1_10_megacodes_2_ipads_v2": {
     "reviewer": "Mikko Figueroa, RN",
     "date": "2026-10-12",
     "status": "approved"
