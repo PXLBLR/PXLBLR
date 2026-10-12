@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
+from content.published_fixes import CAROUSELS_PUB, REELS_PUB  # noqa: E402
 from content.reels_fixes import FIXES  # noqa: E402
 
 LOG = Path(__file__).parent / "review_log.json"
@@ -20,7 +21,9 @@ def load():
 
 
 def specs():
-    return {s["id"]: s for s in (f() for f in FIXES)}
+    items = {s["id"]: s for s in (f() for f in FIXES + REELS_PUB)}
+    items.update({c["id"]: c for c in CAROUSELS_PUB})
+    return items
 
 
 def check(rid):

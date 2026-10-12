@@ -1,0 +1,7 @@
+Inferior STEMI = new ST elevation of 1 mm or more in 2 contiguous inferior leads (II, III, aVF) on a 12-lead, often with reciprocal depression in I and aVL.
+
+Get a right-sided ECG: ST elevation of 1 mm or more in V4R supports RV infarction. RV infarcts are preload dependent, so avoid nitrates and treat hypotension with fluids. Watch for bradycardia and AV block, and get them to reperfusion fast.
+
+Educational only. Follow AHA 2025 guidelines and your institution's protocols.
+
+#STEMI #ECG #CardiacNurse #ACLS #ICUNurse

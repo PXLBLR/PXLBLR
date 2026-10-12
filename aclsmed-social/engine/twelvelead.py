@@ -25,6 +25,16 @@ ANTERIOR_STEMI = {
 }
 
 
+# Inferior STEMI: ST elevation II, III, aVF (III > II), reciprocal ST depression I, aVL; slow rate.
+INFERIOR_STEMI = {
+    "I": {"r_amp": 0.6, "st": -0.12, "t_amp": -0.1}, "II": {"r_amp": 0.9, "st": 0.35, "t_amp": 0.55},
+    "III": {"r_amp": 0.7, "st": 0.5, "t_amp": 0.65}, "aVR": {"r_amp": -0.7, "st": -0.1, "t_amp": -0.25, "p_amp": -0.12},
+    "aVL": {"r_amp": 0.4, "st": -0.25, "t_amp": -0.2}, "aVF": {"r_amp": 0.8, "st": 0.42, "t_amp": 0.6},
+    "V1": {"r_amp": -0.7, "t_amp": 0.1}, "V2": {"r_amp": -0.5, "t_amp": 0.3}, "V3": {"r_amp": 0.6, "t_amp": 0.35},
+    "V4": {"r_amp": 1.0, "t_amp": 0.35}, "V5": {"r_amp": 1.1, "t_amp": 0.3}, "V6": {"r_amp": 1.0, "t_amp": 0.25},
+}
+
+
 def render(pattern=ANTERIOR_STEMI, width=1000, height=470, hr=88, highlight=None, recip=None,
            title="12-LEAD  ·  TEACHING ILLUSTRATION"):
     """highlight / recip: lists of lead names outlined in red (ST elevation) / cyan (reciprocal depression)."""
