@@ -90,7 +90,7 @@ def story(rid, beats, ask="Save this for your next *megacode*.", cover_t=1.6, **
             els.append(T(b["sub"], (reveal + 0.15, e), y, b.get("sub_size", 48), weight="semibold",
                          family="body", color=b.get("sub_color", WHITE), accent=b.get("sub_accent", YELLOW),
                          max_w=900))
-            y += 150
+            y += 150 if b.get("sub_size", 48) >= 48 else 125
         if b.get("bottom"):
             els.append(T(b["bottom"], (reveal + (0.4 if b.get("big") else 0), e), y, b.get("bottom_size", 54),
                          max_w=900, accent=b.get("bottom_accent", RED)))

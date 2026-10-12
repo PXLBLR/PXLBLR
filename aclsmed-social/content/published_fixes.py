@@ -25,7 +25,7 @@ def s03_v2():
         {"d": 5.5, "top": "Now AFib travels down that pathway.", "rh": ("preexcited_af", {}, "HR 250 IRREG"),
          "bottom": "Irregular, very fast, *wide & bizarre* complexes.", "sfx": [(0, "alarm", 0.6)]},
         {"d": 7, "top": "Do *NOT* give these:", "big": "AVOID",
-         "sub": "Adenosine · beta-blockers · diltiazem/verapamil · digoxin · *IV amiodarone*",
+         "sub": "Adenosine · beta-blockers · diltiazem/verapamil · digoxin · *IV amiodarone*", "sub_size": 42,
          "bottom": "They can push *more* impulses down the pathway → *VF*.", "bottom_size": 44},
         {"d": 6.5, "top": "So what works?",
          "bullets": ["Unstable → *synchronized cardioversion*", "Stable → *procainamide* or *ibutilide*",

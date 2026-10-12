@@ -1,0 +1,9 @@
+Updated version: we've added IV amiodarone to the avoid list.
+
+Short PR + delta wave = WPW pattern. Put AFib on top of it and you get irregular, very fast, wide complexes.
+
+Avoid adenosine, beta-blockers, diltiazem/verapamil, digoxin and IV amiodarone; they can push the rhythm into VF. Unstable → synchronized cardioversion. Stable → procainamide or ibutilide + expert consult.
+
+Educational only. Follow AHA 2025 guidelines and your institution's protocols.
+
+#WPW #ECG #ACLS #EmergencyMedicine #CardiacNurse

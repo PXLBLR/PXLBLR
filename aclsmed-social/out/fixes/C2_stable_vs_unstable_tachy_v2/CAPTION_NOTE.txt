@@ -1,0 +1,1 @@
+Updated version: AHA 2025 set fixed starting doses for synchronized cardioversion (narrow 100 J, monomorphic VT 100 J, AFib/flutter 200 J) and polymorphic VT gets a defibrillation dose, not synchronized.
