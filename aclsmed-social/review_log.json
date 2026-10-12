@@ -1,0 +1,77 @@
+{
+  "S09_stemi_v2_12lead": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S37_choking_2025": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S10_inferior_mi_rv_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S11_arrest_pregnancy_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S13_aivr_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S14_hypothermia_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S15_opioid_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S16_pad_placement_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S26_team_leader_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S29_brugada_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S32_precharge_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "S03_wpw_preexcited_af_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "R3_torsades_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "C2_stable_vs_unstable_tachy_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  },
+  "C6_megacode_mistakes_v2": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-12",
+    "status": "approved"
+  }
+}

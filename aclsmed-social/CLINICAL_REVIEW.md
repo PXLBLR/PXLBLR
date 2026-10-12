@@ -38,3 +38,4 @@ A licensed clinician (RN/MD/RRT/paramedic) signs off in `review_log.json`:
 | Date | Item | Problem | Action |
 |---|---|---|---|
 | 2026-10-12 | S09 STEMI (posted Oct 12 AM) | STEMI taught from a single monitor lead; no mm criteria or mimics; outdated "door-to-balloon"; fibrinolysis without the >120 min / <12 h / contraindication conditions; nitrate contraindications missing PDE-5 inhibitors | Post deleted; replaced today by S37 (choking, AHA 2025); corrected S09 v2 (12-lead, full criteria, sourced) ready to post after Oct 25; full audit of all 57 items run |
+| 2026-10-12 | 15 corrected/replacement items (S09 v2, S37, S10/S11/S13/S14/S15/S16/S26/S29/S32 v2, S03 v2, R3 v2, C2 v2, C6 v2) | Independent audit + primary-source verification | Approved by Mikko Figueroa, RN (review_log.json) |
