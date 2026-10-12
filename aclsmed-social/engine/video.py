@@ -116,6 +116,10 @@ class Reel:
             img = logo_mark(el.get("h", 46))
         elif t == "icon":
             img = icon(el.get("h", 150))
+        elif t == "image":
+            img = el["img"]
+            if img.mode != "RGBA":
+                img = img.convert("RGBA")
         elif t == "box":
             x0, y0, x1, y1 = el["rect"]
             img = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
@@ -287,7 +291,7 @@ class Reel:
             ty = el["type"]
             if ty in ("ecg", "capno"):
                 self.draw_monitor(fr, d, el, t)
-            elif ty in ("text", "pill", "logo", "icon", "box"):
+            elif ty in ("text", "pill", "logo", "icon", "box", "image"):
                 self.draw_layer_el(fr, el, t)
             elif ty == "countdown":
                 self.draw_countdown(d, el, t)

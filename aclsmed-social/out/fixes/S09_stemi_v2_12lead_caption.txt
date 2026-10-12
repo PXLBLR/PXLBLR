@@ -1,0 +1,9 @@
+Updated version of our earlier STEMI reel. Thank you to everyone who flagged it: STEMI is diagnosed on a 12-lead with mm criteria, and nitrates have real contraindications.
+
+STEMI = new ST elevation at the J point in 2 contiguous leads on a 12-lead: 1 mm or more in most leads; in V2–V3, 2 mm (men 40+), 2.5 mm (men under 40), 1.5 mm (women). Look for reciprocal depression and rule out mimics.
+
+Primary PCI: first medical contact to device in 90 min or less (120 with transfer). Expected PCI delay over 120 min and symptoms under 12 h → fibrinolysis if no contraindications. Aspirin if no contraindication; oxygen only if SpO2 under 90%. No nitrates with SBP under 90, RV infarct, recent PDE-5 inhibitors, or marked brady/tachycardia.
+
+Educational only. Follow AHA 2025 guidelines and your institution's protocols.
+
+#STEMI #ECG #ACLS #CardiacNurse #EmergencyMedicine

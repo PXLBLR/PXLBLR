@@ -22,6 +22,7 @@ def story(rid, beats, ask="Save this for your next *megacode*.", cover_t=1.6, **
     els, fx = [], []
     t = 0.0
     cur_rh, rh_start = None, 0.0
+    cur_img, img_start = None, 0.0
 
     def close_monitor(at):
         if cur_rh and cur_rh != "off":
@@ -41,7 +42,16 @@ def story(rid, beats, ask="Save this for your next *megacode*.", cover_t=1.6, **
         if "rh" in b and b["rh"] != cur_rh:
             close_monitor(s)
             cur_rh, rh_start = b["rh"], s
-        mon = cur_rh not in (None, "off")
+        if b.get("img") is not None:
+            if b["img"] is not cur_img:
+                img_start = s
+            cur_img = b["img"]
+            els.append({"type": "image", "img": b["img"], "t": (s, e), "y": b.get("img_y", 585),
+                        "anim": "up" if img_start == s else "none", "fade_in": 0.2 if img_start == s else 0,
+                        "fade_out": 0})
+        else:
+            cur_img = None
+        mon = cur_rh not in (None, "off") or b.get("img") is not None
         hook = b.get("hook")
         if i == 0:
             fx.append((0, b.get("open_sfx", "alarm"), 0.65))
@@ -61,7 +71,7 @@ def story(rid, beats, ask="Save this for your next *megacode*.", cover_t=1.6, **
         if b.get("sub_top"):
             els.append(T(b["sub_top"], (s + 0.5, e), 600, 44, weight="semibold", family="body", color=CYAN,
                          max_w=900))
-        base = 1085 if mon else 820
+        base = 1085 if mon else b.get("base", 640)
         reveal = s + 0.45
         if b.get("quiz"):
             els.append({"type": "countdown", "t": (s + 0.4, s + 0.4 + b["quiz"]), "n": round(b["quiz"]),
