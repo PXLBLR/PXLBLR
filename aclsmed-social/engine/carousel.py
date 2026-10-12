@@ -153,6 +153,12 @@ class Slide:
             self.cta()
         elif k == "pairs":
             self.pairs(b[1], b[2])
+        elif k == "image":
+            im = b[1].convert("RGBA")
+            if im.width != CW:
+                im = im.resize((CW, int(im.height * CW / im.width)), Image.LANCZOS)
+            self.img.paste(im, (X0, int(self.y)), im)
+            self.y += im.height + 22
         elif k == "devices":
             self.devices(*b[1:])
         elif k == "scenario":

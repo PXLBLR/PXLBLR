@@ -76,7 +76,7 @@ def afib(dur, mean_hr=128, seed=7):
     while q < dur + 1:
         y += _qrs(t, q, 0.08, 1.0) + _twave(t, q + 0.24, 0.20, 0.05)
         rs.append(q)
-        q += rng.uniform(0.34, 0.80) * (128 / mean_hr)
+        q += rng.uniform(0.6, 1.4) * 60 / mean_hr  # mean RR matches mean_hr
     return y, [r for r in rs if r < dur]
 
 

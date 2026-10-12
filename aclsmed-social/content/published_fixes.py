@@ -47,7 +47,7 @@ def r03_v2():
         {"d": 5.5, "top": "Polymorphic VT + a *long QT*\n= *Torsades de Pointes*",
          "bottom": "QRS spirals around the baseline: tall, tiny, tall."},
         {"d": 6, "top": "*Unstable* (even with a pulse) or pulseless?", "big": "DEFIBRILLATE",
-         "big_size": 100, "sub": "Defibrillation dose, *not synchronized*. CPR if no pulse.", "shock": True},
+         "big_size": 100, "sub": "Defibrillation dose, *not synchronized*. CPR if no pulse. Then *Mg 1–2 g IV*.", "shock": True},
         {"d": 6, "top": "*Stable*, with a pulse?", "big": "MAGNESIUM", "big_color": CYAN,
          "sub": "*1–2 g IV*, per protocol. Get expert help."},
         {"d": 7, "top": "Then fix *why* the QT is long", "rh": ("sinus", {"hr": 72, "t_amp": 0.22}, "HR 72"),
@@ -55,7 +55,8 @@ def r03_v2():
                      "Review the MAR: antiarrhythmics, antipsychotics, some antibiotics"]},
     ], caption=cap("Updated version: unstable torsades gets defibrillated even with a pulse.\n\nTorsades de "
                    "pointes is polymorphic VT with a long QT. Unstable or pulseless → defibrillation dose, not "
-                   "synchronized (AHA 2025). Stable with a pulse → magnesium 1–2 g IV. Then stop QT-prolonging drugs "
+                   "synchronized (AHA 2025), then magnesium 1–2 g IV. Stable with a pulse → magnesium 1–2 g IV. Then stop "
+                   "QT-prolonging drugs "
                    "and correct K+ and Mg.",
                    ["ACLS", "TorsadesDePointes", "ECG", "ICUNurse", "Paramedic"]),
         shorts_title="Torsades: Shock if Unstable, Magnesium if Stable #shorts",

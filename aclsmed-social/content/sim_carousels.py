@@ -93,3 +93,53 @@ ALT = ("Carousel promoting the ACLSMED Sim iPad app. Slide 1: '10 megacodes you 
        "App Store link by DM.")
 
 SIM_CAROUSELS = [SIM1]
+
+
+# ---- v2: fixes from the Oct 12 clinical audit (SIM1 was never posted) ----
+import copy  # noqa: E402
+
+from engine import twelvelead  # noqa: E402
+
+AHA25_ACLS_CHANGES = ("AHA 2025 Interim Training Materials: ACLS Provider Manual Changes (cardioversion doses, "
+                      "polymorphic VT) — https://cpr.heartandstroke.ca/resource/Guidelines2025InterimACLSProviderManualEN")
+INF_SIM = twelvelead.render(twelvelead.INFERIOR_STEMI, width=936, height=360, hr=44,
+                            highlight=["II", "III", "aVF"], recip=["I", "aVL"])
+
+SIM1_V2 = copy.deepcopy(SIM1)
+SIM1_V2["id"] = "SIM1_10_megacodes_2_ipads_v2"
+S = SIM1_V2["slides"]
+S[2] = scen(1, "Brady that *won't respond*", "78M, dizzy, BP 78/40.", "chb", {"vent": 34}, "II  ·  HR 34",
+            "Sinus brady 38 → no response to atropine → *complete heart block* 34.",
+            "Atropine *1 mg* → pads on → *pace* (analgesia/sedation), confirm mechanical capture. "
+            "Epi/dopamine drip as a bridge.")
+S[3] = scen(2, "Unstable *SVT*", "34F, palpitations, BP 82/50, confused.", "svt", {"hr": 192}, "II  ·  HR 192",
+            "SVT 192, then drop the BP into the 70s. Run it again *stable* to test vagal → adenosine.",
+            "Unstable → *synchronized cardioversion, 100 J* (AHA 2025; sedate if possible). "
+            "Stable → vagal → *adenosine 6 → 12 mg*.")
+S[8] = scen(7, "The *flat line*", "80F found unresponsive in bed.", "asystole", {}, "II  ·  ASYSTOLE",
+            "Flat line. Watch whether CPR starts *before* anyone fiddles with the monitor.",
+            "*CPR now.* Confirm the flat line (leads, gain, 2nd lead) without pausing. *Epi ASAP* → every 3–5 min. "
+            "Never shock asystole.")
+S[9] = scen(8, "It *twists*", "49F on methadone, QTc 560.", "torsades", {}, "II  ·  TORSADES",
+            "Torsades with a pulse and soft BP → lose the pulse at 60 s.",
+            "Unstable or pulseless: *defibrillate* (not synced), CPR if no pulse, then *Mg 1–2 g IV*. "
+            "Stable: *Mg 1–2 g IV*. Stop QT-prolonging drugs.")
+S[10] = [("kicker", "SCENARIO 09 / 10", RED), ("title", "Inferior STEMI + *brady*", 64),
+         ("body", "66M, chest pressure, HR 44, BP 84/50.", 34), ("image", INF_SIM),
+         ("scenario", "Show the *12-lead*: inferior ST elevation, reciprocal I/aVL. Soft BP. Offer nitro and see "
+                      "who stops it.",
+          "*V4R*. Aspirin, *no nitrates* (SBP under 90, HR 44, RV infarct), fluid bolus if lungs clear, "
+          "*atropine 1 mg* → pace if no response, *cath lab*.")]
+S[4] = scen(3, "AFib RVR + *hypotension*", "71M, AFib at 150, BP 76/44.", "afib", {"mean_hr": 150},
+            "II  ·  HR 150 IRREG", "AFib 150, BP drifting down after each delay.",
+            "*SYNC* cardioversion (sedate if possible), *200 J* initial (AHA 2025). Re-check SYNC after every shock.")
+SIM1_V2["sources"] = [
+    AHA25_ACLS_CHANGES,
+    "Fourth Universal Definition of MI (STEMI on a 12-lead) — https://www.ahajournals.org/doi/10.1161/CIR.0000000000000617",
+    "2013 ACCF/AHA STEMI guideline (RV infarction, V4R, nitrates) — "
+    "https://www.ahajournals.org/doi/10.1161/CIR.0b013e3182742cf6",
+    "AHA 2025 Bradycardia algorithm (atropine 1 mg, pacing, drips) — https://cpr.heart.org/-/media/CPR-Files/"
+    "CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Bradycardia-250514.pdf",
+]
+ALT_V2 = ALT.replace("each with an ECG strip", "each with an ECG strip (Scenario 9: a 12-lead)")
+SIM_CAROUSELS = [SIM1_V2]

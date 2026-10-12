@@ -1,6 +1,6 @@
 Updated version: unstable torsades gets defibrillated even with a pulse.
 
-Torsades de pointes is polymorphic VT with a long QT. Unstable or pulseless → defibrillation dose, not synchronized (AHA 2025). Stable with a pulse → magnesium 1–2 g IV. Then stop QT-prolonging drugs and correct K+ and Mg.
+Torsades de pointes is polymorphic VT with a long QT. Unstable or pulseless → defibrillation dose, not synchronized (AHA 2025), then magnesium 1–2 g IV. Stable with a pulse → magnesium 1–2 g IV. Then stop QT-prolonging drugs and correct K+ and Mg.
 
 Educational only. Follow AHA 2025 guidelines and your institution's protocols.
 

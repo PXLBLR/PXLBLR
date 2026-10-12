@@ -60,9 +60,7 @@
     "status": "approved"
   },
   "R3_torsades_v2": {
-    "reviewer": "Mikko Figueroa, RN",
-    "date": "2026-10-12",
-    "status": "approved"
+    "status": "pending re-review (Mg added after Oct 12 sign-off)"
   },
   "C2_stable_vs_unstable_tachy_v2": {
     "reviewer": "Mikko Figueroa, RN",
