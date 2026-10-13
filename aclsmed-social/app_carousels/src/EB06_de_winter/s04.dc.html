@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ECG Builder carousel — treat it like a STEMI</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&amp;family=Geist+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; position: relative; overflow: hidden; box-sizing: border-box; padding: 64px 72px; background: radial-gradient(ellipse at 50% 70%, #18163A 0%, #0B1D42 38%, #090B10 75%); font-family: 'SF Pro Display', -apple-system, 'Geist', sans-serif; color: #F5F6F8; display: flex; flex-direction: column; gap: 30px">
+  <div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 14px"><img src="/_blob/311d4becd6707e032fd640bd1fa82cbd" alt="" style="width: 50px; height: 50px; border-radius: 12px"><div style="font-size: 28px; font-weight: 700">ECG Builder</div></div><div style="font-family: 'Geist Mono', monospace; font-size: 24px; color: #A9B1BE">04 / 06</div></div>
+  <div style="display: flex; flex-direction: column; gap: 18px"><div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 600; letter-spacing: 0.14em; color: #B9A4FF">STEP 3 · ACT ON IT</div><h2 style="margin: 0; font-size: 88px; line-height: 0.96; font-weight: 800; letter-spacing: -0.04em">Treat it like <span style="color: #B9A4FF">a STEMI.</span></h2></div>
+  <div style="display: flex; flex-direction: column; gap: 14px">
+    <div style="border-radius: 24px; padding: 26px 28px; background: linear-gradient(180deg, #8F78F0, #5B48C7); color: #FFFFFF; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-family: 'Geist Mono', monospace; font-size: 20px; letter-spacing: 0.12em">ACC CHEST PAIN PATHWAY 2022</div>
+      <div style="font-size: 30px; font-weight: 600; line-height: 1.3">de Winter is a <b>STEMI equivalent</b>. It can reflect proximal LAD occlusion and <b>warrants immediate angiography.</b></div>
+    </div>
+    <div style="border-radius: 24px; padding: 26px 28px; background: rgba(21,25,34,0.9); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Geist Mono', monospace; font-size: 20px; letter-spacing: 0.12em; color: #B9A4FF">2025 ACC/AHA ACS GUIDELINE</div><div style="font-size: 29px; font-weight: 600; line-height: 1.3">When ST elevation <b>or an equivalent</b> is on the ECG, triage follows the <b>STEMI pathway</b>: reperfusion, preferably primary PCI.</div></div>
+    <div style="border-radius: 24px; padding: 26px 28px; background: rgba(21,25,34,0.9); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 10px;"><div style="font-family: 'Geist Mono', monospace; font-size: 20px; letter-spacing: 0.12em; color: #FFB25B">THE TRAP</div><div style="font-size: 29px; font-weight: 600; line-height: 1.3">It fails the ST-elevation cut-offs, so it gets filed as "just ST depression". Tall T waves + upsloping ST in V1–V6 = think LAD.</div></div>
+  </div>
+  <div style="border-radius: 24px; padding: 24px 28px; box-shadow: inset 0 0 0 2px rgba(185,164,255,0.55); font-size: 29px; font-weight: 700; line-height: 1.3">Not sure? Repeat the ECG, compare with an old one, and escalate early under your local STEMI protocol.</div>
+  <div style="margin-top: auto; display: flex; justify-content: space-between; gap: 24px; font-family: 'Geist Mono', monospace; font-size: 19px; color: #A9B1BE"><span>ACC ECDP 2022 (Kontos) · 2025 ACC/AHA ACS guideline</span><span style="text-align: right">Educational only</span></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

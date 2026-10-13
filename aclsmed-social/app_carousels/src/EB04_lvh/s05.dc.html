@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ECG Builder carousel — drag the voltage</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..900&amp;family=Geist+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; position: relative; overflow: hidden; box-sizing: border-box; padding: 64px 72px; background: linear-gradient(180deg, #090B10 0%, #090B10 40%, #0B1D42 100%); font-family: 'SF Pro Display', -apple-system, 'Geist', sans-serif; color: #F5F6F8; display: flex; flex-direction: column; gap: 34px">
+  <div style="display: flex; align-items: center; justify-content: space-between"><div style="display: flex; align-items: center; gap: 14px"><img src="/_blob/311d4becd6707e032fd640bd1fa82cbd" alt="" style="width: 50px; height: 50px; border-radius: 12px"><div style="font-size: 28px; font-weight: 700">ECG Builder</div></div><div style="font-family: 'Geist Mono', monospace; font-size: 24px; color: #A9B1BE">05 / 06</div></div>
+  <div style="display: flex; flex-direction: column; gap: 18px"><div style="font-family: 'Geist Mono', monospace; font-size: 26px; font-weight: 600; letter-spacing: 0.14em; color: #FFB25B">TRY IT IN THE APP</div><h2 style="margin: 0; font-size: 80px; line-height: 0.96; font-weight: 800; letter-spacing: -0.04em">Drag the voltage.<br><span style="color: #FFB25B">Watch the box.</span></h2></div>
+  <div style="display: flex; gap: 32px; align-items: flex-start">
+    <div style="flex: none; width: 470px; height: 619px; box-sizing: border-box; padding: 12px; border-radius: 36px; background: #151922; box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 0 0 1px rgba(76,157,255,0.3), 0 40px 90px -30px rgba(76,157,255,0.55)"><img src="/_asset/eb_ipad-lvh.jpg" alt="ECG Builder on iPad: the Chambers tool with left ventricular hypertrophy at 0.74; the synthetic 12-lead is printed at 5 mm/mV half standard" style="width: 100%; height: 100%; border-radius: 26px; object-fit: cover; object-position: top; display: block"></div>
+    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px"><div style="border-radius: 22px; padding: 22px 24px; background: rgba(21,25,34,0.9); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 8px"><div style="display: flex; gap: 12px; align-items: center"><span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #4C9DFF">1</span><span style="padding: 3px 10px; border-radius: 999px; background: #1E2A3D; color: #A9B1BE; font-family: 'Geist Mono', monospace; font-size: 17px">FREE</span></div><div style="font-size: 26px; font-weight: 600; line-height: 1.3">Type "LVH with strain". You get the full 12-lead as a watermarked preview.</div></div><div style="border-radius: 22px; padding: 22px 24px; background: rgba(21,25,34,0.9); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 8px"><div style="display: flex; gap: 12px; align-items: center"><span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #4C9DFF">2</span><span style="padding: 3px 10px; border-radius: 999px; background: #2A74DB; color: #FFFFFF; font-family: 'Geist Mono', monospace; font-size: 17px">PRO</span></div><div style="font-size: 26px; font-weight: 600; line-height: 1.3">Chambers → drag LVH. Voltage and QRS width grow together; past the paper’s room the sheet drops to half standard.</div></div><div style="border-radius: 22px; padding: 22px 24px; background: rgba(21,25,34,0.9); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 8px"><div style="display: flex; gap: 12px; align-items: center"><span style="font-family: 'Geist Mono', monospace; font-size: 22px; color: #4C9DFF">3</span><span style="padding: 3px 10px; border-radius: 999px; background: #2A74DB; color: #FFFFFF; font-family: 'Geist Mono', monospace; font-size: 17px">PRO</span></div><div style="font-size: 26px; font-weight: 600; line-height: 1.3">Repolarisation → T inversion → Lateral adds the strain. Then export PNG or PDF.</div></div></div>
+  </div>
+  <div style="border-radius: 24px; padding: 20px 26px; background: rgba(21,25,34,0.9); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 10px;"><div style="font-size: 24px; font-weight: 600; line-height: 1.3">Shown on iPad. Android has the same Chambers and Repolarisation tools.</div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
