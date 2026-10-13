@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CardioLens carousel — P waves and PR interval</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; position: relative; overflow: hidden; box-sizing: border-box; padding: 64px 72px; background: #0A0F0A; font-family: 'DM Sans', sans-serif; color: #F4F8F6; display: flex; flex-direction: column; gap: 40px">
+  <div style="display: flex; align-items: center; justify-content: space-between">
+    <div style="display: flex; align-items: center; gap: 16px">
+      <img src="/_blob/292a06269bb3d2bea39f3de1cfb91e1f" alt="" style="width: 52px; height: 52px; border-radius: 12px">
+      <div style="font-size: 28px; font-weight: 800; letter-spacing: -0.02em">CardioLens <span style="color: #00E5A0">AI</span></div>
+    </div>
+    <div style="font-family: 'Space Mono', monospace; font-size: 24px; color: #8A988F">03 / 06</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 18px">
+    <div style="font-family: 'Space Mono', monospace; font-size: 26px; font-weight: 700; letter-spacing: 0.14em; color: #00E5A0">QUESTIONS 03 + 04</div>
+    <h2 style="margin: 0; font-size: 76px; line-height: 0.98; font-weight: 900; letter-spacing: -0.04em">Find the P. <span style="color: #00E5A0">Measure the PR.</span></h2>
+  </div>
+
+  <div style="position: relative; flex: none; border-radius: 28px; overflow: hidden; height: 420px; background-color: #0E1712; background-image: linear-gradient(rgba(0,229,160,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,160,0.2) 1px, transparent 1px), linear-gradient(rgba(0,229,160,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,160,0.07) 1px, transparent 1px); background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px; box-shadow: inset 0 0 0 2px rgba(0,229,160,0.25)">
+    <svg aria-hidden="true" viewBox="0 0 936 420" style="position: absolute; inset: 0; width: 936px; height: 420px; filter: drop-shadow(0 0 8px rgba(0,229,160,0.6))">
+      <path d="M0,280 h120 q30,-56 60,0 h36 l10,16 l14,-216 l14,236 l10,-36 h72 q60,-110 120,0 h480" fill="none" stroke="#00E5A0" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
+    </svg>
+    <svg aria-hidden="true" viewBox="0 0 936 420" style="position: absolute; inset: 0; width: 936px; height: 420px">
+      <path d="M120,326 V344 H216 V326" fill="none" stroke="#FFFFFF" stroke-width="3"></path>
+      <path d="M216,366 V384 H264 V366" fill="none" stroke="#FFD166" stroke-width="3"></path>
+    </svg>
+    <div style="position: absolute; left: 136px; top: 196px; font-family: 'Space Mono', monospace; font-size: 30px; font-weight: 700; color: #FFFFFF">P</div>
+    <div style="position: absolute; left: 272px; top: 50px; font-family: 'Space Mono', monospace; font-size: 30px; font-weight: 700; color: #FFD166">QRS</div>
+    <div style="position: absolute; left: 380px; top: 186px; font-family: 'Space Mono', monospace; font-size: 30px; font-weight: 700; color: #FFFFFF">T</div>
+    <div style="position: absolute; left: 520px; top: 316px; padding: 8px 16px; border-radius: 10px; background: #FFFFFF; color: #0A0F0A; font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700">PR = 4 small boxes = 0.16 s</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 20px">
+    <div style="border-radius: 28px; padding: 30px 32px; background: #121C17; box-shadow: inset 0 0 0 2px #1F2E27; display: flex; gap: 26px; align-items: flex-start">
+      <div style="font-family: 'Space Mono', monospace; font-size: 30px; font-weight: 700; color: #00E5A0">03</div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <div style="font-size: 34px; font-weight: 800; line-height: 1.15">A P before every QRS, and a QRS after every P?</div>
+        <div style="font-size: 28px; line-height: 1.35; color: #B7C4BD">Yes, and upright in lead II: the beat started in the SA node (sinus). Ps that don't conduct: look for a 2nd- or 3rd-degree block.</div>
+      </div>
+    </div>
+    <div style="border-radius: 28px; padding: 30px 32px; background: #121C17; box-shadow: inset 0 0 0 2px #1F2E27; display: flex; gap: 26px; align-items: flex-start">
+      <div style="font-family: 'Space Mono', monospace; font-size: 30px; font-weight: 700; color: #00E5A0">04</div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <div style="font-size: 34px; font-weight: 800; line-height: 1.15">Normal PR: 0.12–0.20 s (3–5 small boxes)</div>
+        <div style="font-size: 28px; line-height: 1.35; color: #B7C4BD">Longer than 0.20 s on every beat, each P still conducting = 1st-degree AV block.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: auto; display: flex; justify-content: flex-end; font-family: 'Space Mono', monospace; font-size: 22px; color: #8A988F">Educational only</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

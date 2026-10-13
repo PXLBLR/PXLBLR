@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
+from content.app_carousels import APP_CAROUSELS  # noqa: E402
 from content.published_fixes import CAROUSELS_PUB, REELS_PUB  # noqa: E402
 from content.reels_fixes import FIXES  # noqa: E402
 from content.sim_carousels import SIM1_V2  # noqa: E402
@@ -23,7 +24,7 @@ def load():
 
 def specs():
     items = {s["id"]: s for s in (f() for f in FIXES + REELS_PUB)}
-    items.update({c["id"]: c for c in CAROUSELS_PUB + [SIM1_V2]})
+    items.update({c["id"]: c for c in CAROUSELS_PUB + [SIM1_V2] + APP_CAROUSELS})
     return items
 
 
