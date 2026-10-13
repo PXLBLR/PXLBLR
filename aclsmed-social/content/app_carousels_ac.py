@@ -20,16 +20,17 @@ def _dm(first_line):
 
 AC00 = {
     "id": "AC00_drip_math", "app": "ACLSMED Sim", "date": "2026-10-13", "time": "17:00", "keyword": "SIM",
-    "caption": f"""Drip math in 3 steps: mcg/min → mL/h. Save this for your next drip. 💧
+    "caption": f"""Drip math in 3 steps: mcg/min → mL/h. Save this and practise it. 💧
 
 The formula: mL/h = dose (mcg/min) × 60 ÷ concentration (mcg/mL)
 
 1. Bag → mcg/mL. Example bag: epinephrine 4 mg in 250 mL = 4,000 mcg ÷ 250 mL = 16 mcg/mL.
 2. Dose per hour. 2 mcg/min × 60 = 120 mcg/h.
 3. ÷ concentration. 120 ÷ 16 = 7.5 mL/h.
-Check it backwards: 7.5 × 16 ÷ 60 = 2 mcg/min ✓
+Check it backwards: 7.5 mL/h × 16 mcg/mL ÷ 60 = 2 mcg/min ✓
 
-Context: AHA 2025 adult bradycardia algorithm lists an epinephrine infusion of 2–10 mcg/min, titrated to response.
+Context: in the AHA 2025 adult bradycardia algorithm, if atropine is ineffective, an epinephrine infusion of 2–10 mcg/min (titrated to patient response) is an alternative to transcutaneous pacing.
+Read the order's unit first: adult brady epinephrine is mcg/min, so never multiply it by kg.
 
 Weight-based (mcg/kg/min)? Multiply by kg first: mL/h = mcg/kg/min × kg × 60 ÷ mcg/mL. Example: dopamine 5 mcg/kg/min, 80 kg, 1,600 mcg/mL bag = 15 mL/h.
 
@@ -46,12 +47,12 @@ Comment SIM and we'll DM you the link to ACLSMED Sim.
             "mcg/mL and three step cards. Slide 2: step 1, an example bag of epinephrine 4 mg in 250 mL converted to "
             "4,000 mcg and then 16 mcg/mL, labelled as an example concentration. Slide 3: steps 2 and 3, 2 mcg/min "
             "times 60 is 120 mcg/h, divided by 16 is 7.5 mL/h, checked backwards, with the AHA 2025 bradycardia range "
-            "of 2 to 10 mcg/min. Slide 4: the weight-based formula with a dopamine example, 5 mcg/kg/min for 80 kg "
-            "from a 1,600 mcg/mL bag is 15 mL/h. Slide 5: the IVmed pump confirming epinephrine 1 mg/250 mL at "
+            "of 2 to 10 mcg/min if atropine is ineffective. Slide 4: the weight-based formula with a dopamine example, 5 mcg/kg/min for 80 kg "
+            "from a 1,600 mcg/mL bag is 15 mL/h, with a warning never to multiply a mcg/min order by weight. Slide 5: the IVmed pump confirming epinephrine 1 mg/250 mL at "
             "2.00 mcg/min and 30.0 mL/hr, with three steps to try it. Slide 6: comment SIM to get the ACLSMED Sim link."),
-    "dm": _dm("Drip math practice: in IVmed (Clinical Suite) choose Epinephrine 1 mg/250 mL NS, work the mL/h by "
-              "hand (1,000 ÷ 250 = 4 mcg/mL → 2 × 60 ÷ 4 = 30 mL/h), then enter Dose 2, Confirm and see if the "
-              "pump agrees."),
+    "dm": _dm("Drip math practice: work it by hand first (epinephrine 1 mg in 250 mL: 1,000 ÷ 250 = 4 mcg/mL → "
+              "2 × 60 ÷ 4 = 30 mL/h). Then in IVmed (Clinical Suite), Critical Care profile, choose Epinephrine "
+              "1 mg/250 mL NS, check Dose 2 mcg/min, Confirm and see if the pump agrees."),
     "sources": [
         AHA_BRADY,
         "Infusion rate arithmetic: mL/h = dose (mcg/min) × 60 ÷ concentration (mcg/mL); weight-based mL/h = "

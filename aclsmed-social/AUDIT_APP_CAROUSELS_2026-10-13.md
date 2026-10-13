@@ -35,3 +35,27 @@ Found in the apps (not in the carousels): RESPmed's New Patient screen opens at 
 178 cm male (correct: 73.2 kg / 439 mL); RESPmed VC waveforms (item 13). Both queued as separate tasks.
 
 Status: all three **approved by Mikko Figueroa, RN on 2026-10-13** (review_log.json).
+
+---
+
+# Clinical audit — AC00_drip_math (Oct 13, 2026, posts 5:00 PM ET)
+
+Independent reviewer; arithmetic, AHA 2025 bradycardia doses and every IVmed claim re-checked. No HIGH findings.
+
+| # | Sev | Item | Finding | Fix |
+|---|---|---|---|---|
+| 1 | MED | s03 headline | "2 mcg/min of epi is 7.5 mL/h" gives a rate with no bag — the error the post warns about | "2 mcg/min from a 16 mcg/mL bag is 7.5 mL/h." |
+| 2 | MED | s03 chips | "ORDER" + "SYMPTOMATIC BRADY" read like an order; AHA puts the infusion after atropine fails | "EXAMPLE DOSE", "BRADY · ATROPINE INEFFECTIVE" |
+| 3 | MED | s03, caption | Range given without "if atropine is ineffective" | Added, with "alternative to transcutaneous pacing" in the caption |
+| 4 | MED | s04, caption | Units trap: multiplying a mcg/min epinephrine order by kg is an 80× error | "Read the order's unit first… never multiply a mcg/min order by kg" |
+| 5 | MED | s01, caption | "Save this for your next drip" invites bedside use | "Practise this before your next drip" / "Save this and practise it" |
+| 6 | MED | s06 | IVmed feature card had no plan tag | "IVmed pump (Clinical Suite)" |
+| 7–14 | LOW | s02/s03/s05 | Step order (library pre-fills the answer), profile (epinephrine is in ED/Critical Care only), "not a standard" label, "labelled in mg", universal "ALWAYS", units in the back-check, "Epi" abbreviation | All fixed as suggested; DM mirrors the new step order |
+| 15 | LOW | s06 | Some empty space above the feature cards | Left as is (cosmetic) |
+
+Verified: all arithmetic (16 mcg/mL → 7.5 mL/h; 1,600 mcg/mL → 15 mL/h; 4 mcg/mL → 30 mL/h); AHA 2025 Adult Bradycardia
+With a Pulse: atropine 1 mg q3–5 min max 3 mg, then pacing and/or epinephrine 2–10 mcg/min or dopamine 5–20 mcg/kg/min,
+titrated to patient response (Part 9, Circulation 2025;152(suppl 2):S538–S577); IVmed library entries, Confirm read-back and
+the s05 screenshot (aclsmed/iv.html, manual §05.05–05.06); IVmed is Clinical Suite only.
+
+Status: awaiting RN sign-off.
