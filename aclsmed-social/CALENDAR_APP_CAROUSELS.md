@@ -6,29 +6,32 @@ store link. Design canvas: https://claude.ai/artifact/892aFz9JQH7ADWyRPLKdC4
 
 | Date | App | Topic | Keyword | Status |
 |---|---|---|---|---|
-| Tue Oct 13 (5:00 PM) | ACLSMED Sim | Drip math in 3 steps: mcg/min → mL/h (IVmed) | SIM | building |
+| Tue Oct 13 (5:00 PM) | ACLSMED Sim | Drip math in 3 steps: mcg/min → mL/h (IVmed) | SIM | audited · awaiting RN sign-off |
 | Wed Oct 14 | CardioLens AI | Read any strip in 5 questions | LENS | approved (Mikko Figueroa, RN) · bundle ready |
 | Thu Oct 15 | ACLSMED Sim | One patient, four stations | SIM | approved (Mikko Figueroa, RN) · bundle ready |
 | Fri Oct 16 | ECG Builder | Inferior STEMI: the clue in aVL | BUILD | approved (Mikko Figueroa, RN) · bundle ready |
-| Sat Oct 17 | CardioLens AI | "Irregular" isn't one rhythm: AFib vs MAT | LENS | planned |
-| Sun Oct 18 | ACLSMED Sim | Kids aren't small adults: PALS doses by weight | SIM | planned |
-| Mon Oct 19 | ECG Builder | LBBB vs RBBB: build both | BUILD | planned |
-| Tue Oct 20 | CardioLens AI | How to work an ECG case | LENS | planned |
-| Wed Oct 21 | ACLSMED Sim | Plan a 15-minute mock code | SIM | planned |
-| Thu Oct 22 | ECG Builder | Posterior MI: the STEMI hiding in V1–V3 | BUILD | planned |
-| Fri Oct 23 | CardioLens AI | The conduction system in 1 slide | LENS | planned |
-| Sat Oct 24 | ACLSMED Sim | Infant brady under 60: when to start CPR | SIM | planned |
-| Sun Oct 25 | ECG Builder | LVH: big voltage, strain, not a STEMI | BUILD | planned |
-| Mon Oct 26 | CardioLens AI | Axis in 2 leads: I and aVF | LENS | planned |
-| Tue Oct 27 | ACLSMED Sim | Debrief like a pro: 5 questions | SIM | planned |
-| Wed Oct 28 | ECG Builder | Educators: an exam strip in 60 s | BUILD | planned |
-| Thu Oct 29 | CardioLens AI | Mega codes on your phone | LENS | planned |
-| Fri Oct 30 | ACLSMED Sim | Drowning arrest: why breaths come first | SIM | planned |
-| Sat Oct 31 | ECG Builder | Halloween: the ghost STEMI (de Winter T waves) | BUILD | planned |
+| Sat Oct 17 | CardioLens AI | "Irregular" isn't one rhythm: AFib vs MAT | LENS | audited · awaiting RN sign-off |
+| Sun Oct 18 | ACLSMED Sim | Kids aren't small adults: PALS doses by weight | SIM | audited · awaiting RN sign-off |
+| Mon Oct 19 | ECG Builder | LBBB vs RBBB: build both | BUILD | audited · awaiting RN sign-off |
+| Tue Oct 20 | CardioLens AI | How to work an ECG case | LENS | audited · awaiting RN sign-off |
+| Wed Oct 21 | ACLSMED Sim | Plan a 15-minute mock code | SIM | audited · awaiting RN sign-off |
+| Thu Oct 22 | ECG Builder | Posterior MI: the STEMI hiding in V1–V3 | BUILD | audited · awaiting RN sign-off |
+| Fri Oct 23 | CardioLens AI | The conduction system in 1 slide | LENS | audited · awaiting RN sign-off |
+| Sat Oct 24 | ACLSMED Sim | Infant brady under 60: when to start CPR | SIM | audited · awaiting RN sign-off |
+| Sun Oct 25 | ECG Builder | LVH: big voltage, strain, and a STEMI mimic | BUILD | audited · awaiting RN sign-off |
+| Mon Oct 26 | CardioLens AI | Axis in 2 leads: I and aVF | LENS | audited · awaiting RN sign-off |
+| Tue Oct 27 | ACLSMED Sim | Debrief like a pro: 5 questions | SIM | audited · awaiting RN sign-off |
+| Wed Oct 28 | ECG Builder | Educators: an exam strip in 60 s | BUILD | audited · awaiting RN sign-off |
+| Thu Oct 29 | CardioLens AI | Mega codes on your phone | LENS | audited · awaiting RN sign-off |
+| Fri Oct 30 | ACLSMED Sim | Drowning arrest: why breaths can't be skipped | SIM | audited · awaiting RN sign-off |
+| Sat Oct 31 | ECG Builder | Halloween: the ghost STEMI (de Winter T waves) | BUILD | audited · awaiting RN sign-off |
 
 Topics were checked against everything already posted (R1–R7, C1–C7, S01–S37, SIM1). Dropped for repeating
 earlier posts: AV blocks (C7), CPR numbers (C4), capnography (R4), hyperkalemia (R7), pacing (R6),
 H's & T's (C1), tombstone STEMI (S09 v2 reposts Oct 26), and "Defib, sync or pace?" (S24, R6, C2).
+
+Audits: `AUDIT_APP_CAROUSELS_2026-10-13.md` (Oct 13–16) and `AUDIT_APP_CAROUSELS_OCT17_31.md` (Oct 17–31).
+App bugs the audits turned up: `APP_ISSUES_FROM_AUDITS.md`.
 
 ## Pipeline
 1. Design on the canvas, copy each artboard to `app_carousels/src/<id>/s0N.dc.html`.
