@@ -42,7 +42,7 @@ CL02 = {
     "caption": f""""Irregular" isn't one rhythm. AFib, MAT and flutter with variable block can all look messy. The P waves tell them apart. 🫀
 
 AFib: no distinct P waves, a wavy (fibrillatory) baseline, R-R intervals irregular with no pattern.
-MAT: the P waves ARE there, in 3 or more different shapes in the same lead, rate over 100, flat baseline between them. It usually rides with lung disease, most often COPD.
+MAT: the P waves ARE there, in 3 or more different shapes in the same lead, rate over 100, flat baseline between them. MAT often comes with lung disease (most often COPD) or another acute illness. The fix starts with the cause.
 Flutter with variable block: sawtooth flutter waves (best seen in II, III, aVF). The AV node lets through every 2nd, 3rd or 4th wave, so the R-R jumps around.
 
 Comment LENS and we'll DM you the link to CardioLens AI.
@@ -56,7 +56,7 @@ Comment LENS and we'll DM you the link to CardioLens AI.
             "Slide 2: an AFib strip with R-R intervals of 0.58, 0.47, 0.80, 0.54 and 0.68 seconds and the fibrillatory "
             "baseline circled, with the three ECG features of AF. "
             "Slide 3: a MAT strip with five different P-wave shapes boxed and lettered A to E, the criteria (3 or more P "
-            "shapes, rate over 100, flat baseline) and the link to lung disease. "
+            "shapes, rate over 100, flat baseline) and the link to lung disease or another acute illness. "
             "Slide 4: a flutter strip with 2:1, 4:1 and 3:1 conduction marked, and a table comparing P waves, baseline "
             "and clues for AFib, MAT and flutter. "
             "Slide 5: the CardioLens Rhythm Mastery screen with Atrial Fibrillation and Atrial Flutter in the free "
@@ -80,7 +80,7 @@ Educational only, not a diagnostic tool.""",
         "against StatPearls below)",
         "StatPearls: Multifocal Atrial Tachycardia (Custer, Yelamanchili, Lappin; 2023), PMID 29083603: rate >100, "
         "≥3 different non-sinus P-wave morphologies in the same lead, irregular P-P, isoelectric baseline between P "
-        "waves, most commonly with COPD, treatment is mainly of the underlying condition — "
+        "waves, most commonly with COPD, typically in elderly/acutely ill patients, treatment is mainly of the underlying condition — "
         "https://www.ncbi.nlm.nih.gov/books/NBK459152/",
         "6-second method (count QRS in 6 s × 10) — as approved in CL01; AHA/ACCF/HRS standardization Part I — "
         "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.106.180200",
@@ -117,16 +117,16 @@ Comment LENS and we'll DM you the link to CardioLens AI.
             "Slide 2: the five signs that make a rhythm unstable from the AHA 2025 algorithms, stable versus unstable, "
             "and 'no pulse, start CPR'. "
             "Slide 3: the five rhythm questions next to a 12-lead layout colour-coded into inferior, lateral and "
-            "anterior lead groups, with the 2-contiguous-leads rule and the 10-minute target. "
+            "anterior lead groups (labelled common teaching groups), with the 2-contiguous-leads rule and the 10-minute target. "
             "Slide 4: synthetic lead III from a past visit beside today's lead III with new ST elevation, and steps to "
             "compare, escalate and repeat the ECG. "
-            "Slide 5: the CardioLens Cases screen with 10 series and 60 cases, and how to work a case, with Cases "
-            "marked Pro and Rhythm Mastery marked free. "
+            "Slide 5: the CardioLens Cases screen with 10 series and 60 cases, and how to work a case: strip and story "
+            "first, tap Quiz before the Diagnosis box, then review; Cases marked Pro and Rhythm Mastery marked free. "
             "Slide 6: a CardioLens quiz question that opens with a patient, and 'Comment LENS' to get the download link."),
     "dm": f"""Here's CardioLens AI 👉 {CARDIOLENS_IOS}
 Android: {CARDIOLENS_ANDROID}
 
-First thing to try: Learn → Rhythm Mastery (free) and answer the first question: it starts from a patient, not just a strip. With Pro, open Learn → Clinical Cases and work one case top to bottom: patient, strip, questions, teaching points.
+First thing to try: Learn → Rhythm Mastery (free). Most of its free questions start from a patient, not just a strip. With Pro, open Learn → Clinical Cases, read the strip and the patient story, then tap Quiz before you scroll to the Diagnosis box.
 
 Educational only, not a diagnostic tool.""",
     "sources": [
@@ -145,8 +145,10 @@ Educational only, not a diagnostic tool.""",
         "anterior V1–V4 — iOS Tabs/Learn/CoronaryVesselsView.swift L25, L100–102)",
         "App: Clinical Cases are Pro (iOS Tabs/Cases/CasesView.swift isLocked → paywall; Android feature/learn/"
         "LearnScreen.kt onCases if isPro). 60 cases in 10 series with Beg/Int/Adv levels (Resources/cases.json; "
-        "screenshot). Each case opens with age, sex and presentation (Tabs/Cases/CaseDetailView.swift L136–140), "
-        "per-question feedback (QuizView.swift feedbackBox) and teaching points (QuizResultView.swift). Free Rhythm "
+        "screenshot). Each case opens on the Live Strip tab with age, sex and presentation; the Diagnosis box and teaching points "
+        "are shown before the Quiz tab, so s05 tells users to tap Quiz first (Tabs/Cases/CaseDetailView.swift L136–166); "
+        "per-question feedback (QuizView.swift feedbackBox) and teaching points (QuizResultView.swift). Per the audit, "
+        "30 of 33 free Rhythm Mastery questions start from a patient ('most'). Free Rhythm "
         "Mastery question with a patient vignette: cardiolens-website/public/screens/ss5-question.png. s05 screenshot "
         "ss6-cases.png ('10 series · 60 cases')",
         APP_COUNTS + "; 8 study modules (Tabs/Learn/StudyModulesListView.swift)",
@@ -157,11 +159,11 @@ CL04 = {
     "id": "CL04_conduction_system", "app": "CardioLens AI", "date": "2026-10-23", "time": "12:00", "keyword": "LENS",
     "caption": f"""The conduction system in 1 slide, and what each part draws on the ECG. ⚡
 
-SA node fires → the atria depolarize = the P wave. Upright P in lead II = sinus.
+SA node fires → the atria depolarize = the P wave. Upright P in lead II before every QRS: points to a sinus beat.
 AV node slows the impulse → His bundle → bundle branches = the flat PR segment. Whole PR (start of P to start of QRS): 0.12–0.20 s.
 Purkinje fibers fire both ventricles at once = a quick, narrow QRS (under 0.12 s). A detour, like a blocked bundle branch or a beat that starts in the ventricle, makes it 0.12 s or wider.
 
-Backup pacemakers: SA node 60–100/min, AV junction 40–60/min (narrow QRS), ventricles 20–40/min (wide QRS). The fastest one sets the pace.
+Pacemaker rates: SA node 60–100/min; backups: AV junction 40–60/min (narrow QRS), ventricles 20–40/min (wide QRS). The fastest one sets the pace; a lower one takes over as an escape rhythm when the faster one fails or is blocked.
 
 Comment LENS and we'll DM you the link to CardioLens AI.
 
@@ -173,9 +175,9 @@ Comment LENS and we'll DM you the link to CardioLens AI.
             "Purkinje fibers, colour-matched to a single synthetic beat: P wave, PR segment and QRS. "
             "Slide 2: a zoomed beat with the P wave and PR segment highlighted and a PR of 0.16 seconds bracketed, "
             "explaining that P is the atria and the PR is the trip through the AV node, His and bundle branches. "
-            "Slide 3: the same beat with a 0.08-second QRS highlighted, explaining that Purkinje fibers fire the "
+            "Slide 3: the same beat with a 0.09-second QRS highlighted, explaining that Purkinje fibers fire the "
             "ventricles, and narrow versus wide QRS. "
-            "Slide 4: three synthetic strips for the backup pacemakers: SA node 60 to 100, AV junction 40 to 60 with "
+            "Slide 4: 'If the top fails or is blocked, the next one down takes over', with three synthetic strips: SA node 60 to 100, AV junction 40 to 60 with "
             "narrow QRS, ventricles 20 to 40 with wide QRS. "
             "Slide 5: the CardioLens Conduction System module with its heart diagram and Play Animation button, marked "
             "free, with three steps. "
@@ -194,7 +196,7 @@ Educational only, not a diagnostic tool.""",
         "lower pacemakers (overdrive suppression); junctional escape rhythm 40–60 bpm — "
         "https://pubmed.ncbi.nlm.nih.gov/29939537/",
         "Merck Manual Professional, Atrioventricular Block: escapes above the His bifurcation give narrow QRS; below it, "
-        "wider QRS at 20–40 beats/min (Merck lists junctional escape at 35–50 bpm; slides use StatPearls' 40–60) — "
+        "wider QRS at 20–40 beats/min (Merck lists junctional escape at 35–50 bpm, so the s04 footer cites Merck for the ventricular 20–40/min only; the junctional 40–60 is StatPearls) — "
         "https://www.merckmanuals.com/professional/cardiovascular-disorders/specific-cardiac-arrhythmias/atrioventricular-block",
         "MedGen/HPO 'Ventricular escape rhythm' (C0232216): escape rate usually 20–40 bpm, often broad QRS (≥120 ms) — "
         "https://www.ncbi.nlm.nih.gov/medgen/65423",
@@ -229,18 +231,19 @@ Comment LENS and we'll DM you the link to CardioLens AI.
     "alt": ("Six-slide carousel from CardioLens AI. "
             "Slide 1: 'Axis in 2 leads: I and aVF' with a 2-by-2 grid of synthetic QRS complexes: both up is normal, I up "
             "and aVF down is possible left axis, I down and aVF up is right axis, both down is extreme. "
-            "Slide 2: a positive and a negative QRS, explaining how to judge the net deflection and what an equiphasic "
+            "Slide 2: a positive QRS (R taller than Q + S are deep) and a negative one (Q + S deeper than the R is tall), explaining how to judge the net deflection and what an equiphasic "
             "QRS means. "
             "Slide 3: a hexaxial wheel shaded into normal from −30° to +90°, left axis deviation from −30° to −90°, right "
             "axis deviation from +90° to +180° and extreme axis. "
             "Slide 4: the wheel with lead II at +60° and the −30° boundary, showing that lead II up means still normal "
             "and lead II down means left axis deviation. "
-            "Slide 5: the CardioLens Study Modules list with the locked Axis Interpretation module highlighted as Pro. "
-            "Slide 6: a CardioLens scan screen and 'Comment LENS' to get the download link."),
+            "Slide 5: the CardioLens Study Modules list with the locked Axis Interpretation module highlighted as Pro, "
+            "and a warning that its Axis Finder calls I up plus aVF down left axis, so check lead II yourself. "
+            "Slide 6: a CardioLens scan screen, the note that scans don't report axis, and 'Comment LENS' to get the download link."),
     "dm": f"""Here's CardioLens AI 👉 {CARDIOLENS_IOS}
 Android: {CARDIOLENS_ANDROID}
 
-First thing to try: with Pro, open Learn → Study Modules → Axis Interpretation and use the Axis Finder (iPhone): set lead I and aVF up or down and see the quadrant. Free modules to start with: PQRST Waves and Conduction System.
+First thing to try: with Pro, open Learn → Study Modules → Axis Interpretation and use the Axis Finder (iPhone): set lead I and aVF up or down; it names the quadrant. I up, aVF down? It will say left axis, so check lead II yourself (slide 4). Free modules to start with: PQRST Waves and Conduction System.
 
 Educational only, not a diagnostic tool.""",
     "sources": [
@@ -255,7 +258,7 @@ Educational only, not a diagnostic tool.""",
         "set (iOS Tabs/Learn/StudyModulesListView.swift freeModuleIDs; Android feature/learn/LearnScreen.kt "
         "freeModuleIds). The iOS module has the hexaxial wheel, the Axis Finder (lead I and aVF positive/negative → "
         "Normal / Left / Right / Extreme) and labels normal −30° to +90° (Tabs/Learn/AxisInterpretationView.swift). "
-        "Android shows the module as a text summary only (LearnScreen.kt ModuleDetailPane). Scans do not report axis "
+        "Android shows the module as a text summary only (LearnScreen.kt ModuleDetailPane). The Axis Finder maps I+ / aVF− straight to 'Left Axis Deviation' (AxisInterpretationView.swift axisResult), hence the s05/DM warning. Scans do not report axis "
         "(no axis field in Models/AnalysisResult.swift), so no scan-based axis claim is made. s05 screenshot "
         "ss3-modules.png (Axis Interpretation row with lock); s06 cl_scan.png (CL01's scan screen)",
         APP_COUNTS + "; 8 study modules, 4 free",
@@ -267,8 +270,10 @@ CL06 = {
     "caption": f"""A code runs on a 2-minute clock. Here's the loop from the AHA 2025 adult cardiac arrest algorithm. ⏱️
 
 Every 2 minutes: a brief rhythm check. Shockable (VF/pulseless VT)? Shock, then straight back into 2 minutes of CPR. Not shockable? Straight into CPR.
-Shockable side: shock 1 → CPR + IV/IO access. Shock 2 → CPR + epinephrine 1 mg IV/IO, then every 3–5 min. Shock 3 → CPR + amiodarone 300 mg (or lidocaine 1–1.5 mg/kg). Next antiarrhythmic dose: amiodarone 150 mg (or lidocaine 0.5–0.75 mg/kg).
+Shockable side: CPR + oxygen until the pads are on, then the check. Shock 1 → CPR + IV/IO access. Shock 2 → CPR + epinephrine 1 mg IV/IO, then every 3–5 min. Shock 3 → CPR + amiodarone 300 mg (or lidocaine 1–1.5 mg/kg). Second dose: amiodarone 150 mg (or lidocaine 0.5–0.75 mg/kg).
 Asystole/PEA: no shock, epinephrine 1 mg as soon as possible, then every 3–5 min. Treat reversible causes. If a check shows VF/pVT, shock and switch sides.
+
+Learn to spot VF, VT and asystole free in CardioLens AI, and rehearse with MEGA CODES (Pro). The app's flowcharts and MEGA CODES use general ACLS wording and are not the AHA 2025 algorithm, so check every step against AHA 2025.
 
 Comment LENS and we'll DM you the link to CardioLens AI.
 
@@ -277,25 +282,30 @@ Comment LENS and we'll DM you the link to CardioLens AI.
 #ACLS #CodeBlue #Megacode #NursingStudent #Paramedic""",
     "alt": ("Six-slide carousel from CardioLens AI. "
             "Slide 1: 'A code runs on a 2-minute clock' with a dial split into rhythm check, shock if shockable, and CPR "
-            "plus medications, next to the CardioLens MEGA CODES list. "
+            "plus medications (2:00 of CPR, then a pause under 10 s to check), next to the CardioLens MEGA CODES list. "
             "Slide 2: a flow diagram: rhythm check, shock for VF or pulseless VT or no shock for asystole or PEA, then 2 "
             "minutes of CPR with IV/IO access, drugs, airway, reversible causes and compressor swaps. "
-            "Slide 3: a timeline for the shockable side: shock 1 then IV/IO access, shock 2 then epinephrine 1 mg every "
-            "3 to 5 minutes, shock 3 then amiodarone 300 mg or lidocaine, then amiodarone 150 mg. "
+            "Slide 3: a timeline for the shockable side: CPR and oxygen until pads are on, shock 1 then IV/IO access, shock 2 then epinephrine 1 mg every "
+            "3 to 5 minutes, shock 3 then amiodarone 300 mg or lidocaine, then a second and last amiodarone dose of 150 mg or lidocaine. "
             "Slide 4: a timeline for asystole or PEA: epinephrine 1 mg as soon as possible, CPR, reversible causes, and "
             "switching to the shockable side if VF appears. "
-            "Slide 5: the CardioLens Algorithms tab and MEGA CODES list, with ACLS Cardiac Arrest and Classic VFib Arrest "
-            "marked Pro and Rhythm Mastery marked free. "
-            "Slide 6: the Rhythm Mastery screen and 'Comment LENS' to get the download link."),
+            "Slide 5: 'Know the rhythm. Rehearse the code.' with the CardioLens Algorithms tab and MEGA CODES list: Rhythm "
+            "Mastery VF, VT and asystole marked free, MEGA CODES and the ACLS flowchart marked Pro, and a note that the "
+            "app's flowcharts and MEGA CODES use general ACLS wording and are not the AHA 2025 algorithm. "
+            "Slide 6: the Rhythm Mastery screen, 7 scored MEGA CODE scenarios on iPhone, and 'Comment LENS' to get the download link."),
     "dm": f"""Here's CardioLens AI 👉 {CARDIOLENS_IOS}
 Android: {CARDIOLENS_ANDROID}
 
-First thing to try: warm up free in Learn → Rhythm Mastery (VF, VT and asystole). With Pro, open Algorithms → MEGA CODES → Classic VFib Arrest and call each step of the 2-minute loop before you tap.
+First thing to try: warm up free in Learn → Rhythm Mastery (VF, VT and asystole). With Pro, open Algorithms → MEGA CODES → Classic VFib Arrest for scenario practice.
+
+Heads-up: the app lists amiodarone only; AHA 2025 accepts amiodarone or lidocaine. The app's flowcharts and MEGA CODES use general ACLS wording and are not the AHA 2025 algorithm, so check every step against AHA 2025.
 
 Educational only, not a diagnostic tool, and not a substitute for certified ACLS training.""",
     "sources": [
         AHA_CA,
         AHA_PART9,
+        "AHA 2025 Adult Cardiac Arrest Algorithm box 1: start CPR, give oxygen, attach monitor/defibrillator (s03 0:00); "
+        "brief rhythm checks — Part 9 (pause under 10 s, as in approved C6)",
         "Angle check: previous posts covered megacode mistakes (C6) and drug doses as a cheat sheet (C5); this one is the "
         "cycle structure on a timeline. '~2:00 / ~4:00' marks are the algorithm's 2-minute CPR blocks; 'every 3–5 min ≈ "
         "every other 2-minute cycle' is arithmetic (4 min falls inside 3–5 min)",
@@ -303,8 +313,10 @@ Educational only, not a diagnostic tool, and not a substitute for certified ACLS
         "L133–137; Android feature/algorithms/AlgorithmsScreen.kt L85–87 'Algorithms are subscriber-only'). Classic VFib "
         "Arrest scenario with rhythm + HR/BP/SpO2/ETCO2 at each decision and a scored debrief (iOS "
         "Models/MegaCodeScenario.swift scenario1, Tabs/Algorithms/MegaCodesView.swift L145–152, MegaCodesViewModel.swift; "
-        "Android feature/algorithms/MegaCodesScreen.kt). Some scenarios branch on a wrong answer (wrongNextIndex in "
-        "MegaCodeScenario.swift and Android core/data/MegaCodeScenarios.kt). Algorithm filters ACLS · PALS · BCLS · "
+        "Android feature/algorithms/MegaCodesScreen.kt). 7 scored scenarios on iOS (MegaCodeLibrary.allScenarios), 5 on Android, so s06 says "
+        "'(iPhone)'. App flowcharts/MEGA CODES use non-AHA wording (adrenaline, 4 H's & 4 T's, amiodarone only, TTM; "
+        "lidocaine graded wrong in scenario1) — Resources/algorithms.json, Models/MegaCodeScenario.swift — hence the "
+        "s05/caption/DM caveat and the app is positioned for rhythm recognition + scenario practice only. Algorithm filters ACLS · PALS · BCLS · "
         "Stroke (AlgorithmsView.swift header). VF, VT and asystole are free 'survival' quiz rhythms (quiz_bank_v1.json). "
         "s01/s05 screenshots ss8-megacodes.png and ss7-algorithms.png (shown unlocked, i.e. the Pro view); s06 "
         "ss4-quiz.png",
