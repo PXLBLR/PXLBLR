@@ -1,0 +1,11 @@
+Inferior STEMI leaves a clue in aVL. 🔎
+
+Step 1: ST elevation in II, III and aVF (new, at the J point, 1 mm or more in 2 contiguous leads).
+Step 2: Look at aVL. ST depression there is the mirror image: reciprocal change.
+Step 3: Rule out look-alikes. Pericarditis: widespread ST elevation, often PR depression, no reciprocal change except aVR (sometimes V1). Early repolarization: J-point notch or slur, no reciprocal change, doesn't evolve.
+
+Every tracing here was built in ECG Builder (on Google Play now, iPhone and iPad coming soon). Comment BUILD and we'll DM you the link.
+
+Synthetic tracings. Educational only, not diagnostic.
+
+#ECG #STEMI #12Lead #CardiacNurse #Paramedic

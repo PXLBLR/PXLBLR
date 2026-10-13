@@ -1,0 +1,8 @@
+Keyword: BUILD
+
+Here's ECG Builder on Google Play 👉 https://play.google.com/store/apps/details?id=com.ecgbuilder.app
+iPhone and iPad: coming soon, we'll post when it's live.
+
+Try it free: type "inferior STEMI at 52" and you get the full 12-lead as a watermarked preview. With Pro, open Ischaemia → Inferior, drag the ST shift and watch aVL mirror it.
+
+Every tracing is synthetic. Educational only, not a medical device.

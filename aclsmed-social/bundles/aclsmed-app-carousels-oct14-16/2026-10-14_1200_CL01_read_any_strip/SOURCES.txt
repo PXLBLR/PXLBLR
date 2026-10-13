@@ -1,0 +1,4 @@
+- AHA ECG interpretation basics: 25 mm/s paper, 1 small box 0.04 s, 1 big box 0.20 s; normal PR 0.12–0.20 s; QRS under 0.12 s — AHA/ACCF/HRS Recommendations for the Standardization and Interpretation of the ECG (2007) https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.106.180200
+- AHA/ACCF/HRS ECG standardization Part III (QRS 120 ms cut-off for bundle branch block, Surawicz 2009) — https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.108.191095
+- AHA 2025 Adult Tachycardia With a Pulse algorithm (wide QRS: assess pulse/stability; assume VT) — https://cpr.heart.org/-/media/CPR-Files/CPR-Guidelines-Files/2025-Algorithms/Algorithm-ACLS-Tachycardia-250514.pdf
+- CardioLens App Store listing + cardiolens.ca (free tier 3 scans/month; full library, quiz, cases with Pro) — https://apps.apple.com/app/cardiolens/id6761556643

@@ -1,0 +1,4 @@
+- ISMP List of High-Alert Medications in Acute Care Settings (IV adrenergic agonists e.g. epinephrine; IV antiarrhythmics e.g. amiodarone) — https://www.ismp.org/recommendations/high-alert-medications-acute-list
+- ATS/ESICM/SCCM 2017 ARDS guideline: 4–8 mL/kg predicted body weight; PBW male 50 + 0.91 × (cm − 152.4), female 45.5 + 0.91 × (cm − 152.4) (ARDSNet) — https://doi.org/10.1164/rccm.201703-0548ST
+- AHA 2025 Part 12: Resuscitation Education Science (CPR feedback devices in training) — https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines/resuscitation-education-science
+- ACLSMED download + institutions pages (Clinical Suite: Monitor, Instructor Remote, IVmed, RESPmed sharing one patient; ACLSMED CPR free, pairs up to 6 learners; web simulator) — aclsmed.com/download, aclsmed.com/institutions

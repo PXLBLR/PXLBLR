@@ -1,0 +1,4 @@
+- Fourth Universal Definition of MI (2018) — https://www.ahajournals.org/doi/10.1161/CIR.0000000000000617
+- 2025 ESC Guidelines for the management of myocarditis and pericarditis (widespread ST elevation, PR depression) — https://doi.org/10.1093/eurheartj/ehaf192
+- AHA/ACCF/HRS ECG standardization Part VI: acute ischemia/infarction (reciprocal ST depression) — https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.108.191098
+- ECG Builder App Store metadata (synthetic tracings, reciprocal change modelled as a vector, export) — PXLBLR/ECGBuilder Marketing/AppStore/METADATA.md

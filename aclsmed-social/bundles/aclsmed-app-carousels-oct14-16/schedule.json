@@ -1,0 +1,29 @@
+[
+  {
+    "id": "CL01_read_any_strip",
+    "app": "CardioLens AI",
+    "type": "carousel",
+    "slides": 6,
+    "publish_at": "2026-10-14T12:00:00-04:00",
+    "folder": "2026-10-14_1200_CL01_read_any_strip",
+    "keyword": "LENS"
+  },
+  {
+    "id": "AC01_four_stations",
+    "app": "ACLSMED Sim",
+    "type": "carousel",
+    "slides": 6,
+    "publish_at": "2026-10-15T12:00:00-04:00",
+    "folder": "2026-10-15_1200_AC01_four_stations",
+    "keyword": "SIM"
+  },
+  {
+    "id": "EB01_inferior_stemi_avl",
+    "app": "ECG Builder",
+    "type": "carousel",
+    "slides": 6,
+    "publish_at": "2026-10-16T12:00:00-04:00",
+    "folder": "2026-10-16_1200_EB01_inferior_stemi_avl",
+    "keyword": "BUILD"
+  }
+]
