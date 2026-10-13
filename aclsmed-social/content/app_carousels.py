@@ -22,7 +22,7 @@ No tablet? The web simulator runs in any browser: aclsmed.com
 Free CPR trainer for your learners' phones: ACLSMED CPR
 iPhone: {CPR_IOS} · Android: {CPR_ANDROID}
 
-Pair the Monitor and Instructor Remote with the 4-digit code and start with Scenario 01.
+Put the Monitor and Instructor tablets on the same account and Wi-Fi and they pair by themselves (no code to type). Then pick a MegaCode on the Instructor Remote.
 
 Educational only, not diagnostic and not a substitute for certified ACLS training."""
 
