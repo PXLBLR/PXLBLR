@@ -1,0 +1,23 @@
+Drip math in 3 steps: mcg/min → mL/h. Save this and practise it. 💧
+
+The formula: mL/h = dose (mcg/min) × 60 ÷ concentration (mcg/mL)
+
+1. Bag → mcg/mL. Example bag: epinephrine 4 mg in 250 mL = 4,000 mcg ÷ 250 mL = 16 mcg/mL.
+2. Dose per hour. 2 mcg/min × 60 = 120 mcg/h.
+3. ÷ concentration. 120 ÷ 16 = 7.5 mL/h.
+Check it backwards: 7.5 mL/h × 16 mcg/mL ÷ 60 = 2 mcg/min ✓
+
+Context: in the AHA 2025 adult bradycardia algorithm, if atropine is ineffective, an epinephrine infusion of 2–10 mcg/min (titrated to patient response) is an alternative to transcutaneous pacing.
+Read the order's unit first: adult brady epinephrine is mcg/min, so never multiply it by kg.
+
+Weight-based (mcg/kg/min)? Multiply by kg first: mL/h = mcg/kg/min × kg × 60 ÷ mcg/mL. Example: dopamine 5 mcg/kg/min, 80 kg, 1,600 mcg/mL bag = 15 mL/h.
+
+Same dose, different bag: 2 mcg/min from a 4 mcg/mL bag is 30 mL/h. Read the concentration every time.
+
+The concentrations here are examples. Use your institution's standard concentration and smart-pump library, and the independent double-check your policy calls for.
+
+Comment SIM and we'll DM you the link to ACLSMED Sim.
+
+Educational only, not diagnostic and not a substitute for certified ACLS/PALS training. Follow AHA 2025 guidelines and your institution's protocols.
+
+#NursingStudent #DripMath #ICUNurse #NurseEducator #ACLS

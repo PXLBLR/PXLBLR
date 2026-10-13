@@ -1,0 +1,14 @@
+Keyword: SIM
+
+Drip math practice: work it by hand first (epinephrine 1 mg in 250 mL: 1,000 ÷ 250 = 4 mcg/mL → 2 × 60 ÷ 4 = 30 mL/h). Then in IVmed (Clinical Suite), Critical Care profile, choose Epinephrine 1 mg/250 mL NS, check Dose 2 mcg/min, Confirm and see if the pump agrees.
+
+Here's ACLSMED Sim 👉 iPad: https://apps.apple.com/us/app/aclsmed-sim/id6771604723
+Android tablets: https://play.google.com/store/apps/details?id=com.aclsmed.simulator
+No tablet? The web simulator runs in any browser: aclsmed.com
+
+Free CPR trainer for your learners' phones: ACLSMED CPR
+iPhone: https://apps.apple.com/us/app/aclsmed-cpr/id6792341448 · Android: https://play.google.com/store/apps/details?id=com.aclsmed.cpr
+
+Put the Monitor and Instructor tablets on the same account and Wi-Fi and they pair by themselves (no code to type). Then pick a MegaCode on the Instructor Remote.
+
+Educational only, not diagnostic and not a substitute for certified ACLS training.
