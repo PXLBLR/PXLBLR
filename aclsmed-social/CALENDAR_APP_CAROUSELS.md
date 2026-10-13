@@ -6,9 +6,9 @@ store link. Design canvas: https://claude.ai/artifact/892aFz9JQH7ADWyRPLKdC4
 
 | Date | App | Topic | Keyword | Status |
 |---|---|---|---|---|
-| Wed Oct 14 | CardioLens AI | Read any strip in 5 questions | LENS | rendered · pending RN sign-off |
-| Thu Oct 15 | ACLSMED Sim | One patient, four stations | SIM | rendered · pending RN sign-off |
-| Fri Oct 16 | ECG Builder | Inferior STEMI: the clue in aVL | BUILD | rendered · pending RN sign-off |
+| Wed Oct 14 | CardioLens AI | Read any strip in 5 questions | LENS | approved (Mikko Figueroa, RN) · bundle ready |
+| Thu Oct 15 | ACLSMED Sim | One patient, four stations | SIM | approved (Mikko Figueroa, RN) · bundle ready |
+| Fri Oct 16 | ECG Builder | Inferior STEMI: the clue in aVL | BUILD | approved (Mikko Figueroa, RN) · bundle ready |
 | Sat Oct 17 | CardioLens AI | "Irregular" isn't one rhythm: AFib vs MAT | LENS | planned |
 | Sun Oct 18 | ACLSMED Sim | Kids aren't small adults: PALS doses by weight | SIM | planned |
 | Mon Oct 19 | ECG Builder | LBBB vs RBBB: build both | BUILD | planned |

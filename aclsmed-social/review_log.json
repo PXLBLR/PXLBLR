@@ -78,5 +78,20 @@
     "reviewer": "Mikko Figueroa, RN",
     "date": "2026-10-12",
     "status": "approved"
+  },
+  "CL01_read_any_strip": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-13",
+    "status": "approved"
+  },
+  "AC01_four_stations": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-13",
+    "status": "approved"
+  },
+  "EB01_inferior_stemi_avl": {
+    "reviewer": "Mikko Figueroa, RN",
+    "date": "2026-10-13",
+    "status": "approved"
   }
 }

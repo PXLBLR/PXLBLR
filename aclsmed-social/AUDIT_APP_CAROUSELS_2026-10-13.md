@@ -34,4 +34,4 @@ feedback devices, and every remaining app claim against the listings and repos.
 Found in the apps (not in the carousels): RESPmed's New Patient screen opens at 77.0 kg / 462 mL for a
 178 cm male (correct: 73.2 kg / 439 mL); RESPmed VC waveforms (item 13). Both queued as separate tasks.
 
-Status: all three **pending human clinician sign-off** (`python3 review.py approve <id> "<Name, RN>"`).
+Status: all three **approved by Mikko Figueroa, RN on 2026-10-13** (review_log.json).
