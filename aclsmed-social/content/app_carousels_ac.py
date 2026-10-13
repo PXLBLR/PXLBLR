@@ -14,8 +14,11 @@ AHA_BRADY = ("AHA 2025 Adult Bradycardia With a Pulse algorithm (epinephrine inf
              "Part 9: Adult Advanced Life Support, Circulation 2025;152(suppl 2), doi:10.1161/CIR.0000000000001376")
 
 
-def _dm(first_line):
-    return f"{first_line}\n\n{SIM_DM}"
+def _dm(first_line, pals=False):
+    dm = f"{first_line}\n\n{SIM_DM}"
+    if pals:  # PALS-topic posts name PALS in the disclaimer; the shared SIM_DM itself stays unchanged
+        dm = dm.replace("certified ACLS training", "certified ACLS/PALS training")
+    return dm
 
 
 AC00 = {
