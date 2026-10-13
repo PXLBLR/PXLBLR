@@ -132,3 +132,48 @@ guideline); all strip geometry except CL04 s03 QRS; free/Pro gating; 36 library 
 App issues found: Rhythm Mastery questions say "this strip" with no strip; Axis Finder's LAD shortcut; Cases show the
 Diagnosis before the Quiz; algorithms.json / MEGA CODES ERC-style wording and lidocaine graded wrong; PQRST module
 "ST ±0.5 mm — elevation or depression is pathological" overstates.
+
+## ECG Builder — EB02–EB06
+
+No HIGH findings. Cross-cutting: (a) tracings are real output of ECG Builder's waveform engine (matched to 0.005 mm,
+app seed 7) but were not built in the app and the sheets use a port of its renderer → say "made with ECG Builder's
+waveform engine", never "built in ECG Builder". (b) RBBB's drawn QRS measures ≈170 ms (engine set value 140) →
+relabel. (c) iPad screenshots need "(coming soon)".
+
+| ID # | Sev | Where | Finding | Fix |
+|---|---|---|---|---|
+| EB02 1 | MED | s01 footer, s06 alt, caption | "built in ECG Builder" | "Synthetic tracings from ECG Builder's waveform engine"; caption "Every tracing here was made with ECG Builder's waveform engine (on Google Play now, iPhone and iPad coming soon)." |
+| EB02 2 | MED | s02, alt, sources | RBBB drawn ≈170 ms, labelled 140; bracket cuts off r onset/R′ | Bracket `M18.2 34.2V35.8H22.4V34.2` (+ dashed lines), "QRS ≈ 170 ms"; card "These two measure about 170 and 145 ms: both wide." |
+| EB02 3 | LOW | s05 footer | iPad without coming soon | "Shown on iPad (coming soon). The Android app has the same Conduction tool: None, RBBB, LBBB, IVCD." |
+| EB02 4 | LOW | s02 | "ends up"/"ends down" labels collide | Move to x 29.5 / x 14 |
+| EB02 5 | LOW | s06 | aVL/aVF labels overprinted (app does the same) | Optional offset |
+| EB03 1 | MED | s01 footer, s06 alt | "built in" | Engine wording |
+| EB03 2 | MED | s05 footer | No platform note | "Shown on iPad (coming soon); Android has the same Ischaemia tool. ECG Builder draws the standard 12 leads. V7–V9 have to come from the patient." |
+| EB03 3 | LOW | s02/s04 | Example T in V1–V2 not upright | "tall R waves, often an upright T (here only in V3)." |
+| EB03 4 | LOW | s02 | V2 J 3.1 mm | "(here about 2–3 mm at the J point)" |
+| EB03 5–6 | LOW | s01/s02 | V3 "tall R" label on V2 baseline; flipped V3 clipped | Move label to y≈46; enlarge panel or reduce gain |
+| EB03 7 | LOW | s06 | Masthead "posterior ST elevation" over V1–V3 depression | Alt/caption note: "the app names the posterior injury; the 12 leads show its mirror." |
+| EB04 1 | MED | s01, caption | "not a STEMI" contradicts s04 and the guideline | "LVH: big voltage, strain, and a STEMI mimic." |
+| EB04 2 | MED | s01 footer, s06 alt | "built in" | Engine wording |
+| EB04 3 | LOW | s05 | iPad without coming soon | "Shown on iPad (coming soon). Android has the same Chambers and Repolarisation tools." |
+| EB04 4 | LOW | s02 | Cornell varies 19–23 mm beat to beat | "Here: about 14 + 7 = 21 mm: meets the women's cut-off, not the men's." |
+| EB04 5 | LOW | s03 | Strain also in II, V4 | "ON THIS ECG: I · II · aVL · V4–V6" |
+| EB04 6 | LOW | s02/s03 | Label collisions | Move "V1" y 6.5; "R 34 mm" x 26 end-anchored with halo; "slow slope down" up 4 mm |
+| EB05 1 | MED | s01 | Stem cues out option A | "Which best describes the intraventricular conduction?" |
+| EB05 2 | MED | s01/s03 footers, alt | "built in" | "Made with ECG Builder's waveform engine" |
+| EB05 3 | MED | s03, s04, caption, alt | RBBB "QRS 140 ms" | "QRS ≈ 170 ms" |
+| EB05 4 | LOW | s02 | Big-box bracket straddles lines | `M35 28.2V29.8H40V28.2`, text x 37.5 |
+| EB05 5 | LOW | s05 | Screenshot is another build | Footer "(output screen shown with another build)" |
+| EB06 1 | MED | s04, caption | Implies the 2025 ACS guideline names de Winter | "The guideline doesn't name de Winter, but when ST elevation or an equivalent is on the ECG, triage follows the STEMI pathway: reperfusion, preferably primary PCI." |
+| EB06 2 | MED | s06 | "Teach the STEMIs that hide" implies the app builds de Winter | "Build the anterior STEMI next to it." |
+| EB06 3 | MED | s05 | No platform note | "ECG Builder has no de Winter preset; the de Winter tracings here are synthetic illustrations. Shown on iPad (coming soon); Android has the same Ischaemia tool." |
+| EB06 4 | LOW | s05 step 3 | Implies user has a de Winter strip | "Export PNG or PDF for your teaching set." |
+| EB06 5 | LOW | s02, caption | aVR figure source | "Often slight ST elevation in aVR (0.5–1 mm per ACC 2022)" |
+| EB06 6 | LOW | s03 | J dot ≈2 mm | "J point about 2 mm below baseline" (+ alt) |
+| EB06 7 | LOW | s01/s02 | Rows overlap; glow hides baseline | Row pitch ≈20 mm; halve the halo or draw baseline above it |
+| all | LOW | s06 | Disclaimer wording | "Educational only, not diagnostic, not a medical device." |
+
+Verified correct (ECG Builder): Surawicz Part III BBB criteria; 4th UDMI posterior leads and thresholds; 2025 ACC/AHA ACS
+guideline Table 3 and V7–V9 indications (full text); Kontos 2022 STEMI equivalents incl. de Winter; Hancock Sokolow–Lyon /
+Cornell; half-standard handling; strain geometry; every s05 frame matches its source video; ProGate free/Pro; export
+PNG 12 px/mm and true-size PDF; seed kept on edit ("same patient"); 5 hashtags; disclaimers; Play link.
