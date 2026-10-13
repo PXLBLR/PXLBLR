@@ -2,6 +2,7 @@
 
   python3 package_app_carousels.py review <out_dir>   # preview bundle for the clinician (no gate)
   python3 package_app_carousels.py post <out_dir>     # gated: only items that pass review.check()
+  Add carousel ids after <out_dir> to package only those.
 
 Each carousel goes in its own dated folder with the slides in order plus CAPTION.txt, ALT.txt, DM.txt and
 SOURCES.txt; `post` also writes schedule.json.
@@ -13,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import review  # noqa: E402
-from content.app_carousels import APP_CAROUSELS  # noqa: E402
+from content.app_carousels_all import APP_CAROUSELS  # noqa: E402
 
 RENDERS = Path(__file__).parent / "out" / "app_carousels"
 
@@ -34,9 +35,11 @@ def write_item(c, dest):
 
 
 if __name__ == "__main__":
-    mode, dest = sys.argv[1], Path(sys.argv[2])
+    mode, dest, only = sys.argv[1], Path(sys.argv[2]), set(sys.argv[3:])
     schedule = []
     for c in APP_CAROUSELS:
+        if only and c["id"] not in only:
+            continue
         if mode == "post":
             problems = review.check(c["id"])
             if problems:

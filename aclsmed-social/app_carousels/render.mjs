@@ -4,7 +4,8 @@
 //
 // The slides are authored on the Design canvas, where images are canvas uploads
 // (/_blob/<id>). Here the canvas wrappers are stripped and each upload is swapped
-// for its local copy in assets/ (blobs.json maps one to the other).
+// for its local copy in assets/ (blobs.json maps one to the other). Slides built outside the
+// canvas point at assets/ directly with /_asset/<file name>.
 import { readFileSync, readdirSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -25,7 +26,8 @@ function toPlainHtml(src) {
     .replace(/\/_blob\/([0-9a-f]{32})/g, (m, id) => {
       if (!BLOBS[id]) throw new Error(`unknown upload ${id}`);
       return pathToFileURL(join(ROOT, 'assets', BLOBS[id])).href;
-    });
+    })
+    .replace(/\/_asset\/([\w.-]+)/g, (m, name) => pathToFileURL(join(ROOT, 'assets', name)).href);
 }
 
 const wanted = process.argv.slice(2);

@@ -1,4 +1,4 @@
-# App carousels — Oct 14–31, 2026 (12:00 PM ET, between the 7:30 AM / PM reels)
+# App carousels — Oct 13–31, 2026 (12:00 PM ET, between the 7:30 AM / PM reels)
 
 One carousel a day, rotating CardioLens AI → ACLSMED Sim → ECG Builder. Each one teaches a single idea,
 uses the real app screen as the example, and ends on a comment keyword that ManyChat answers with the
@@ -6,6 +6,7 @@ store link. Design canvas: https://claude.ai/artifact/892aFz9JQH7ADWyRPLKdC4
 
 | Date | App | Topic | Keyword | Status |
 |---|---|---|---|---|
+| Tue Oct 13 (5:00 PM) | ACLSMED Sim | Drip math in 3 steps: mcg/min → mL/h (IVmed) | SIM | building |
 | Wed Oct 14 | CardioLens AI | Read any strip in 5 questions | LENS | approved (Mikko Figueroa, RN) · bundle ready |
 | Thu Oct 15 | ACLSMED Sim | One patient, four stations | SIM | approved (Mikko Figueroa, RN) · bundle ready |
 | Fri Oct 16 | ECG Builder | Inferior STEMI: the clue in aVL | BUILD | approved (Mikko Figueroa, RN) · bundle ready |
