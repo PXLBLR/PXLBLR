@@ -1,5 +1,9 @@
 # ACLSMED × iPhone Duo — launch-day teaser reel
 
+> **REJECTED by the owner on 2026-10-22. Do not post this render.** The hand-drawn device (`src/Device.tsx`) is not the real
+> iPhone Duo: wrong camera placement and wrong opening direction. Being redone on the owner's Mac from the app-capture
+> skill and the iPhone Duo Simulator with the real device bezel.
+
 - **File:** `out/aclsmed_iphone_duo_teaser.mp4` (1080×1920, 30 fps, 22 s, H.264/AAC). Rebuild: `python3 make_audio.py && CHROMIUM=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell node render.mjs`
 - **Post:** Fri Oct 23, 2026, **9:00 AM ET** (iPhone Duo goes on sale Oct 23; the 7:30 AM slot already has the Electrical Alternans reel)
 - **Cover frame:** end card (frame 640) or the unfolded monitor (frame 330)
