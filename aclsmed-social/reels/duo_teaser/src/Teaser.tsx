@@ -139,7 +139,7 @@ const DeviceStage: React.FC = () => {
   const pitch = g < S_FLASH ? interpolate(g, [S_FOLD, S_FLASH], [14, 6], clamp) : interpolate(g, [S_FLASH, S_OPEN + 30], [6, 2], clamp);
   const baseScale = g < S_FLASH
     ? interpolate(g, [S_FOLD, S_FLASH], [1.12, 1.32], clamp) * (0.6 + 0.4 * appear)
-    : interpolate(open, [0, 1], [1.3, 1.2]);
+    : interpolate(open, [0, 1], [1.3, 1.12]);
   const exit = interpolate(g, [S_END - 12, S_END + 6], [0, 1], { ...clamp, easing: Easing.in(Easing.cubic) });
 
   const inner = cutIdx < 0 ? <Shot src="fig-monitor.jpg" zoom={interpolate(g, [S_OPEN, S_CUTS], [1.08, 1], clamp)} />
