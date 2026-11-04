@@ -63,7 +63,7 @@ All from `python3 check.py` on the final MP4 (2026-11-04): ALL CHECKS PASS.
   The largest "offset" (0.46 s, "Integrated.") is Whisper stretching the word into the pause after it; that card pops
   on the measured voice onset.
 - **Known:** the simulator stalled for 1–2 frames (≤ 100 ms) a few times inside some shots (align.py lists them);
-  none sits on a cut.
+  they are not hidden or patched.
 - Contact sheet of 16 moments checked by eye: right lines and labels at every step, end card and outro clean.
 
 ## Rebuild
