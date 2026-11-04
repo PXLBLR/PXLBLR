@@ -1,0 +1,358 @@
+{
+  "F0": 12.5,
+  "segments": [
+    {
+      "id": "lead2",
+      "take": "ecg_II",
+      "from": 0.0,
+      "to": 4.0,
+      "start": 4.1294,
+      "frames": 120,
+      "repeats": 14,
+      "longestRepeat": 2,
+      "cursorErrPx": 1.8
+    },
+    {
+      "id": "leadI",
+      "take": "ecg_I",
+      "from": 4.0,
+      "to": 4.45,
+      "start": 5.118,
+      "frames": 14,
+      "repeats": 0,
+      "longestRepeat": 0,
+      "cursorErrPx": 1.1
+    },
+    {
+      "id": "leadIII",
+      "take": "ecg_III",
+      "from": 4.45,
+      "to": 4.9,
+      "start": 5.4248,
+      "frames": 13,
+      "repeats": 0,
+      "longestRepeat": 0,
+      "cursorErrPx": 0.6
+    },
+    {
+      "id": "leadaVR",
+      "take": "ecg_aVR",
+      "from": 4.9,
+      "to": 5.35,
+      "start": 5.8435,
+      "frames": 14,
+      "repeats": 3,
+      "longestRepeat": 2,
+      "cursorErrPx": 99.0
+    },
+    {
+      "id": "leadaVL",
+      "take": "ecg_aVL",
+      "from": 5.35,
+      "to": 5.8,
+      "start": 6.2723,
+      "frames": 13,
+      "repeats": 2,
+      "longestRepeat": 2,
+      "cursorErrPx": 1.5
+    },
+    {
+      "id": "leadaVF",
+      "take": "ecg_aVF",
+      "from": 5.8,
+      "to": 6.25,
+      "start": 6.9241,
+      "frames": 14,
+      "repeats": 4,
+      "longestRepeat": 2,
+      "cursorErrPx": 2.1
+    },
+    {
+      "id": "leadV1",
+      "take": "ecg_V1",
+      "from": 6.25,
+      "to": 6.7,
+      "start": 7.2328,
+      "frames": 13,
+      "repeats": 0,
+      "longestRepeat": 0,
+      "cursorErrPx": 0.6
+    },
+    {
+      "id": "leadV2",
+      "take": "ecg_V2",
+      "from": 6.7,
+      "to": 7.15,
+      "start": 7.6981,
+      "frames": 14,
+      "repeats": 1,
+      "longestRepeat": 1,
+      "cursorErrPx": 1.0
+    },
+    {
+      "id": "leadV3",
+      "take": "ecg_V3",
+      "from": 7.15,
+      "to": 7.6,
+      "start": 8.1065,
+      "frames": 13,
+      "repeats": 0,
+      "longestRepeat": 0,
+      "cursorErrPx": 2.0
+    },
+    {
+      "id": "leadV4",
+      "take": "ecg_V4",
+      "from": 7.6,
+      "to": 8.05,
+      "start": 8.6448,
+      "frames": 14,
+      "repeats": 1,
+      "longestRepeat": 1,
+      "cursorErrPx": 0.6
+    },
+    {
+      "id": "leadV5",
+      "take": "ecg_V5",
+      "from": 8.05,
+      "to": 8.5,
+      "start": 9.1326,
+      "frames": 13,
+      "repeats": 3,
+      "longestRepeat": 2,
+      "cursorErrPx": 6.3
+    },
+    {
+      "id": "leadV6",
+      "take": "ecg_V6",
+      "from": 8.5,
+      "to": 8.95,
+      "start": 9.4256,
+      "frames": 14,
+      "repeats": 2,
+      "longestRepeat": 1,
+      "cursorErrPx": 3.9
+    },
+    {
+      "id": "leadII2",
+      "take": "ecg_II",
+      "from": 8.95,
+      "to": 9.95,
+      "start": 13.0963,
+      "frames": 30,
+      "repeats": 2,
+      "longestRepeat": 1,
+      "cursorErrPx": 0.3
+    },
+    {
+      "id": "art",
+      "take": "art",
+      "from": 9.95,
+      "to": 11.95,
+      "start": 3.8966,
+      "frames": 60,
+      "repeats": 6,
+      "longestRepeat": 3,
+      "cursorErrPx": 1.0
+    },
+    {
+      "id": "pa",
+      "take": "pa",
+      "from": 11.95,
+      "to": 13.92,
+      "start": 4.0948,
+      "frames": 59,
+      "repeats": 3,
+      "longestRepeat": 2,
+      "cursorErrPx": 0.3
+    },
+    {
+      "id": "cvp",
+      "take": "cvp",
+      "from": 13.92,
+      "to": 16.0,
+      "start": 4.0679,
+      "frames": 62,
+      "repeats": 3,
+      "longestRepeat": 2,
+      "cursorErrPx": 0.3
+    },
+    {
+      "id": "etco2",
+      "take": "etco2",
+      "from": 16.0,
+      "to": 18.1,
+      "start": 4.1464,
+      "frames": 63,
+      "repeats": 3,
+      "longestRepeat": 2,
+      "cursorErrPx": 1.3
+    },
+    {
+      "id": "spo2",
+      "take": "all",
+      "from": 18.1,
+      "to": 30.8,
+      "start": 4.2443,
+      "frames": 381,
+      "repeats": 26,
+      "longestRepeat": 2,
+      "cursorErrPx": 1.8
+    }
+  ],
+  "takes": {
+    "all": {
+      "k": 26.3693,
+      "F": [
+        26.37,
+        48.04
+      ],
+      "medianResidMs": 2.3,
+      "onTimeFrames": 0.769
+    },
+    "art": {
+      "k": 18.5757,
+      "F": [
+        18.58,
+        26.18
+      ],
+      "medianResidMs": 3.4,
+      "onTimeFrames": 0.901
+    },
+    "cvp": {
+      "k": 22.3686,
+      "F": [
+        22.37,
+        31.04
+      ],
+      "medianResidMs": 1.9,
+      "onTimeFrames": 0.958
+    },
+    "ecg_I": {
+      "k": 11.4227,
+      "F": [
+        11.42,
+        24.02
+      ],
+      "medianResidMs": 8.6,
+      "onTimeFrames": 0.866
+    },
+    "ecg_II": {
+      "k": 8.3844,
+      "F": [
+        8.38,
+        24.03
+      ],
+      "medianResidMs": 2.6,
+      "onTimeFrames": 0.875
+    },
+    "ecg_III": {
+      "k": 11.5539,
+      "F": [
+        11.55,
+        24.2
+      ],
+      "medianResidMs": 12.2,
+      "onTimeFrames": 0.814
+    },
+    "ecg_V1": {
+      "k": 11.5401,
+      "F": [
+        11.54,
+        24.17
+      ],
+      "medianResidMs": 8.3,
+      "onTimeFrames": 0.802
+    },
+    "ecg_V2": {
+      "k": 11.5229,
+      "F": [
+        11.52,
+        24.17
+      ],
+      "medianResidMs": 17.0,
+      "onTimeFrames": 0.679
+    },
+    "ecg_V3": {
+      "k": 11.5421,
+      "F": [
+        11.54,
+        24.19
+      ],
+      "medianResidMs": 13.0,
+      "onTimeFrames": 0.625
+    },
+    "ecg_V4": {
+      "k": 11.4024,
+      "F": [
+        11.4,
+        24.05
+      ],
+      "medianResidMs": 64.1,
+      "onTimeFrames": 0.42
+    },
+    "ecg_V5": {
+      "k": 11.4085,
+      "F": [
+        11.41,
+        24.06
+      ],
+      "medianResidMs": 13.7,
+      "onTimeFrames": 0.705
+    },
+    "ecg_V6": {
+      "k": 11.3883,
+      "F": [
+        11.39,
+        24.01
+      ],
+      "medianResidMs": 31.7,
+      "onTimeFrames": 0.5
+    },
+    "ecg_aVF": {
+      "k": 11.3926,
+      "F": [
+        11.39,
+        24.04
+      ],
+      "medianResidMs": 15.5,
+      "onTimeFrames": 0.643
+    },
+    "ecg_aVL": {
+      "k": 11.4052,
+      "F": [
+        11.41,
+        24.06
+      ],
+      "medianResidMs": 39.5,
+      "onTimeFrames": 0.45
+    },
+    "ecg_aVR": {
+      "k": 11.4189,
+      "F": [
+        11.42,
+        24.05
+      ],
+      "medianResidMs": 54.2,
+      "onTimeFrames": 0.054
+    },
+    "etco2": {
+      "k": 24.3776,
+      "F": [
+        24.38,
+        33.03
+      ],
+      "medianResidMs": 2.4,
+      "onTimeFrames": 0.914
+    },
+    "pa": {
+      "k": 20.3853,
+      "F": [
+        20.39,
+        29.04
+      ],
+      "medianResidMs": 1.8,
+      "onTimeFrames": 0.929
+    }
+  }
+}

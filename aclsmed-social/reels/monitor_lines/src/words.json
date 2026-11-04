@@ -1,0 +1,533 @@
+[
+ {
+  "id": "l1",
+  "at": 0.1,
+  "dur": 3.73,
+  "speechStart": 0.46,
+  "speechEnd": 3.16,
+  "words": [
+   {
+    "w": "Every",
+    "start": 0.46,
+    "end": 0.68,
+    "key": false
+   },
+   {
+    "w": "code",
+    "start": 0.68,
+    "end": 0.94,
+    "key": false
+   },
+   {
+    "w": "starts",
+    "start": 0.94,
+    "end": 1.3,
+    "key": false
+   },
+   {
+    "w": "here.",
+    "start": 1.3,
+    "end": 1.64,
+    "key": false
+   },
+   {
+    "w": "Lead",
+    "start": 2.5,
+    "end": 2.78,
+    "key": true
+   },
+   {
+    "w": "II.",
+    "start": 2.78,
+    "end": 3.02,
+    "key": true
+   }
+  ]
+ },
+ {
+  "id": "l2",
+  "at": 3.3,
+  "dur": 4.14,
+  "speechStart": 3.74,
+  "speechEnd": 6.66,
+  "words": [
+   {
+    "w": "Need",
+    "start": 3.74,
+    "end": 3.88,
+    "key": false
+   },
+   {
+    "w": "another",
+    "start": 3.88,
+    "end": 4.2,
+    "key": false
+   },
+   {
+    "w": "view?",
+    "start": 4.2,
+    "end": 4.48,
+    "key": false
+   },
+   {
+    "w": "Switch",
+    "start": 5.38,
+    "end": 5.78,
+    "key": false
+   },
+   {
+    "w": "leads",
+    "start": 5.78,
+    "end": 6.18,
+    "key": true
+   },
+   {
+    "w": "in",
+    "start": 6.18,
+    "end": 6.36,
+    "key": false
+   },
+   {
+    "w": "a",
+    "start": 6.36,
+    "end": 6.46,
+    "key": false
+   },
+   {
+    "w": "tap.",
+    "start": 6.46,
+    "end": 6.66,
+    "key": false
+   }
+  ]
+ },
+ {
+  "id": "lart",
+  "at": 9.2,
+  "dur": 2.35,
+  "speechStart": 9.6,
+  "speechEnd": 10.86,
+  "words": [
+   {
+    "w": "Place",
+    "start": 9.6,
+    "end": 9.86,
+    "key": false
+   },
+   {
+    "w": "an",
+    "start": 9.86,
+    "end": 10.02,
+    "key": false
+   },
+   {
+    "w": "arterial",
+    "start": 10.02,
+    "end": 10.52,
+    "key": true
+   },
+   {
+    "w": "line.",
+    "start": 10.52,
+    "end": 10.78,
+    "key": false
+   }
+  ]
+ },
+ {
+  "id": "l3",
+  "at": 11.2,
+  "dur": 2.18,
+  "speechStart": 11.56,
+  "speechEnd": 12.68,
+  "words": [
+   {
+    "w": "Float",
+    "start": 11.56,
+    "end": 11.84,
+    "key": false
+   },
+   {
+    "w": "a",
+    "start": 11.84,
+    "end": 12.0,
+    "key": false
+   },
+   {
+    "w": "PA",
+    "start": 12.0,
+    "end": 12.26,
+    "key": true
+   },
+   {
+    "w": "line.",
+    "start": 12.26,
+    "end": 12.6,
+    "key": false
+   }
+  ]
+ },
+ {
+  "id": "l4",
+  "at": 13.2,
+  "dur": 2.09,
+  "speechStart": 13.62,
+  "speechEnd": 14.52,
+  "words": [
+   {
+    "w": "Add",
+    "start": 13.62,
+    "end": 13.8,
+    "key": false
+   },
+   {
+    "w": "a",
+    "start": 13.8,
+    "end": 13.94,
+    "key": false
+   },
+   {
+    "w": "CVP.",
+    "start": 13.94,
+    "end": 14.44,
+    "key": true
+   }
+  ]
+ },
+ {
+  "id": "l5",
+  "at": 15.1,
+  "dur": 2.48,
+  "speechStart": 15.48,
+  "speechEnd": 16.92,
+  "words": [
+   {
+    "w": "Turn",
+    "start": 15.48,
+    "end": 15.78,
+    "key": false
+   },
+   {
+    "w": "on",
+    "start": 15.78,
+    "end": 16.06,
+    "key": false
+   },
+   {
+    "w": "capnography.",
+    "start": 16.06,
+    "end": 16.76,
+    "key": true
+   }
+  ]
+ },
+ {
+  "id": "l6",
+  "at": 17.4,
+  "dur": 1.85,
+  "speechStart": 17.84,
+  "speechEnd": 18.52,
+  "words": [
+   {
+    "w": "And",
+    "start": 17.84,
+    "end": 18.0,
+    "key": false
+   },
+   {
+    "w": "the",
+    "start": 18.0,
+    "end": 18.12,
+    "key": false
+   },
+   {
+    "w": "pleth.",
+    "start": 18.12,
+    "end": 18.48,
+    "key": true
+   }
+  ]
+ },
+ {
+  "id": "l7",
+  "at": 19.2,
+  "dur": 6.14,
+  "speechStart": 19.6,
+  "speechEnd": 24.6,
+  "words": [
+   {
+    "w": "Every",
+    "start": 19.6,
+    "end": 19.84,
+    "key": false
+   },
+   {
+    "w": "monitoring",
+    "start": 19.84,
+    "end": 20.26,
+    "key": false
+   },
+   {
+    "w": "line",
+    "start": 20.26,
+    "end": 20.6,
+    "key": false
+   },
+   {
+    "w": "you",
+    "start": 20.6,
+    "end": 20.8,
+    "key": false
+   },
+   {
+    "w": "need",
+    "start": 20.8,
+    "end": 21.0,
+    "key": false
+   },
+   {
+    "w": "for",
+    "start": 21.0,
+    "end": 21.22,
+    "key": false
+   },
+   {
+    "w": "advanced",
+    "start": 21.22,
+    "end": 21.6,
+    "key": false
+   },
+   {
+    "w": "scenarios,",
+    "start": 21.6,
+    "end": 22.16,
+    "key": false
+   },
+   {
+    "w": "on",
+    "start": 22.16,
+    "end": 22.62,
+    "key": false
+   },
+   {
+    "w": "one",
+    "start": 22.62,
+    "end": 22.84,
+    "key": false
+   },
+   {
+    "w": "monitor,",
+    "start": 22.84,
+    "end": 23.22,
+    "key": false
+   },
+   {
+    "w": "synced",
+    "start": 23.22,
+    "end": 23.6,
+    "key": false
+   },
+   {
+    "w": "across",
+    "start": 23.6,
+    "end": 23.86,
+    "key": false
+   },
+   {
+    "w": "the",
+    "start": 23.86,
+    "end": 24.1,
+    "key": false
+   },
+   {
+    "w": "code",
+    "start": 24.1,
+    "end": 24.33,
+    "key": false
+   },
+   {
+    "w": "room.",
+    "start": 24.33,
+    "end": 24.56,
+    "key": false
+   }
+  ]
+ },
+ {
+  "id": "l8",
+  "at": 25.3,
+  "dur": 5.46,
+  "speechStart": 25.88,
+  "speechEnd": 30.08,
+  "words": [
+   {
+    "w": "ACLSMED",
+    "start": 25.88,
+    "end": 26.52,
+    "key": true
+   },
+   {
+    "w": "Sim.",
+    "start": 26.52,
+    "end": 27.08,
+    "key": true
+   },
+   {
+    "w": "The",
+    "start": 27.98,
+    "end": 28.06,
+    "key": false
+   },
+   {
+    "w": "only",
+    "start": 28.04,
+    "end": 28.3,
+    "key": false
+   },
+   {
+    "w": "monitor",
+    "start": 28.3,
+    "end": 28.72,
+    "key": false
+   },
+   {
+    "w": "simulator",
+    "start": 28.72,
+    "end": 29.12,
+    "key": false
+   },
+   {
+    "w": "you'll",
+    "start": 29.12,
+    "end": 29.56,
+    "key": false
+   },
+   {
+    "w": "ever",
+    "start": 29.56,
+    "end": 29.78,
+    "key": false
+   },
+   {
+    "w": "need.",
+    "start": 29.78,
+    "end": 30.0,
+    "key": false
+   }
+  ]
+ },
+ {
+  "id": "l9",
+  "at": 30.9,
+  "dur": 7.12,
+  "speechStart": 31.34,
+  "speechEnd": 37.3,
+  "words": [
+   {
+    "w": "Integrated.",
+    "start": 31.34,
+    "end": 32.08,
+    "key": false
+   },
+   {
+    "w": "Immersive.",
+    "start": 32.82,
+    "end": 33.4,
+    "key": false
+   },
+   {
+    "w": "Essential.",
+    "start": 34.12,
+    "end": 34.62,
+    "key": false
+   },
+   {
+    "w": "ACLSmed.com",
+    "start": 35.36,
+    "end": 37.3,
+    "key": false
+   }
+  ]
+ },
+ {
+  "id": "l10",
+  "at": 38.1,
+  "dur": 5.28,
+  "speechStart": 38.68,
+  "speechEnd": 42.62,
+  "words": [
+   {
+    "w": "ACLSMED",
+    "start": 38.74,
+    "end": 39.34,
+    "key": false
+   },
+   {
+    "w": "Sim",
+    "start": 39.34,
+    "end": 39.86,
+    "key": false
+   },
+   {
+    "w": "is",
+    "start": 39.86,
+    "end": 40.16,
+    "key": false
+   },
+   {
+    "w": "available",
+    "start": 40.16,
+    "end": 40.5,
+    "key": false
+   },
+   {
+    "w": "today",
+    "start": 40.5,
+    "end": 40.88,
+    "key": false
+   },
+   {
+    "w": "on",
+    "start": 40.88,
+    "end": 41.2,
+    "key": false
+   },
+   {
+    "w": "the",
+    "start": 41.2,
+    "end": 41.3,
+    "key": false
+   },
+   {
+    "w": "App",
+    "start": 41.3,
+    "end": 41.5,
+    "key": false
+   },
+   {
+    "w": "Store",
+    "start": 41.5,
+    "end": 41.76,
+    "key": false
+   },
+   {
+    "w": "and",
+    "start": 41.76,
+    "end": 42.0,
+    "key": false
+   },
+   {
+    "w": "Google",
+    "start": 42.0,
+    "end": 42.22,
+    "key": false
+   },
+   {
+    "w": "Play.",
+    "start": 42.22,
+    "end": 42.56,
+    "key": false
+   }
+  ]
+ }
+]

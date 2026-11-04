@@ -1,0 +1,265 @@
+{
+  "_doc": "Reel timeline in reel seconds. F0 maps reel time to the film clock (F = r + F0). shots[] say which take plays from each cut; vo[] places each narration clip. Edit here, then re-run align.py, make_audio.py and render.",
+  "F0": 12.5,
+  "fps": 30,
+  "duration": 44.5,
+  "hr": 76,
+  "shots": [
+    {
+      "id": "lead2",
+      "take": "ecg_II",
+      "from": 0.0,
+      "label": "LEAD II",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadI",
+      "take": "ecg_I",
+      "from": 4.0,
+      "label": "LEAD I",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadIII",
+      "take": "ecg_III",
+      "from": 4.45,
+      "label": "LEAD III",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadaVR",
+      "take": "ecg_aVR",
+      "from": 4.9,
+      "label": "LEAD aVR",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadaVL",
+      "take": "ecg_aVL",
+      "from": 5.35,
+      "label": "LEAD aVL",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadaVF",
+      "take": "ecg_aVF",
+      "from": 5.8,
+      "label": "LEAD aVF",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadV1",
+      "take": "ecg_V1",
+      "from": 6.25,
+      "label": "LEAD V1",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadV2",
+      "take": "ecg_V2",
+      "from": 6.7,
+      "label": "LEAD V2",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadV3",
+      "take": "ecg_V3",
+      "from": 7.15,
+      "label": "LEAD V3",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadV4",
+      "take": "ecg_V4",
+      "from": 7.6,
+      "label": "LEAD V4",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadV5",
+      "take": "ecg_V5",
+      "from": 8.05,
+      "label": "LEAD V5",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadV6",
+      "take": "ecg_V6",
+      "from": 8.5,
+      "label": "LEAD V6",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "leadII2",
+      "take": "ecg_II",
+      "from": 8.95,
+      "label": "LEAD II",
+      "eyebrow": "ECG",
+      "color": "ecg"
+    },
+    {
+      "id": "art",
+      "take": "art",
+      "from": 9.95,
+      "label": "ART LINE",
+      "eyebrow": "+ ARTERIAL",
+      "color": "art"
+    },
+    {
+      "id": "pa",
+      "take": "pa",
+      "from": 11.95,
+      "label": "PA LINE",
+      "eyebrow": "+ PULMONARY ARTERY",
+      "color": "pa"
+    },
+    {
+      "id": "cvp",
+      "take": "cvp",
+      "from": 13.92,
+      "label": "CVP",
+      "eyebrow": "+ CENTRAL VENOUS",
+      "color": "cvp"
+    },
+    {
+      "id": "etco2",
+      "take": "etco2",
+      "from": 16.0,
+      "label": "EtCO₂",
+      "eyebrow": "+ CAPNOGRAPHY",
+      "color": "etco2"
+    },
+    {
+      "id": "spo2",
+      "take": "all",
+      "from": 18.1,
+      "label": "SpO₂",
+      "eyebrow": "+ PLETH",
+      "color": "spo2"
+    },
+    {
+      "id": "all",
+      "take": "all",
+      "from": 19.2,
+      "label": "ALL LINES",
+      "eyebrow": "ECG · ART · PA · CVP · SpO₂ · EtCO₂",
+      "color": "cream"
+    },
+    {
+      "id": "hero",
+      "take": "all",
+      "from": 25.2,
+      "label": "HERO",
+      "eyebrow": "",
+      "color": "cream"
+    },
+    {
+      "id": "end",
+      "take": null,
+      "from": 30.8
+    },
+    {
+      "id": "outro",
+      "take": null,
+      "from": 38.0
+    }
+  ],
+  "vo": [
+    {
+      "id": "l1",
+      "at": 0.1,
+      "text": "Every code starts here. Lead II.",
+      "key": [
+        "Lead",
+        "II."
+      ]
+    },
+    {
+      "id": "l2",
+      "at": 3.3,
+      "text": "Need another view? Switch leads in a tap.",
+      "key": [
+        "leads"
+      ]
+    },
+    {
+      "id": "lart",
+      "at": 9.2,
+      "text": "Place an arterial line.",
+      "key": [
+        "arterial"
+      ]
+    },
+    {
+      "id": "l3",
+      "at": 11.2,
+      "text": "Float a PA line.",
+      "key": [
+        "PA"
+      ]
+    },
+    {
+      "id": "l4",
+      "at": 13.2,
+      "text": "Add a CVP.",
+      "key": [
+        "CVP."
+      ]
+    },
+    {
+      "id": "l5",
+      "at": 15.1,
+      "text": "Turn on capnography.",
+      "key": [
+        "capnography."
+      ]
+    },
+    {
+      "id": "l6",
+      "at": 17.4,
+      "text": "And the pleth.",
+      "key": [
+        "pleth."
+      ]
+    },
+    {
+      "id": "l7",
+      "at": 19.2,
+      "text": "Every monitoring line you need for advanced scenarios, on one monitor, synced across the code room.",
+      "key": []
+    },
+    {
+      "id": "l8",
+      "at": 25.3,
+      "text": "ACLSMED Sim. The only monitor simulator you'll ever need.",
+      "key": [
+        "ACLSMED",
+        "Sim."
+      ]
+    },
+    {
+      "id": "l9",
+      "at": 30.9,
+      "text": "Integrated. Immersive. Essential. ACLSmed.com",
+      "key": []
+    },
+    {
+      "id": "l10",
+      "at": 38.1,
+      "text": "ACLSMED Sim is available today on the App Store and Google Play.",
+      "key": []
+    }
+  ]
+}
