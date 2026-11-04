@@ -420,13 +420,13 @@
   "id": "l9",
   "at": 30.9,
   "dur": 7.12,
-  "speechStart": 31.34,
-  "speechEnd": 37.3,
+  "speechStart": 31.42,
+  "speechEnd": 37.26,
   "words": [
    {
     "w": "Integrated.",
-    "start": 31.34,
-    "end": 32.08,
+    "start": 31.42,
+    "end": 32.1,
     "key": false
    },
    {
@@ -444,7 +444,7 @@
    {
     "w": "ACLSmed.com",
     "start": 35.36,
-    "end": 37.3,
+    "end": 37.26,
     "key": false
    }
   ]

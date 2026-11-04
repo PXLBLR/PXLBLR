@@ -12,7 +12,9 @@
   iPad, the captions, the end card and the outro are reel graphics outside the screen.
 - **Voice:** "Mikko (narration) v2", the local voice clone in `/Applications/Prayer Voice.app` (VoxCPM2 + LoRA, runs on
   this Mac, no API key). Every line read back word-for-word by Whisper. The owner's script plus one line added with
-  the ART step the owner asked for: "Place an arterial line." The YouTube title has no disclaimer (it would not fit in 100
+  the ART step the owner asked for: "Place an arterial line." "Integrated" on the end card was re-rendered from the
+  spelling "Intigrated" (take 1) and spliced in, because the first take put an "r" in it ("intergrated"; third
+  formant of the vowel before the g 2140 Hz -> 2686 Hz, now above the speaker's "ay"); the rest of line 9 is unchanged. The YouTube title has no disclaimer (it would not fit in 100
   characters); the description ends with it.
 - **Sound:** narration, a quiet synthesized pad from `engine/sfx.py` ducked ~9 dB under the voice, the app's own
   `heart_beep.wav` low on every R wave while the monitor is on screen, small synthesized ticks on each cut. −14.7 LUFS.
