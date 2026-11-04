@@ -1,7 +1,10 @@
 # ACLSMED Sim · monitoring lines, one at a time · narrated reel (IG Reels + YouTube Shorts)
 
 - **File:** `aclsmed_monitor_lines.mp4` (1080×1920, 30 fps, H.264/AAC, 44.5 s). Cover: `cover.png`.
-- **Status:** NOT posted, NOT scheduled. Waiting for the owner's go-ahead. Never "Publish now".
+- **Status:** POSTED 2026-11-04 ~16:20 ET on the owner's go-ahead, from the mikko.figueroa Chrome.
+  Instagram @aclsmed Reel: https://www.instagram.com/aclsmed/reel/DfVaCqaTtcE/ (9:16, cover.png as cover, caption below).
+  YouTube ACLSMED Short (Public): https://youtube.com/shorts/wu4aE2gMS4Y (cover.png as thumbnail, not made for kids,
+  paid promotion No, AI-use disclosure No and Instagram AI label off, both by the owner's choice).
 - **What it shows:** the ACLSMED Sim iPad Monitor (Console shell) with one adult patient the whole time: sinus rhythm
   76/min, NIBP 120/80, PA 25/10 (MAP 15), CVP 6, SpO₂ 98 %, EtCO₂ 38, Resp 14, Temp 37.0 °C. It starts on ECG lead II
   alone, flips through the other eleven leads the app offers (I, III, aVR, aVL, aVF, V1–V6) and back to II, then turns on
