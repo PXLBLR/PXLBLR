@@ -1,0 +1,14 @@
+{
+  "id": "R01_vfib",
+  "voice": "Mikko (narration) v2",
+  "direction": "Calm, warm, confident educator. One continuous read, conversational pace (~150 wpm). Let sentences run into each other; small natural breaths, no robotic gaps. Slight lift on 'Now watch', settle down on 'No pulse.'",
+  "lines": [
+    {"id": "l1", "cue": "nsr", "text": "This is a normal heartbeat.", "gap_after": 0.25},
+    {"id": "l2", "cue": "nsr", "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.", "gap_after": 0.45},
+    {"id": "l3", "cue": "vf", "text": "Now watch what happens in V-fib.", "gap_after": 0.35},
+    {"id": "l4", "cue": "vf", "text": "The electrical activity in the ventricles turns chaotic. Instead of squeezing, they just quiver.", "gap_after": 0.4},
+    {"id": "l5", "cue": "nopulse", "text": "And with no squeeze, there's no cardiac output. No pulse.", "gap_after": 0.45},
+    {"id": "l6", "cue": "action", "text": "V-fib is a shockable rhythm. Start CPR, and defibrillate as soon as possible.", "gap_after": 0.5},
+    {"id": "l7", "cue": "end", "text": "Practice it on ACLSMED Sim. ACLSmed dot com.", "gap_after": 1.2}
+  ]
+}

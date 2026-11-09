@@ -1,0 +1,52 @@
+{
+  "mode": "mockup",
+  "duration": 36.3,
+  "vf_start": 10.25,
+  "nopulse": 19.85,
+  "action": 24.6,
+  "end_card": 30.3,
+  "lines": [
+    {
+      "id": "l1",
+      "text": "This is a normal heartbeat.",
+      "at": 0.4,
+      "end": 2.7
+    },
+    {
+      "id": "l2",
+      "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+      "at": 2.95,
+      "end": 10.05
+    },
+    {
+      "id": "l3",
+      "text": "Now watch what happens in V-fib.",
+      "at": 10.5,
+      "end": 13.2
+    },
+    {
+      "id": "l4",
+      "text": "The electrical activity in the ventricles turns chaotic. Instead of squeezing, they just quiver.",
+      "at": 13.55,
+      "end": 19.45
+    },
+    {
+      "id": "l5",
+      "text": "And with no squeeze, there's no cardiac output. No pulse.",
+      "at": 19.85,
+      "end": 24.15
+    },
+    {
+      "id": "l6",
+      "text": "V-fib is a shockable rhythm. Start CPR, and defibrillate as soon as possible.",
+      "at": 24.6,
+      "end": 30.1
+    },
+    {
+      "id": "l7",
+      "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+      "at": 30.6,
+      "end": 34.1
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { AbsoluteFill, Audio, continueRender, delayRender, Easing, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
-import { ecg, R_TIMES, VF_START } from './ecg';
+import { ecg, VF_START } from './ecg';
+import timeline from './timeline.json';
 
 const OUTFIT = 'Outfit';
 const MONO = 'JetBrains Mono';
@@ -17,16 +18,9 @@ const CYAN = '#00DCC8';
 const CREAM = '#F2EEE3';
 const clamp = { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' } as const;
 
-// Voice-over script (rendered later in the owner's voice); captions follow it.
-export const SCRIPT = [
-  { at: 0.3, end: 1.7, text: 'This is a normal beat.' },
-  { at: 1.8, end: 6.2, text: 'The SA node fires, the signal travels down to the ventricles, and they squeeze together.' },
-  { at: 6.6, end: 7.9, text: 'Now, V-fib.' },
-  { at: 8.0, end: 13.6, text: 'Chaotic electrical activity across the ventricles. They quiver instead of squeezing.' },
-  { at: 14.0, end: 19.0, text: 'No squeeze means no cardiac output. No pulse.' },
-  { at: 19.5, end: 25.2, text: 'V-fib is shockable. Start CPR and defibrillate as soon as possible.' },
-  { at: 25.6, end: 29.6, text: 'Practice it on ACLSMED Sim. ACLSMED.COM' },
-];
+// Voice-over lines and cue times come from timeline.json (built from the narration by make_timeline.py).
+export const SCRIPT = timeline.lines;
+const T = timeline;
 
 // Heart picture: 1206 x 1565, drawn 600 px wide.
 const IMG_W = 1206;
@@ -58,7 +52,7 @@ const rnd = (n: number) => { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
 const Heart: React.FC<{ t: number }> = ({ t }) => {
   const vf = t >= VF_START;
   // Sinus: phase within the beat drives the spark and the squeeze.
-  const beat = t % 0.8;
+  const beat = ((t % 0.8) + 0.8) % 0.8;
   const atria = interpolate(beat, [0.0, 0.16], [0, 1], clamp);
   const vent = interpolate(beat, [0.17, 0.3], [0, 1], clamp);
   const squeeze = vf ? 0 : interpolate(beat, [0.22, 0.3, 0.55], [0, 1, 0], clamp);
@@ -159,9 +153,9 @@ export const HeartRhythm: React.FC = () => {
   const vf = t >= VF_START;
   const line = SCRIPT.find((l) => t >= l.at - 0.1 && t <= l.end + 0.2);
   const lineIn = line ? interpolate(t, [line.at - 0.1, line.at + 0.15], [0, 1], clamp) : 0;
-  const end = interpolate(t, [25.4, 26.0], [0, 1], clamp);
+  const end = interpolate(t, [T.end_card, T.end_card + 0.6], [0, 1], clamp);
   const flash = interpolate(t, [VF_START, VF_START + 0.05, VF_START + 0.5], [0, 0.55, 0], clamp);
-  const noPulse = interpolate(t, [14.2, 14.6], [0, 1], clamp) * (1 - end);
+  const noPulse = interpolate(t, [T.nopulse + 0.2, T.nopulse + 0.6], [0, 1], clamp) * (1 - end);
   return (
     <AbsoluteFill style={{ background: `radial-gradient(90% 50% at 50% 45%, ${vf ? '#2a0a12' : '#0f1838'} 0%, ${NAVY} 60%, #000 100%)` }}>
       <Audio src={staticFile('audio.wav')} />
@@ -174,9 +168,9 @@ export const HeartRhythm: React.FC = () => {
           opacity: lineIn * (1 - end), transform: `translateY(${(1 - lineIn) * 16}px)` }}>{line?.text}</div>
       </div>
       <Heart t={t} />
-      <Tag x={248} y={560} text="SA NODE" o={vf ? 0 : interpolate(t, [2.0, 2.4, 6.2, 6.5], [0, 1, 1, 0], clamp)} />
-      <Tag x={395} y={860} text="AV NODE" o={vf ? 0 : interpolate(t, [2.8, 3.2, 6.2, 6.5], [0, 1, 1, 0], clamp)} />
-      <Tag x={780} y={1300} text="VENTRICLES" color={RED} o={interpolate(t, [8.4, 8.8, 13.8, 14.1], [0, 1, 1, 0], clamp)} />
+      <Tag x={248} y={560} text="SA NODE" o={vf ? 0 : interpolate(t, [T.lines[1].at + 0.2, T.lines[1].at + 0.6, VF_START - 0.4, VF_START], [0, 1, 1, 0], clamp)} />
+      <Tag x={395} y={860} text="AV NODE" o={vf ? 0 : interpolate(t, [T.lines[1].at + 1.6, T.lines[1].at + 2.0, VF_START - 0.4, VF_START], [0, 1, 1, 0], clamp)} />
+      <Tag x={780} y={1300} text="VENTRICLES" color={RED} o={interpolate(t, [T.lines[3].at + 0.4, T.lines[3].at + 0.8, T.nopulse - 0.3, T.nopulse], [0, 1, 1, 0], clamp)} />
       <Tag x={660} y={250} text="NO PULSE" color={RED} o={noPulse} />
       <Strip t={t} />
       <AbsoluteFill style={{ background: '#fff', opacity: flash, pointerEvents: 'none' }} />
