@@ -1,6 +1,6 @@
 # Heart rhythms 01-10 · render notes (2026-11-09)
 
-All ten reels built 2026-11-09. Status: **awaiting the owner's review and RN sign-off. Nothing posted or scheduled.**
+All ten reels built 2026-11-09. RN sign-off by the owner the same day; **scheduled** Nov 9-18, 12:00 PM ET, on IG @aclsmed and YouTube ACLSMED Shorts (POST.md).
 
 ## Layout (one pipeline, a reel id per step)
 | Path | What |
