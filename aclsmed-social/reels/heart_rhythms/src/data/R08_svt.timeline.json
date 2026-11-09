@@ -1,0 +1,629 @@
+{
+ "id": "R08_svt",
+ "n": 8,
+ "mode": "full",
+ "duration": 39.1,
+ "onset": 8.68,
+ "key": 18.33,
+ "action": 24.68,
+ "end_card": 32.02,
+ "post_shift": 8.18,
+ "hr_pre": "75",
+ "hr_post": "185",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.76,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in SVT.",
+   "at": 8.93,
+   "end": 10.79
+  },
+  {
+   "id": "l4",
+   "text": "In the most common type, a tiny short circuit in the AV node sends the signal spinning around again and again.",
+   "at": 11.22,
+   "end": 17.79
+  },
+  {
+   "id": "l5",
+   "text": "Every lap fires the ventricles, so the heart races at well over 150 beats a minute.",
+   "at": 18.33,
+   "end": 24.1
+  },
+  {
+   "id": "l6",
+   "text": "If the patient is stable, try vagal maneuvers, then adenosine. If unstable, use synchronized cardioversion.",
+   "at": 24.68,
+   "end": 31.74
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 32.32,
+   "end": 36.9
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.975,
+   "q": -4.811,
+   "kind": "normal"
+  },
+  {
+   "p": -4.175,
+   "q": -4.011,
+   "kind": "normal"
+  },
+  {
+   "p": -3.395,
+   "q": -3.231,
+   "kind": "normal"
+  },
+  {
+   "p": -2.612,
+   "q": -2.447,
+   "kind": "normal"
+  },
+  {
+   "p": -1.815,
+   "q": -1.65,
+   "kind": "normal"
+  },
+  {
+   "p": -1.012,
+   "q": -0.848,
+   "kind": "normal"
+  },
+  {
+   "p": -0.191,
+   "q": -0.027,
+   "kind": "normal"
+  },
+  {
+   "p": 0.622,
+   "q": 0.786,
+   "kind": "normal"
+  },
+  {
+   "p": 1.418,
+   "q": 1.582,
+   "kind": "normal"
+  },
+  {
+   "p": 2.195,
+   "q": 2.359,
+   "kind": "normal"
+  },
+  {
+   "p": 2.974,
+   "q": 3.139,
+   "kind": "normal"
+  },
+  {
+   "p": 3.761,
+   "q": 3.925,
+   "kind": "normal"
+  },
+  {
+   "p": 4.581,
+   "q": 4.745,
+   "kind": "normal"
+  },
+  {
+   "p": 5.4,
+   "q": 5.564,
+   "kind": "normal"
+  },
+  {
+   "p": 6.218,
+   "q": 6.382,
+   "kind": "normal"
+  },
+  {
+   "p": 7.02,
+   "q": 7.184,
+   "kind": "normal"
+  },
+  {
+   "p": 7.799,
+   "q": 7.963,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 8.84,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 9.166,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 9.491,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 9.814,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 10.138,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 10.462,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 10.786,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 11.11,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 11.434,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 11.757,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 12.083,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 12.406,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 12.731,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 13.057,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 13.382,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 13.707,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 14.032,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 14.357,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 14.681,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 15.004,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 15.327,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 15.65,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 15.977,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 16.301,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 16.625,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 16.948,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 17.272,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 17.597,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 17.924,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 18.247,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 18.573,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 18.895,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 19.22,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 19.544,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 19.867,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 20.191,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 20.514,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 20.837,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 21.163,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 21.489,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 21.812,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 22.134,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 22.46,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 22.785,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 23.111,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 23.435,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 23.759,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 24.081,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 24.405,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 24.729,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 25.054,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 25.376,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 25.702,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 26.025,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 26.349,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 26.675,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 27.001,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 27.326,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 27.651,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 27.976,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 28.302,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 28.626,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 28.949,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 29.273,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 29.597,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 29.921,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 30.247,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 30.57,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 30.895,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 31.218,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 31.544,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 31.868,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 32.192,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 32.517,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 32.842,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 33.167,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 33.492,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 33.816,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 34.14,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 34.466,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 34.788,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 35.111,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 35.436,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 35.76,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 36.086,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 36.408,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 36.733,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 37.057,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 37.382,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 37.705,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 38.028,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 38.351,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 38.676,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 39.002,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 39.324,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 39.649,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 39.973,
+   "kind": "normal"
+  }
+ ]
+}

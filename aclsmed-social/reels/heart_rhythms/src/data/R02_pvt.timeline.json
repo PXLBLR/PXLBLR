@@ -1,0 +1,544 @@
+{
+ "id": "R02_pvt",
+ "n": 2,
+ "mode": "full",
+ "duration": 36.33,
+ "onset": 8.68,
+ "key": 21.76,
+ "action": 23.38,
+ "end_card": 29.25,
+ "post_shift": 8.18,
+ "hr_pre": "75",
+ "hr_post": "168",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.75,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in pulseless V-tach.",
+   "at": 8.93,
+   "end": 11.07
+  },
+  {
+   "id": "l4",
+   "text": "One spot in the ventricle takes over and fires a fast loop of its own, bypassing the normal pathway.",
+   "at": 11.5,
+   "end": 16.95
+  },
+  {
+   "id": "l5",
+   "text": "The ventricles race too fast to fill, and too little blood gets out. No pulse.",
+   "at": 17.47,
+   "end": 22.74
+  },
+  {
+   "id": "l6",
+   "text": "Pulseless V-tach is shockable. Start CPR, and defibrillate as soon as possible.",
+   "at": 23.38,
+   "end": 28.96
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 29.55,
+   "end": 34.13
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.975,
+   "q": -4.811,
+   "kind": "normal"
+  },
+  {
+   "p": -4.175,
+   "q": -4.011,
+   "kind": "normal"
+  },
+  {
+   "p": -3.395,
+   "q": -3.231,
+   "kind": "normal"
+  },
+  {
+   "p": -2.612,
+   "q": -2.447,
+   "kind": "normal"
+  },
+  {
+   "p": -1.815,
+   "q": -1.65,
+   "kind": "normal"
+  },
+  {
+   "p": -1.012,
+   "q": -0.848,
+   "kind": "normal"
+  },
+  {
+   "p": -0.191,
+   "q": -0.027,
+   "kind": "normal"
+  },
+  {
+   "p": 0.622,
+   "q": 0.786,
+   "kind": "normal"
+  },
+  {
+   "p": 1.418,
+   "q": 1.582,
+   "kind": "normal"
+  },
+  {
+   "p": 2.195,
+   "q": 2.359,
+   "kind": "normal"
+  },
+  {
+   "p": 2.974,
+   "q": 3.139,
+   "kind": "normal"
+  },
+  {
+   "p": 3.761,
+   "q": 3.925,
+   "kind": "normal"
+  },
+  {
+   "p": 4.581,
+   "q": 4.745,
+   "kind": "normal"
+  },
+  {
+   "p": 5.4,
+   "q": 5.564,
+   "kind": "normal"
+  },
+  {
+   "p": 6.218,
+   "q": 6.382,
+   "kind": "normal"
+  },
+  {
+   "p": 7.02,
+   "q": 7.184,
+   "kind": "normal"
+  },
+  {
+   "p": 7.799,
+   "q": 7.963,
+   "kind": "normal"
+  },
+  {
+   "p": null,
+   "q": 8.902,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 9.262,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 9.622,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 9.974,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 10.331,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 10.687,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 11.044,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 11.399,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 11.756,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 12.109,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 12.47,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 12.826,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 13.185,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 13.547,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 13.904,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 14.263,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 14.623,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 14.982,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 15.337,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 15.692,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 16.044,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 16.4,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 16.762,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 17.12,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 17.476,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 17.828,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 18.185,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 18.545,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 18.908,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 19.262,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 19.623,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 19.976,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 20.333,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 20.691,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 21.045,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 21.401,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 21.754,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 22.107,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 22.469,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 22.83,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 23.184,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 23.536,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 23.898,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 24.256,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 24.616,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 24.972,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 25.329,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 25.681,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 26.037,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 26.392,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 26.752,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 27.103,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 27.463,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 27.819,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 28.174,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 28.536,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 28.897,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 29.258,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 29.616,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 29.975,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 30.337,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 30.692,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 31.045,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 31.403,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 31.759,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 32.114,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 32.476,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 32.831,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 33.189,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 33.544,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 33.903,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 34.261,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 34.617,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 34.976,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 35.334,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 35.693,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 36.054,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 36.41,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 36.764,
+   "kind": "vent"
+  },
+  {
+   "p": null,
+   "q": 37.126,
+   "kind": "vent"
+  }
+ ]
+}

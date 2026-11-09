@@ -1,0 +1,339 @@
+{
+ "id": "R05_pea",
+ "n": 5,
+ "mode": "full",
+ "duration": 39.96,
+ "onset": 8.67,
+ "key": 23.45,
+ "action": 25.29,
+ "end_card": 32.88,
+ "post_shift": 8.17,
+ "hr_pre": "75",
+ "hr_post": "72",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.75,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in PEA, pulseless electrical activity.",
+   "at": 8.92,
+   "end": 12.42
+  },
+  {
+   "id": "l4",
+   "text": "The electrical signal still fires, so the monitor shows an organized rhythm. But the heart isn't moving enough blood to make a pulse.",
+   "at": 12.86,
+   "end": 20.59
+  },
+  {
+   "id": "l5",
+   "text": "The rhythm can look almost normal. But there's no pulse.",
+   "at": 21.15,
+   "end": 24.75
+  },
+  {
+   "id": "l6",
+   "text": "PEA is not shockable. Start CPR, give epinephrine as soon as possible, and look for the cause.",
+   "at": 25.29,
+   "end": 32.53
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 33.18,
+   "end": 37.76
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.975,
+   "q": -4.811,
+   "kind": "normal"
+  },
+  {
+   "p": -4.175,
+   "q": -4.011,
+   "kind": "normal"
+  },
+  {
+   "p": -3.395,
+   "q": -3.231,
+   "kind": "normal"
+  },
+  {
+   "p": -2.612,
+   "q": -2.447,
+   "kind": "normal"
+  },
+  {
+   "p": -1.815,
+   "q": -1.65,
+   "kind": "normal"
+  },
+  {
+   "p": -1.012,
+   "q": -0.848,
+   "kind": "normal"
+  },
+  {
+   "p": -0.191,
+   "q": -0.027,
+   "kind": "normal"
+  },
+  {
+   "p": 0.622,
+   "q": 0.786,
+   "kind": "normal"
+  },
+  {
+   "p": 1.418,
+   "q": 1.582,
+   "kind": "normal"
+  },
+  {
+   "p": 2.195,
+   "q": 2.359,
+   "kind": "normal"
+  },
+  {
+   "p": 2.974,
+   "q": 3.139,
+   "kind": "normal"
+  },
+  {
+   "p": 3.761,
+   "q": 3.925,
+   "kind": "normal"
+  },
+  {
+   "p": 4.581,
+   "q": 4.745,
+   "kind": "normal"
+  },
+  {
+   "p": 5.4,
+   "q": 5.564,
+   "kind": "normal"
+  },
+  {
+   "p": 6.218,
+   "q": 6.382,
+   "kind": "normal"
+  },
+  {
+   "p": 7.02,
+   "q": 7.184,
+   "kind": "normal"
+  },
+  {
+   "p": 7.799,
+   "q": 7.963,
+   "kind": "normal"
+  },
+  {
+   "p": 9.133,
+   "q": 9.277,
+   "kind": "normal"
+  },
+  {
+   "p": 9.967,
+   "q": 10.11,
+   "kind": "normal"
+  },
+  {
+   "p": 10.821,
+   "q": 10.965,
+   "kind": "normal"
+  },
+  {
+   "p": 11.678,
+   "q": 11.821,
+   "kind": "normal"
+  },
+  {
+   "p": 12.508,
+   "q": 12.651,
+   "kind": "normal"
+  },
+  {
+   "p": 13.326,
+   "q": 13.47,
+   "kind": "normal"
+  },
+  {
+   "p": 14.151,
+   "q": 14.295,
+   "kind": "normal"
+  },
+  {
+   "p": 14.999,
+   "q": 15.143,
+   "kind": "normal"
+  },
+  {
+   "p": 15.857,
+   "q": 16.0,
+   "kind": "normal"
+  },
+  {
+   "p": 16.69,
+   "q": 16.834,
+   "kind": "normal"
+  },
+  {
+   "p": 17.507,
+   "q": 17.651,
+   "kind": "normal"
+  },
+  {
+   "p": 18.316,
+   "q": 18.46,
+   "kind": "normal"
+  },
+  {
+   "p": 19.158,
+   "q": 19.301,
+   "kind": "normal"
+  },
+  {
+   "p": 20.014,
+   "q": 20.158,
+   "kind": "normal"
+  },
+  {
+   "p": 20.855,
+   "q": 20.998,
+   "kind": "normal"
+  },
+  {
+   "p": 21.678,
+   "q": 21.822,
+   "kind": "normal"
+  },
+  {
+   "p": 22.485,
+   "q": 22.629,
+   "kind": "normal"
+  },
+  {
+   "p": 23.317,
+   "q": 23.46,
+   "kind": "normal"
+  },
+  {
+   "p": 24.172,
+   "q": 24.316,
+   "kind": "normal"
+  },
+  {
+   "p": 25.015,
+   "q": 25.158,
+   "kind": "normal"
+  },
+  {
+   "p": 25.829,
+   "q": 25.973,
+   "kind": "normal"
+  },
+  {
+   "p": 26.632,
+   "q": 26.776,
+   "kind": "normal"
+  },
+  {
+   "p": 27.455,
+   "q": 27.598,
+   "kind": "normal"
+  },
+  {
+   "p": 28.301,
+   "q": 28.444,
+   "kind": "normal"
+  },
+  {
+   "p": 29.146,
+   "q": 29.29,
+   "kind": "normal"
+  },
+  {
+   "p": 29.975,
+   "q": 30.118,
+   "kind": "normal"
+  },
+  {
+   "p": 30.792,
+   "q": 30.936,
+   "kind": "normal"
+  },
+  {
+   "p": 31.603,
+   "q": 31.747,
+   "kind": "normal"
+  },
+  {
+   "p": 32.445,
+   "q": 32.589,
+   "kind": "normal"
+  },
+  {
+   "p": 33.3,
+   "q": 33.444,
+   "kind": "normal"
+  },
+  {
+   "p": 34.147,
+   "q": 34.29,
+   "kind": "normal"
+  },
+  {
+   "p": 34.965,
+   "q": 35.108,
+   "kind": "normal"
+  },
+  {
+   "p": 35.768,
+   "q": 35.912,
+   "kind": "normal"
+  },
+  {
+   "p": 36.592,
+   "q": 36.735,
+   "kind": "normal"
+  },
+  {
+   "p": 37.452,
+   "q": 37.595,
+   "kind": "normal"
+  },
+  {
+   "p": 38.299,
+   "q": 38.442,
+   "kind": "normal"
+  },
+  {
+   "p": 39.116,
+   "q": 39.26,
+   "kind": "normal"
+  },
+  {
+   "p": 39.93,
+   "q": 40.073,
+   "kind": "normal"
+  },
+  {
+   "p": 40.75,
+   "q": 40.894,
+   "kind": "normal"
+  }
+ ]
+}

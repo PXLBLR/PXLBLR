@@ -1,0 +1,52 @@
+{
+ "id": "R06_afib",
+ "n": 6,
+ "rhythm": "Atrial fibrillation",
+ "voice": "Mikko (narration) v2",
+ "direction": "Calm, warm, confident educator. One continuous read, conversational pace (~150 wpm). Let sentences run into each other; small natural breaths, no robotic gaps. Slight lift on 'Now watch', settle down on the key line.",
+ "lines": [
+  {
+   "id": "l1",
+   "cue": "pre",
+   "text": "This is a normal heartbeat.",
+   "gap_after": 0.25
+  },
+  {
+   "id": "l2",
+   "cue": "pre",
+   "text": "The SA node fires, the atria squeeze, then the signal passes through the AV node and both ventricles squeeze.",
+   "gap_after": 0.45
+  },
+  {
+   "id": "l3",
+   "cue": "onset",
+   "text": "Now watch what happens in A-fib.",
+   "gap_after": 0.35
+  },
+  {
+   "id": "l4",
+   "cue": "mech",
+   "text": "The atria no longer squeeze. They just quiver, firing hundreds of chaotic signals a minute.",
+   "gap_after": 0.4
+  },
+  {
+   "id": "l5",
+   "cue": "key",
+   "text": "The AV node lets only some of them through, so the heartbeat becomes irregularly irregular.",
+   "gap_after": 0.45
+  },
+  {
+   "id": "l6",
+   "cue": "action",
+   "text": "If the patient is unstable, use synchronized cardioversion. If stable, slow the rate and think about stroke risk.",
+   "gap_after": 0.5
+  },
+  {
+   "id": "l7",
+   "cue": "end",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "gap_after": 1.2
+  }
+ ],
+ "review": "Clinical fact-check 2026-11-09 (fresh-context agent vs AHA 2025 Part 9 Adult ALS) applied; awaiting RN sign-off."
+}

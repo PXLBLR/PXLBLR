@@ -1,0 +1,144 @@
+{
+ "id": "R04_asystole",
+ "n": 4,
+ "mode": "full",
+ "duration": 37.56,
+ "onset": 8.68,
+ "key": 16.47,
+ "action": 22.73,
+ "end_card": 30.48,
+ "post_shift": 8.18,
+ "hr_pre": "75",
+ "hr_post": "0",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.75,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in asystole.",
+   "at": 8.93,
+   "end": 10.98
+  },
+  {
+   "id": "l4",
+   "text": "All electrical activity stops. Nothing fires, and the heart stays still.",
+   "at": 11.42,
+   "end": 15.97
+  },
+  {
+   "id": "l5",
+   "text": "A flat line, and no pulse. Check the leads and the gain, so fine V-fib isn't missed.",
+   "at": 16.47,
+   "end": 22.18
+  },
+  {
+   "id": "l6",
+   "text": "Asystole is not shockable. Start CPR, give epinephrine as soon as possible, and look for the cause.",
+   "at": 22.73,
+   "end": 30.13
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 30.78,
+   "end": 35.36
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.975,
+   "q": -4.811,
+   "kind": "normal"
+  },
+  {
+   "p": -4.175,
+   "q": -4.011,
+   "kind": "normal"
+  },
+  {
+   "p": -3.395,
+   "q": -3.231,
+   "kind": "normal"
+  },
+  {
+   "p": -2.612,
+   "q": -2.447,
+   "kind": "normal"
+  },
+  {
+   "p": -1.815,
+   "q": -1.65,
+   "kind": "normal"
+  },
+  {
+   "p": -1.012,
+   "q": -0.848,
+   "kind": "normal"
+  },
+  {
+   "p": -0.191,
+   "q": -0.027,
+   "kind": "normal"
+  },
+  {
+   "p": 0.622,
+   "q": 0.786,
+   "kind": "normal"
+  },
+  {
+   "p": 1.418,
+   "q": 1.582,
+   "kind": "normal"
+  },
+  {
+   "p": 2.195,
+   "q": 2.359,
+   "kind": "normal"
+  },
+  {
+   "p": 2.974,
+   "q": 3.139,
+   "kind": "normal"
+  },
+  {
+   "p": 3.761,
+   "q": 3.925,
+   "kind": "normal"
+  },
+  {
+   "p": 4.581,
+   "q": 4.745,
+   "kind": "normal"
+  },
+  {
+   "p": 5.4,
+   "q": 5.564,
+   "kind": "normal"
+  },
+  {
+   "p": 6.218,
+   "q": 6.382,
+   "kind": "normal"
+  },
+  {
+   "p": 7.02,
+   "q": 7.184,
+   "kind": "normal"
+  },
+  {
+   "p": 7.799,
+   "q": 7.963,
+   "kind": "normal"
+  }
+ ]
+}

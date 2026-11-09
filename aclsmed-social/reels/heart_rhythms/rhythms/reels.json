@@ -1,0 +1,644 @@
+{
+ "_doc": "Per-reel visuals. pre/post: the strip before/after the rhythm starts (ECGSim preset + params, or a builtin). heart: animation mode in src/HeartRhythm.tsx. tags: labels on the heart (image px; from/to = cue or line id, +/- seconds). key_tag: shown on the key sentence. sfx: [name, offset s, gain] per cue. beeps_post: QRS beeps keep going after onset.",
+ "R01_vfib": {
+  "out": "heart_vfib_mockup.mp4",
+  "title": "VENTRICULAR FIBRILLATION",
+  "badge": "V-FIB",
+  "arrest": true,
+  "hr": "---",
+  "pre": {
+   "builtin": "sinus75"
+  },
+  "post": {
+   "builtin": "vfib"
+  },
+  "heart": "vf",
+  "tags": [
+   {
+    "text": "VENTRICLES",
+    "x": 780,
+    "y": 1300,
+    "red": true,
+    "from": "l4+0.4",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "NO PULSE",
+   "red": true
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.5
+    ],
+    [
+     "alarm",
+     0.1,
+     0.4
+    ],
+    [
+     "alarm",
+     2.0,
+     0.25
+    ],
+    [
+     "alarm",
+     4.0,
+     0.2
+    ]
+   ],
+   "key": [
+    [
+     "buzzer",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "charge",
+     0,
+     0.3
+    ]
+   ]
+  },
+  "beeps_post": false
+ },
+ "R02_pvt": {
+  "out": "heart_pvt.mp4",
+  "title": "PULSELESS VENTRICULAR TACHYCARDIA",
+  "badge": "V-TACH",
+  "arrest": true,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "vt-mono"
+  },
+  "heart": "pvt",
+  "tags": [
+   {
+    "text": "VT CIRCUIT",
+    "x": 830,
+    "y": 1330,
+    "red": true,
+    "from": "l4+0.6",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "NO PULSE",
+   "red": true
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.5
+    ],
+    [
+     "alarm",
+     0.1,
+     0.4
+    ],
+    [
+     "alarm",
+     2.0,
+     0.25
+    ],
+    [
+     "alarm",
+     4.0,
+     0.2
+    ]
+   ],
+   "key": [
+    [
+     "buzzer",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "charge",
+     0,
+     0.3
+    ]
+   ]
+  },
+  "beeps_post": false
+ },
+ "R03_torsades": {
+  "out": "heart_torsades.mp4",
+  "title": "TORSADES DE POINTES",
+  "badge": "TORSADES",
+  "arrest": true,
+  "hr": "auto",
+  "pre": {
+   "preset": "long-qt",
+   "set": {
+    "rate": 70
+   }
+  },
+  "post": {
+   "preset": "torsades"
+  },
+  "heart": "torsades",
+  "pre_title": "SINUS RHYTHM · LONG QT",
+  "pre_tags": "none",
+  "tags": [
+   {
+    "text": "TWISTING",
+    "x": 780,
+    "y": 1300,
+    "red": true,
+    "from": "l4+0.6",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "CAN BECOME V-FIB",
+   "red": true
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.5
+    ],
+    [
+     "alarm",
+     0.1,
+     0.4
+    ],
+    [
+     "alarm",
+     2.0,
+     0.25
+    ],
+    [
+     "alarm",
+     4.0,
+     0.2
+    ]
+   ],
+   "key": [
+    [
+     "buzzer",
+     0,
+     0.2
+    ]
+   ],
+   "action": [
+    [
+     "charge",
+     0,
+     0.3
+    ]
+   ]
+  },
+  "beeps_post": false,
+  "gain": 0.6
+ },
+ "R04_asystole": {
+  "out": "heart_asystole.mp4",
+  "title": "ASYSTOLE",
+  "badge": "ASYSTOLE",
+  "arrest": true,
+  "hr": "0",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "asystole"
+  },
+  "heart": "asystole",
+  "tags": [],
+  "key_tag": {
+   "text": "NO PULSE",
+   "red": true
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh_down",
+     0,
+     0.5
+    ],
+    [
+     "alarm",
+     0.4,
+     0.35
+    ],
+    [
+     "alarm",
+     2.4,
+     0.2
+    ]
+   ],
+   "key": [
+    [
+     "buzzer",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ]
+  },
+  "beeps_post": false
+ },
+ "R05_pea": {
+  "out": "heart_pea.mp4",
+  "title": "PULSELESS ELECTRICAL ACTIVITY",
+  "badge": "PEA",
+  "arrest": true,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "nsr",
+   "set": {
+    "rate": 72
+   },
+   "seed": 11
+  },
+  "heart": "pea",
+  "tags": [
+   {
+    "text": "SIGNAL STILL FIRES",
+    "x": 330,
+    "y": 500,
+    "red": false,
+    "from": "l4+0.4",
+    "to": "key-0.3"
+   },
+   {
+    "text": "NOT ENOUGH OUTPUT",
+    "x": 780,
+    "y": 1300,
+    "red": true,
+    "from": "l4+3.2",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "NO PULSE",
+   "red": true
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.45
+    ]
+   ],
+   "key": [
+    [
+     "alarm",
+     0,
+     0.3
+    ],
+    [
+     "buzzer",
+     0.9,
+     0.2
+    ]
+   ],
+   "action": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ]
+  },
+  "beeps_post": true
+ },
+ "R06_afib": {
+  "out": "heart_afib.mp4",
+  "title": "ATRIAL FIBRILLATION",
+  "badge": "A-FIB",
+  "arrest": false,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "afib-rvr"
+  },
+  "heart": "afib",
+  "tags": [
+   {
+    "text": "ATRIA QUIVER",
+    "x": 290,
+    "y": 500,
+    "red": false,
+    "from": "l4+0.4",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "IRREGULARLY IRREGULAR",
+   "red": false
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.45
+    ],
+    [
+     "alarm",
+     0.2,
+     0.18
+    ]
+   ],
+   "key": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "charge",
+     1.2,
+     0.22
+    ]
+   ]
+  },
+  "beeps_post": true
+ },
+ "R07_aflutter": {
+  "out": "heart_aflutter.mp4",
+  "title": "ATRIAL FLUTTER",
+  "badge": "FLUTTER",
+  "arrest": false,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "aflutter-2to1"
+  },
+  "heart": "aflutter",
+  "tags": [
+   {
+    "text": "FLUTTER LOOP",
+    "x": 290,
+    "y": 500,
+    "red": false,
+    "from": "l4+0.4",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "2:1 · ~150/MIN",
+   "red": false
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.45
+    ],
+    [
+     "alarm",
+     0.2,
+     0.18
+    ]
+   ],
+   "key": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "charge",
+     1.2,
+     0.22
+    ]
+   ]
+  },
+  "beeps_post": true
+ },
+ "R08_svt": {
+  "out": "heart_svt.mp4",
+  "title": "SVT · AVNRT",
+  "badge": "SVT",
+  "arrest": false,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "svt"
+  },
+  "heart": "svt",
+  "tags": [
+   {
+    "text": "LOOP IN THE AV NODE",
+    "x": 470,
+    "y": 980,
+    "red": false,
+    "from": "l4+0.4",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "~185/MIN",
+   "red": false
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.45
+    ],
+    [
+     "alarm",
+     0.2,
+     0.2
+    ]
+   ],
+   "key": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "charge",
+     2.6,
+     0.22
+    ]
+   ]
+  },
+  "beeps_post": true
+ },
+ "R09_mobitz2": {
+  "out": "heart_mobitz2.mp4",
+  "title": "2ND-DEGREE AV BLOCK · MOBITZ II",
+  "badge": "MOBITZ II",
+  "arrest": false,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "mobitz2"
+  },
+  "heart": "mobitz2",
+  "tags": [
+   {
+    "text": "BLOCKED",
+    "x": 520,
+    "y": 930,
+    "red": true,
+    "from": "l4+1.6",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "DROPPED BEATS",
+   "red": false
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.45
+    ]
+   ],
+   "key": [
+    [
+     "alarm",
+     0,
+     0.18
+    ]
+   ],
+   "action": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ]
+  },
+  "beeps_post": true
+ },
+ "R10_chb": {
+  "out": "heart_chb.mp4",
+  "title": "3RD-DEGREE (COMPLETE) AV BLOCK",
+  "badge": "CHB",
+  "arrest": false,
+  "hr": "auto",
+  "pre": {
+   "preset": "nsr",
+   "set": {
+    "rate": 75
+   }
+  },
+  "post": {
+   "preset": "chb-ventricular"
+  },
+  "heart": "chb",
+  "tags": [
+   {
+    "text": "ATRIA ~90",
+    "x": 290,
+    "y": 500,
+    "red": false,
+    "from": "l4+1.4",
+    "to": "key-0.3"
+   },
+   {
+    "text": "VENTRICLES ~30",
+    "x": 780,
+    "y": 1300,
+    "red": false,
+    "from": "l4+2.4",
+    "to": "key-0.3"
+   }
+  ],
+  "key_tag": {
+   "text": "AV DISSOCIATION",
+   "red": false
+  },
+  "sfx": {
+   "onset": [
+    [
+     "whoosh",
+     0,
+     0.45
+    ],
+    [
+     "alarm",
+     1.0,
+     0.18
+    ]
+   ],
+   "key": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ],
+   "action": [
+    [
+     "pop",
+     0,
+     0.25
+    ]
+   ]
+  },
+  "beeps_post": true
+ }
+}

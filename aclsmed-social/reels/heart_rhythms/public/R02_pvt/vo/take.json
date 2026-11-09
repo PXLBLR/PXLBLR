@@ -1,0 +1,66 @@
+{
+ "take": 0,
+ "sent": "This is a normal heartbeat. [pause 0.3] The S-A node fires, the signal travels down through the A-V node, and both ventricles squeeze together. [pause 0.45] Now watch what happens in pulseless Vee-tack. [pause 0.35] One spot in the ventricle takes over and fires a fast loop of its own, bypassing the normal pathway. [pause 0.4] The ventricles race too fast to fill, and too little blood gets out. [pause 0.35] No pulse. [pause 0.45] Pulseless Vee-tack is shockable. [pause 0.35] Start CPR, and defibrillate as soon as possible. [pause 0.5] Practice it on A-C-L-S med Sim. [pause 0.35] A-C-L-S med dot com. [pause 1.2]",
+ "chunks": [
+  {
+   "i": 0,
+   "text": "This is a normal heartbeat.",
+   "dur": 1.49,
+   "gap": 0.3
+  },
+  {
+   "i": 1,
+   "text": "The S-A node fires, the signal travels down through the A-V node, and both ventricles squeeze together.",
+   "dur": 5.94,
+   "gap": 0.45
+  },
+  {
+   "i": 2,
+   "text": "Now watch what happens in pulseless Vee-tack.",
+   "dur": 2.23,
+   "gap": 0.35
+  },
+  {
+   "i": 3,
+   "text": "One spot in the ventricle takes over and fires a fast loop of its own, bypassing the normal pathway.",
+   "dur": 5.56,
+   "gap": 0.4
+  },
+  {
+   "i": 4,
+   "text": "The ventricles race too fast to fill, and too little blood gets out.",
+   "dur": 3.94,
+   "gap": 0.35
+  },
+  {
+   "i": 5,
+   "text": "No pulse.",
+   "dur": 1.12,
+   "gap": 0.45
+  },
+  {
+   "i": 6,
+   "text": "Pulseless Vee-tack is shockable.",
+   "dur": 2.13,
+   "gap": 0.35
+  },
+  {
+   "i": 7,
+   "text": "Start CPR, and defibrillate as soon as possible.",
+   "dur": 3.24,
+   "gap": 0.5
+  },
+  {
+   "i": 8,
+   "text": "Practice it on A-C-L-S med Sim.",
+   "dur": 2.06,
+   "gap": 0.35
+  },
+  {
+   "i": 9,
+   "text": "A-C-L-S med dot com.",
+   "dur": 2.26,
+   "gap": 1.2
+  }
+ ]
+}

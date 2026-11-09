@@ -1,4 +1,53 @@
+# Heart rhythms 01-10 · render notes (2026-11-09)
+
+All ten reels built 2026-11-09. Status: **awaiting the owner's review and RN sign-off. Nothing posted or scheduled.**
+
+## Layout (one pipeline, a reel id per step)
+| Path | What |
+|---|---|
+| `rhythms/<id>/script.json` | narration: lines, cues (pre/onset/mech/key/action/end), gaps, `key_sentence` |
+| `rhythms/reels.json` | visuals per reel: ECGSim presets, heart mode, tags, key tag, cue sounds, beeps after onset |
+| `src/data/<id>.strips.json` | lead II + beat/P times from ECGSim (`node export_strips.mjs`), committed so renders need no ECGSim |
+| `src/data/<id>.timeline.json` | captions, cue times, every beat on the reel clock (`make_timeline.py`) |
+| `public/<id>/vo/` | take.json, lines/sentences/whisper.json committed; **full.wav local only** (owner's decision: public repo) |
+
+```
+python3 make_vo.py R02_pvt && python3 check_vo.py R02_pvt      # voice (Mac, Prayer Voice.app) + read-back
+python3 make_vo.py R02_pvt --splice "Then pace" 1               # re-render one sentence and splice it at its breaths
+python3 make_timeline.py R02_pvt && python3 make_audio.py R02_pvt
+CHROMIUM=<Chrome for Testing 149> node render.mjs R02_pvt [R03_torsades ...]
+python3 check_reel.py [ids]                                     # checks on the rendered MP4s
+```
+R01 moved into this layout unchanged: its new mix is identical sample for sample to the delivered one, and its frames
+match the delivered MP4 within compression noise.
+
+## Scripts 02-10
+Drafted on the R01 pattern, then fact-checked by a fresh-context agent against the AHA 2025 Guidelines Part 9 (Adult
+ALS). Applied: torsades = shock sustained runs right away, pulse or not, magnesium for recurrences; Mobitz II / CHB =
+atropine first (may fail below the AV node), then pacing or an epinephrine drip; QT definition; asystole = check leads
+and gain (fine V-fib); PEA = not enough output (the heart may still contract; the reel shows a weak squeeze); flutter
+"often" 2:1; SVT = the most common type (AVNRT); CHB block level and "often" 20-40; unstable branch first for AF and
+flutter, both with stroke risk. The RN should confirm against the live AHA page.
+
+## Voice fixes 02-10
+Read-back is per sentence chunk (take.json gives each chunk's place in full.wav): the whole-file decode dropped the
+last phrase and once doubled a word. Spliced sentences (alternate takes): R04 "Asystole is not shockable." (take 1),
+R04 "Check the leads ... isn't missed." (take 2), R09 "Then pace, or start an epinephrine drip." (take 1). Reworded
+because Whisper cannot hear the difference: R06 "The atria stop squeezing and just quiver" -> "The atria no longer
+squeeze. They just quiver" (stop/stops squeezing), R04 "so you don't miss fine V-fib" -> "so fine V-fib isn't missed".
+"A-fib" is sent as written (the "Ay-fib" respelling read as "eye-fib"). **Listen to "torsades de pointes" (R03):**
+Whisper writes it "Torsad's de point" / "tor saz", i.e. French-style with silent s's.
+
+## Checks on the ten MP4s (`check_reel.py`, all PASS)
+Final mix read back word for word; every word ends inside its caption window; the rhythm starts before "Now watch...";
+the key tag starts on its sentence; the end card is up before "Practice it on..."; -14.1 to -14.3 LUFS, peak -1.3/-1.4
+dBFS; voice 8-17 dB over bed + beeps per line (lowest: A-fib's onset line, alarm + fast beeps start together).
+
+---
+
 # R01 V-fib · narrated render notes (2026-11-09)
+(Paths below are from before the series layout: script.json, public/vo/ and src/timeline.json now live under
+rhythms/R01_vfib/, public/R01_vfib/vo/ and src/data/R01_vfib.timeline.json.)
 
 Output: `out/heart_vfib_mockup.mp4` (gitignored): 1080×1920, 30 fps, H.264 + AAC 48 kHz, 35.2 s.
 Status: **awaiting the owner's review and RN sign-off. Not posted or scheduled.**

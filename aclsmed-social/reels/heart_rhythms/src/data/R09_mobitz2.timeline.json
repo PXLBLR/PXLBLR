@@ -1,0 +1,344 @@
+{
+ "id": "R09_mobitz2",
+ "n": 9,
+ "mode": "full",
+ "duration": 39.94,
+ "onset": 8.72,
+ "key": 18.31,
+ "action": 23.53,
+ "end_card": 32.86,
+ "post_shift": 8.22,
+ "hr_pre": "75",
+ "hr_post": "50",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.75,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in Mobitz type two heart block.",
+   "at": 8.97,
+   "end": 11.65
+  },
+  {
+   "id": "l4",
+   "text": "The atria keep firing on time, but some signals suddenly stop below the AV node, with no warning.",
+   "at": 12.08,
+   "end": 17.82
+  },
+  {
+   "id": "l5",
+   "text": "Every dropped beat is a missing heartbeat, and it can progress to complete heart block.",
+   "at": 18.31,
+   "end": 22.81
+  },
+  {
+   "id": "l6",
+   "text": "Pads on. If unstable, try atropine, but it often fails here. Then pace, or start an epinephrine drip.",
+   "at": 23.53,
+   "end": 32.57
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 33.16,
+   "end": 37.74
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.975,
+   "q": -4.811,
+   "kind": "normal"
+  },
+  {
+   "p": -4.175,
+   "q": -4.011,
+   "kind": "normal"
+  },
+  {
+   "p": -3.395,
+   "q": -3.231,
+   "kind": "normal"
+  },
+  {
+   "p": -2.612,
+   "q": -2.447,
+   "kind": "normal"
+  },
+  {
+   "p": -1.815,
+   "q": -1.65,
+   "kind": "normal"
+  },
+  {
+   "p": -1.012,
+   "q": -0.848,
+   "kind": "normal"
+  },
+  {
+   "p": -0.191,
+   "q": -0.027,
+   "kind": "normal"
+  },
+  {
+   "p": 0.622,
+   "q": 0.786,
+   "kind": "normal"
+  },
+  {
+   "p": 1.418,
+   "q": 1.582,
+   "kind": "normal"
+  },
+  {
+   "p": 2.195,
+   "q": 2.359,
+   "kind": "normal"
+  },
+  {
+   "p": 2.974,
+   "q": 3.139,
+   "kind": "normal"
+  },
+  {
+   "p": 3.761,
+   "q": 3.925,
+   "kind": "normal"
+  },
+  {
+   "p": 4.581,
+   "q": 4.745,
+   "kind": "normal"
+  },
+  {
+   "p": 5.4,
+   "q": 5.564,
+   "kind": "normal"
+  },
+  {
+   "p": 6.218,
+   "q": 6.382,
+   "kind": "normal"
+  },
+  {
+   "p": 7.02,
+   "q": 7.184,
+   "kind": "normal"
+  },
+  {
+   "p": 7.799,
+   "q": 7.963,
+   "kind": "normal"
+  },
+  {
+   "p": 9.036,
+   "q": 9.201,
+   "kind": "normal"
+  },
+  {
+   "p": 9.836,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 10.638,
+   "q": 10.802,
+   "kind": "normal"
+  },
+  {
+   "p": 11.441,
+   "q": 11.605,
+   "kind": "normal"
+  },
+  {
+   "p": 12.236,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 13.036,
+   "q": 13.2,
+   "kind": "normal"
+  },
+  {
+   "p": 13.835,
+   "q": 13.999,
+   "kind": "normal"
+  },
+  {
+   "p": 14.635,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 15.433,
+   "q": 15.597,
+   "kind": "normal"
+  },
+  {
+   "p": 16.233,
+   "q": 16.397,
+   "kind": "normal"
+  },
+  {
+   "p": 17.029,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 17.833,
+   "q": 17.997,
+   "kind": "normal"
+  },
+  {
+   "p": 18.631,
+   "q": 18.795,
+   "kind": "normal"
+  },
+  {
+   "p": 19.433,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 20.237,
+   "q": 20.402,
+   "kind": "normal"
+  },
+  {
+   "p": 21.037,
+   "q": 21.202,
+   "kind": "normal"
+  },
+  {
+   "p": 21.839,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 22.642,
+   "q": 22.806,
+   "kind": "normal"
+  },
+  {
+   "p": 23.443,
+   "q": 23.607,
+   "kind": "normal"
+  },
+  {
+   "p": 24.241,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 25.039,
+   "q": 25.203,
+   "kind": "normal"
+  },
+  {
+   "p": 25.835,
+   "q": 26.0,
+   "kind": "normal"
+  },
+  {
+   "p": 26.633,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 27.438,
+   "q": 27.602,
+   "kind": "normal"
+  },
+  {
+   "p": 28.239,
+   "q": 28.403,
+   "kind": "normal"
+  },
+  {
+   "p": 29.038,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 29.834,
+   "q": 29.998,
+   "kind": "normal"
+  },
+  {
+   "p": 30.633,
+   "q": 30.797,
+   "kind": "normal"
+  },
+  {
+   "p": 31.436,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 32.241,
+   "q": 32.405,
+   "kind": "normal"
+  },
+  {
+   "p": 33.038,
+   "q": 33.202,
+   "kind": "normal"
+  },
+  {
+   "p": 33.842,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 34.638,
+   "q": 34.802,
+   "kind": "normal"
+  },
+  {
+   "p": 35.438,
+   "q": 35.602,
+   "kind": "normal"
+  },
+  {
+   "p": 36.238,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 37.035,
+   "q": 37.2,
+   "kind": "normal"
+  },
+  {
+   "p": 37.834,
+   "q": 37.999,
+   "kind": "normal"
+  },
+  {
+   "p": 38.631,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 39.427,
+   "q": 39.591,
+   "kind": "normal"
+  },
+  {
+   "p": 40.232,
+   "q": 40.396,
+   "kind": "normal"
+  }
+ ]
+}

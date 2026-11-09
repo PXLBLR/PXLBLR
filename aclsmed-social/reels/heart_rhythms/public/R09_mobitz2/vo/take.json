@@ -1,0 +1,67 @@
+{
+ "take": 0,
+ "sent": "This is a normal heartbeat. [pause 0.3] The S-A node fires, the signal travels down through the A-V node, and both ventricles squeeze together. [pause 0.45] Now watch what happens in Mobitz type two heart block. [pause 0.35] The atria keep firing on time, but some signals suddenly stop below the A-V node, with no warning. [pause 0.4] Every dropped beat is a missing heartbeat, and it can progress to complete heart block. [pause 0.45] Pads on. [pause 0.35] If unstable, try atropine, but it often fails here. [pause 0.35] Then pace, or start an epinephrine drip. [pause 0.5] Practice it on A-C-L-S med Sim. [pause 0.35] A-C-L-S med dot com. [pause 1.2]",
+ "chunks": [
+  {
+   "i": 0,
+   "text": "This is a normal heartbeat.",
+   "dur": 1.49,
+   "gap": 0.3
+  },
+  {
+   "i": 1,
+   "text": "The S-A node fires, the signal travels down through the A-V node, and both ventricles squeeze together.",
+   "dur": 5.94,
+   "gap": 0.45
+  },
+  {
+   "i": 2,
+   "text": "Now watch what happens in Mobitz type two heart block.",
+   "dur": 2.8,
+   "gap": 0.35
+  },
+  {
+   "i": 3,
+   "text": "The atria keep firing on time, but some signals suddenly stop below the A-V node, with no warning.",
+   "dur": 5.83,
+   "gap": 0.4
+  },
+  {
+   "i": 4,
+   "text": "Every dropped beat is a missing heartbeat, and it can progress to complete heart block.",
+   "dur": 4.59,
+   "gap": 0.45
+  },
+  {
+   "i": 5,
+   "text": "Pads on.",
+   "dur": 0.89,
+   "gap": 0.35
+  },
+  {
+   "i": 6,
+   "text": "If unstable, try atropine, but it often fails here.",
+   "dur": 3.67,
+   "gap": 0.35
+  },
+  {
+   "i": 7,
+   "text": "Then pace, or start an epinephrine drip.",
+   "dur": 4.05,
+   "gap": 0.5,
+   "spliced_take": 1
+  },
+  {
+   "i": 8,
+   "text": "Practice it on A-C-L-S med Sim.",
+   "dur": 2.06,
+   "gap": 0.35
+  },
+  {
+   "i": 9,
+   "text": "A-C-L-S med dot com.",
+   "dur": 2.26,
+   "gap": 1.2
+  }
+ ]
+}

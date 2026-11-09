@@ -1,0 +1,144 @@
+{
+ "id": "R01_vfib",
+ "n": 1,
+ "mode": "full",
+ "duration": 35.19,
+ "onset": 8.92,
+ "key": 20.65,
+ "action": 22.22,
+ "end_card": 28.11,
+ "post_shift": null,
+ "hr_pre": "75",
+ "hr_post": "---",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.75,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in V-fib.",
+   "at": 9.17,
+   "end": 10.8
+  },
+  {
+   "id": "l4",
+   "text": "The electrical activity in the ventricles turns chaotic. Instead of squeezing, they just quiver.",
+   "at": 11.24,
+   "end": 17.06
+  },
+  {
+   "id": "l5",
+   "text": "And with no squeeze, there's no cardiac output. No pulse.",
+   "at": 17.63,
+   "end": 21.63
+  },
+  {
+   "id": "l6",
+   "text": "V-fib is a shockable rhythm. Start CPR, and defibrillate as soon as possible.",
+   "at": 22.22,
+   "end": 27.82
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 28.41,
+   "end": 32.99
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.8,
+   "q": -4.6,
+   "kind": "normal"
+  },
+  {
+   "p": -4.0,
+   "q": -3.8,
+   "kind": "normal"
+  },
+  {
+   "p": -3.2,
+   "q": -3.0,
+   "kind": "normal"
+  },
+  {
+   "p": -2.4,
+   "q": -2.2,
+   "kind": "normal"
+  },
+  {
+   "p": -1.6,
+   "q": -1.4,
+   "kind": "normal"
+  },
+  {
+   "p": -0.8,
+   "q": -0.6,
+   "kind": "normal"
+  },
+  {
+   "p": 0.0,
+   "q": 0.2,
+   "kind": "normal"
+  },
+  {
+   "p": 0.8,
+   "q": 1.0,
+   "kind": "normal"
+  },
+  {
+   "p": 1.6,
+   "q": 1.8,
+   "kind": "normal"
+  },
+  {
+   "p": 2.4,
+   "q": 2.6,
+   "kind": "normal"
+  },
+  {
+   "p": 3.2,
+   "q": 3.4,
+   "kind": "normal"
+  },
+  {
+   "p": 4.0,
+   "q": 4.2,
+   "kind": "normal"
+  },
+  {
+   "p": 4.8,
+   "q": 5.0,
+   "kind": "normal"
+  },
+  {
+   "p": 5.6,
+   "q": 5.8,
+   "kind": "normal"
+  },
+  {
+   "p": 6.4,
+   "q": 6.6,
+   "kind": "normal"
+  },
+  {
+   "p": 7.2,
+   "q": 7.4,
+   "kind": "normal"
+  },
+  {
+   "p": 8.0,
+   "q": 8.2,
+   "kind": "normal"
+  }
+ ]
+}

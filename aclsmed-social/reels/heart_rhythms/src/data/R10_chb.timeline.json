@@ -1,0 +1,484 @@
+{
+ "id": "R10_chb",
+ "n": 10,
+ "mode": "full",
+ "duration": 40.93,
+ "onset": 8.68,
+ "key": 18.9,
+ "action": 25.34,
+ "end_card": 33.85,
+ "post_shift": 8.18,
+ "hr_pre": "75",
+ "hr_post": "29",
+ "lines": [
+  {
+   "id": "l1",
+   "text": "This is a normal heartbeat.",
+   "at": 0.76,
+   "end": 2.13
+  },
+  {
+   "id": "l2",
+   "text": "The SA node fires, the signal travels down through the AV node, and both ventricles squeeze together.",
+   "at": 2.55,
+   "end": 8.39
+  },
+  {
+   "id": "l3",
+   "text": "Now watch what happens in third-degree heart block.",
+   "at": 8.93,
+   "end": 11.34
+  },
+  {
+   "id": "l4",
+   "text": "No signal gets from the atria down to the ventricles. The atria and ventricles each fire on their own clocks.",
+   "at": 11.78,
+   "end": 18.39
+  },
+  {
+   "id": "l5",
+   "text": "A slow backup pacemaker below the block keeps the heart going, often at only 20 to 40 beats a minute.",
+   "at": 18.9,
+   "end": 24.8
+  },
+  {
+   "id": "l6",
+   "text": "Put pacing pads on. If unstable, give atropine, but don't count on it. Pace, or start an epinephrine drip.",
+   "at": 25.34,
+   "end": 33.56
+  },
+  {
+   "id": "l7",
+   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.",
+   "at": 34.15,
+   "end": 38.73
+  }
+ ],
+ "beats": [
+  {
+   "p": -4.975,
+   "q": -4.811,
+   "kind": "normal"
+  },
+  {
+   "p": -4.175,
+   "q": -4.011,
+   "kind": "normal"
+  },
+  {
+   "p": -3.395,
+   "q": -3.231,
+   "kind": "normal"
+  },
+  {
+   "p": -2.612,
+   "q": -2.447,
+   "kind": "normal"
+  },
+  {
+   "p": -1.815,
+   "q": -1.65,
+   "kind": "normal"
+  },
+  {
+   "p": -1.012,
+   "q": -0.848,
+   "kind": "normal"
+  },
+  {
+   "p": -0.191,
+   "q": -0.027,
+   "kind": "normal"
+  },
+  {
+   "p": 0.622,
+   "q": 0.786,
+   "kind": "normal"
+  },
+  {
+   "p": 1.418,
+   "q": 1.582,
+   "kind": "normal"
+  },
+  {
+   "p": 2.195,
+   "q": 2.359,
+   "kind": "normal"
+  },
+  {
+   "p": 2.974,
+   "q": 3.139,
+   "kind": "normal"
+  },
+  {
+   "p": 3.761,
+   "q": 3.925,
+   "kind": "normal"
+  },
+  {
+   "p": 4.581,
+   "q": 4.745,
+   "kind": "normal"
+  },
+  {
+   "p": 5.4,
+   "q": 5.564,
+   "kind": "normal"
+  },
+  {
+   "p": 6.218,
+   "q": 6.382,
+   "kind": "normal"
+  },
+  {
+   "p": 7.02,
+   "q": 7.184,
+   "kind": "normal"
+  },
+  {
+   "p": 7.799,
+   "q": 7.963,
+   "kind": "normal"
+  },
+  {
+   "p": 8.844,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 8.954,
+   "kind": "vent"
+  },
+  {
+   "p": 9.482,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 10.123,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 10.765,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 11.02,
+   "kind": "vent"
+  },
+  {
+   "p": 11.397,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 12.035,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 12.672,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 13.097,
+   "kind": "vent"
+  },
+  {
+   "p": 13.31,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 13.946,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 14.585,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 15.166,
+   "kind": "vent"
+  },
+  {
+   "p": 15.218,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 15.861,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 16.497,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 17.138,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 17.242,
+   "kind": "vent"
+  },
+  {
+   "p": 17.782,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 18.42,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 19.061,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 19.322,
+   "kind": "vent"
+  },
+  {
+   "p": 19.702,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 20.343,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 20.978,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 21.387,
+   "kind": "vent"
+  },
+  {
+   "p": 21.614,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 22.247,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 22.883,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 23.448,
+   "kind": "vent"
+  },
+  {
+   "p": 23.528,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 24.167,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 24.804,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 25.436,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 25.533,
+   "kind": "vent"
+  },
+  {
+   "p": 26.074,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 26.716,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 27.361,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 27.587,
+   "kind": "vent"
+  },
+  {
+   "p": 27.996,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 28.639,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 29.271,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 29.642,
+   "kind": "vent"
+  },
+  {
+   "p": 29.91,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 30.549,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 31.183,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 31.717,
+   "kind": "vent"
+  },
+  {
+   "p": 31.82,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 32.454,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 33.087,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 33.732,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 33.78,
+   "kind": "vent"
+  },
+  {
+   "p": 34.374,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 35.009,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 35.641,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 35.864,
+   "kind": "vent"
+  },
+  {
+   "p": 36.285,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 36.925,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 37.567,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 37.917,
+   "kind": "vent"
+  },
+  {
+   "p": 38.204,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 38.841,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 39.474,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": null,
+   "q": 39.989,
+   "kind": "vent"
+  },
+  {
+   "p": 40.111,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 40.747,
+   "q": null,
+   "kind": "blocked"
+  },
+  {
+   "p": 41.387,
+   "q": null,
+   "kind": "blocked"
+  }
+ ]
+}

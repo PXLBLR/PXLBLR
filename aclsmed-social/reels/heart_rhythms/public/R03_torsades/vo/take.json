@@ -1,0 +1,66 @@
+{
+ "take": 0,
+ "sent": "This heart is in sinus rhythm, but look how long it takes from each spike to the end of its T wave. [pause 0.3] That's a long Q-T. [pause 0.35] The ventricles take longer than normal to reset, and that leaves them vulnerable. [pause 0.45] Now watch what happens in torsades de pointes. [pause 0.35] A fast ventricular rhythm twists around the baseline, the complexes growing and shrinking like a ribbon. [pause 0.4] It can stop on its own, or turn into Vee-fib. [pause 0.45] If it keeps going, defibrillate right away, pulse or not, and start CPR if there's no pulse. [pause 0.35] I-V magnesium helps stop it coming back. [pause 0.5] Practice it on A-C-L-S med Sim. [pause 0.35] A-C-L-S med dot com. [pause 1.2]",
+ "chunks": [
+  {
+   "i": 0,
+   "text": "This heart is in sinus rhythm, but look how long it takes from each spike to the end of its T wave.",
+   "dur": 5.32,
+   "gap": 0.3
+  },
+  {
+   "i": 1,
+   "text": "That's a long Q-T.",
+   "dur": 1.11,
+   "gap": 0.35
+  },
+  {
+   "i": 2,
+   "text": "The ventricles take longer than normal to reset, and that leaves them vulnerable.",
+   "dur": 4.55,
+   "gap": 0.45
+  },
+  {
+   "i": 3,
+   "text": "Now watch what happens in torsades de pointes.",
+   "dur": 2.74,
+   "gap": 0.35
+  },
+  {
+   "i": 4,
+   "text": "A fast ventricular rhythm twists around the baseline, the complexes growing and shrinking like a ribbon.",
+   "dur": 6.04,
+   "gap": 0.4
+  },
+  {
+   "i": 5,
+   "text": "It can stop on its own, or turn into Vee-fib.",
+   "dur": 2.89,
+   "gap": 0.45
+  },
+  {
+   "i": 6,
+   "text": "If it keeps going, defibrillate right away, pulse or not, and start CPR if there's no pulse.",
+   "dur": 6.13,
+   "gap": 0.35
+  },
+  {
+   "i": 7,
+   "text": "I-V magnesium helps stop it coming back.",
+   "dur": 2.56,
+   "gap": 0.5
+  },
+  {
+   "i": 8,
+   "text": "Practice it on A-C-L-S med Sim.",
+   "dur": 2.06,
+   "gap": 0.35
+  },
+  {
+   "i": 9,
+   "text": "A-C-L-S med dot com.",
+   "dur": 2.26,
+   "gap": 1.2
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "take": 0,
+ "sent": "This is a normal heartbeat. [pause 0.3] The S-A node fires, the atria squeeze, then the signal passes through the A-V node and both ventricles squeeze. [pause 0.45] Now watch what happens in A-fib. [pause 0.35] The atria no longer squeeze. [pause 0.35] They just quiver, firing hundreds of chaotic signals a minute. [pause 0.4] The A-V node lets only some of them through, so the heartbeat becomes irregularly irregular. [pause 0.45] If the patient is unstable, use synchronized cardioversion. [pause 0.35] If stable, slow the rate and think about stroke risk. [pause 0.5] Practice it on A-C-L-S med Sim. [pause 0.35] A-C-L-S med dot com. [pause 1.2]",
+ "chunks": [
+  {
+   "i": 0,
+   "text": "This is a normal heartbeat.",
+   "dur": 1.49,
+   "gap": 0.3
+  },
+  {
+   "i": 1,
+   "text": "The S-A node fires, the atria squeeze, then the signal passes through the A-V node and both ventricles squeeze.",
+   "dur": 7.5,
+   "gap": 0.45
+  },
+  {
+   "i": 2,
+   "text": "Now watch what happens in A-fib.",
+   "dur": 1.97,
+   "gap": 0.35
+  },
+  {
+   "i": 3,
+   "text": "The atria no longer squeeze.",
+   "dur": 2.15,
+   "gap": 0.35
+  },
+  {
+   "i": 4,
+   "text": "They just quiver, firing hundreds of chaotic signals a minute.",
+   "dur": 3.58,
+   "gap": 0.4
+  },
+  {
+   "i": 5,
+   "text": "The A-V node lets only some of them through, so the heartbeat becomes irregularly irregular.",
+   "dur": 5.61,
+   "gap": 0.45
+  },
+  {
+   "i": 6,
+   "text": "If the patient is unstable, use synchronized cardioversion.",
+   "dur": 3.21,
+   "gap": 0.35
+  },
+  {
+   "i": 7,
+   "text": "If stable, slow the rate and think about stroke risk.",
+   "dur": 3.18,
+   "gap": 0.5
+  },
+  {
+   "i": 8,
+   "text": "Practice it on A-C-L-S med Sim.",
+   "dur": 2.06,
+   "gap": 0.35
+  },
+  {
+   "i": 9,
+   "text": "A-C-L-S med dot com.",
+   "dur": 2.26,
+   "gap": 1.2
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 """Read the narration back with Whisper and check it word for word against script.json; write public/vo/lines.json.
 
-    python3 check_vo.py [wav]      (default public/vo/full.wav)
+    python3 check_vo.py R02_pvt [wav]      (default public/R02_pvt/vo/full.wav)
 
 Whisper large-v3-turbo (mlx, the Prayer Voice venv) with word timestamps. Both sides are put in one canonical form
 (lower case, no punctuation, "V-fib"/"vee-fib"/"VFib" -> vfib, "S-A"/"S.A." -> sa, "ACLS med"/"ACLSmed" -> aclsmed,
@@ -18,19 +18,57 @@ import subprocess
 import sys
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-VO = HERE / "public" / "vo"
+import reel
+
+R = None
+VO = None
 PY = Path.home() / "Developer/tts/PrayerVoice/.venv/bin/python"
-CODE = ("import mlx_whisper, json, sys; r = mlx_whisper.transcribe(sys.argv[1], "
-        "path_or_hf_repo='mlx-community/whisper-large-v3-turbo', word_timestamps=True, language='en', "
-        "no_speech_threshold=None, condition_on_previous_text=False); "
-        "print(json.dumps([[w['word'].strip(), w['start'], w['end']] for s in r['segments'] for w in s['words']]))")
+# Whisper per sentence chunk (take.json gives each chunk's exact place in full.wav): short clips read far more reliably
+# than one long file, which dropped the last phrase and once doubled a word. Without take.json: the whole file.
+CODE = """
+import json, sys, mlx_whisper
+from mlx_whisper.audio import load_audio
+wav, segs = sys.argv[1], json.loads(sys.argv[2])
+audio = load_audio(wav)
+out = []
+for a, b in segs:
+    clip = audio[int(max(0, a) * 16000):int(b * 16000)]
+    r = mlx_whisper.transcribe(clip, path_or_hf_repo='mlx-community/whisper-large-v3-turbo', word_timestamps=True,
+                               language='en', no_speech_threshold=None, condition_on_previous_text=False)
+    out += [[w['word'].strip(), round(w['start'] + max(0, a), 3), round(w['end'] + max(0, a), 3)] for s in r['segments'] for w in s['words']]
+print(json.dumps(out))
+"""
+
+
+def segments(wav):
+    take = wav.parent / "take.json"
+    if wav.name != "full.wav" or not take.exists():
+        return [[0, 1e6]]
+    t, segs = 0.3, []
+    for c in json.loads(take.read_text())["chunks"]:
+        segs.append([round(t - 0.08, 3), round(t + c["dur"] + 0.08, 3)])
+        t += c["dur"] + c["gap"]
+    return segs
 
 
 def canon_text(s):
     s = s.lower()
     s = re.sub(r"\.com\b", " dot com", s)
     s = re.sub(r"\b(?:vee|v)[\s-]*fib\b", "vfib", s)
+    s = re.sub(r"\b(?:vee|v)[\s-]*(?:tach|tack|tac|tak)\b", "vtach", s)
+    s = re.sub(r"\b(?:ay|a)[\s-]*fib\b", "afib", s)
+    s = re.sub(r"\bs[\s.-]*v[\s.-]*t\b\.?", "svt", s)
+    s = re.sub(r"\bp[\s.-]*e[\s.-]*a\b\.?", "pea", s)
+    s = re.sub(r"\bi[\s.-]*v\b\.?(?=\s+magnesium)", "iv", s)
+    s = re.sub(r"\bq[\s.-]*t\b\.?", "qt", s)
+    s = re.sub(r"\btorsade\b", "torsades", s)
+    s = re.sub(r"\bpointe?s?\b", "pointes", s)          # same sound in French
+    s = re.sub(r"\btor\s*-?\s*[sz]a(?:h)?(?:d(?:e?[sz]|'s)?|[sz])\b", "torsades", s)
+    s = re.sub(r"\bthird\b", "3rd", s)
+    for k, w in enumerate(["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]):
+        s = re.sub(rf"\b{w}\b", str(k), s)
+    s = re.sub(r"\bmanoeuvres\b", "maneuvers", s)
+    s = re.sub(r"\b(\d+)\s*(?:-|to)\s*(\d+)\b", r"\1 to \2", s)
     s = re.sub(r"\bs[\s.-]*a\.?(?=\s+node)", "sa", s)
     s = re.sub(r"\ba[\s.-]*v\.?(?=\s+node)", "av", s)
     s = re.sub(r"\ba[\s.-]*c[\s.-]*l[\s.-]*s[\s.-]*med\b", "aclsmed", s)
@@ -64,9 +102,17 @@ def snap(wav, spans):
 
 
 def main():
-    wav = Path(sys.argv[1]) if len(sys.argv) > 1 else VO / "full.wav"
-    out = subprocess.run([str(PY), "-c", CODE, str(wav)], capture_output=True, text=True, check=True).stdout
-    heard = json.loads(out.strip().splitlines()[-1])
+    global R, VO
+    R = reel.load(); VO = R["vo"]
+    rest = [a for a in sys.argv[1:] if a != R["id"]]
+    wav = Path(rest[0]) if rest else VO / "full.wav"
+    out = subprocess.run([str(PY), "-c", CODE, str(wav), json.dumps(segments(wav))], capture_output=True, text=True, check=True).stdout
+    heard = []
+    for w in json.loads(out.strip().splitlines()[-1]):   # glue "V" "-fib", "20" "-40", "aclsmed" ".com" back together
+        if heard and w[0][:1] in "-." and len(w[0]) > 1:
+            heard[-1] = [heard[-1][0] + w[0], heard[-1][1], w[2]]
+        else:
+            heard.append(w)
     (VO / "whisper.json").write_text(json.dumps(heard) + "\n")
     # canonical tokens of what Whisper heard, each pointing back to its Whisper word (first, last)
     htok, hidx = [], []
@@ -75,7 +121,11 @@ def main():
             htok.append(c); hidx.append((i, i))
     # join forms Whisper splits across words: "ACLS" "med", "A" "C" "L" "S" "med", "V" "fib", "S" "A" (node)
     MERGES = [(["a", "c", "l", "s", "med"], "aclsmed"), (["acls", "med"], "aclsmed"),
-              (["v", "fib"], "vfib"), (["vee", "fib"], "vfib"), (["s", "a", "node"], "sa"), (["a", "v", "node"], "av")]
+              (["v", "fib"], "vfib"), (["vee", "fib"], "vfib"),
+              (["v", "tach"], "vtach"), (["v", "tack"], "vtach"), (["vee", "tach"], "vtach"), (["vee", "tack"], "vtach"),
+              (["a", "fib"], "afib"), (["ay", "fib"], "afib"), (["s", "v", "t"], "svt"), (["p", "e", "a"], "pea"),
+              (["tor", "sades"], "torsades"), (["cardio", "version"], "cardioversion"),
+              (["q", "t"], "qt"), (["i", "v"], "iv"), (["s", "a", "node"], "sa"), (["a", "v", "node"], "av")]
     merged_t, merged_i, k = [], [], 0
     while k < len(htok):
         for pat, rep in MERGES:
@@ -86,7 +136,7 @@ def main():
         else:
             merged_t.append(htok[k]); merged_i.append(hidx[k]); k += 1
 
-    script = json.loads((HERE / "script.json").read_text())
+    script = R["script"]
     stok, sline, ssent = [], [], []          # script tokens, their line id, their sentence number within the line
     for ln in script["lines"]:
         for k, sent in enumerate(re.split(r"(?<=\.)\s+", ln["text"])):
@@ -105,6 +155,11 @@ def main():
                           f"(at {heard[merged_i[b0][0]][1] if b0 < len(merged_i) else '?'} s)")
             for d in range(min(a1 - a0, b1 - b0)):     # timing for replaced words still comes from where they sit
                 s2h[a0 + d] = merged_i[b0 + d]
+    if errors:
+        print("heard:", " ".join(w for w, _, _ in heard))
+        print("\nWORD ERRORS:"); [print(" ", e) for e in errors]
+        sys.exit(1)
+
     def span(idx):
         idx = [i for i in idx if i in s2h]
         return [round(heard[s2h[idx[0]][0]][1], 3), round(heard[s2h[idx[-1]][1]][2], 3)]
