@@ -5,7 +5,8 @@ Voice sources, in order of preference (all in public/vo/):
                                from Whisper word timestamps on the Mac.
   2. l1.wav ... l7.wav      -- one file per line; placed back to back with each line's gap_after.
   3. none                   -- mockup timing at ~150 wpm (no voice).
-The V-fib onset lands 0.25 s before line 'l3' starts ("Now watch what happens in V-fib").
+The V-fib onset lands 0.25 s before line 'l3' starts ("Now watch what happens in V-fib"). With a full take, the NO PULSE
+cue sits on the sentence "No pulse." (public/vo/sentences.json from check_vo.py).
 """
 import json
 import wave
@@ -38,6 +39,10 @@ else:
         t += d + ln["gap_after"]
 
 first = {c: next(l["at"] for l in lines if l["cue"] == c) for c in ("vf", "nopulse", "action", "end")}
+# "No pulse." is the last sentence of its line: put the NO PULSE cue on those words, not on the start of the line.
+if mode == "full" and (VO / "sentences.json").exists():
+    np_line = next(l["id"] for l in lines if l["cue"] == "nopulse")
+    first["nopulse"] = round(LEAD_IN + json.loads((VO / "sentences.json").read_text())[np_line][-1][0], 3)
 total = lines[-1]["end"] + lines[-1]["gap_after"] + 1.0
 timeline = {"mode": mode, "duration": round(max(total, 24.0), 2), "vf_start": round(first["vf"] - 0.25, 3),
             "nopulse": first["nopulse"], "action": first["action"], "end_card": round(first["end"] - 0.3, 3),

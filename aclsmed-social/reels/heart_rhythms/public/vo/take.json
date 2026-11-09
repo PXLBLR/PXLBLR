@@ -1,0 +1,72 @@
+{
+ "take": 0,
+ "sent": "This is a normal heartbeat. [pause 0.3] The S-A node fires, the signal travels down through the A-V node, and both ventricles squeeze together. [pause 0.45] Now watch what happens in Vee-fib. [pause 0.35] The electrical activity in the ventricles turns chaotic. [pause 0.35] Instead of squeezing, they just quiver. [pause 0.4] And with no squeeze, there's no cardiac output. [pause 0.35] No pulse. [pause 0.45] Vee-fib is a shockable rhythm. [pause 0.35] Start CPR, and defibrillate as soon as possible. [pause 0.5] Practice it on A-C-L-S med Sim. [pause 0.35] A-C-L-S med dot com. [pause 1.2]",
+ "chunks": [
+  {
+   "i": 0,
+   "text": "This is a normal heartbeat.",
+   "dur": 1.49,
+   "gap": 0.3
+  },
+  {
+   "i": 1,
+   "text": "The S-A node fires, the signal travels down through the A-V node, and both ventricles squeeze together.",
+   "dur": 5.94,
+   "gap": 0.45
+  },
+  {
+   "i": 2,
+   "text": "Now watch what happens in Vee-fib.",
+   "dur": 1.95,
+   "gap": 0.35
+  },
+  {
+   "i": 3,
+   "text": "The electrical activity in the ventricles turns chaotic.",
+   "dur": 3.28,
+   "gap": 0.35
+  },
+  {
+   "i": 4,
+   "text": "Instead of squeezing, they just quiver.",
+   "dur": 2.36,
+   "gap": 0.4
+  },
+  {
+   "i": 5,
+   "text": "And with no squeeze, there's no cardiac output.",
+   "dur": 2.68,
+   "gap": 0.35
+  },
+  {
+   "i": 6,
+   "text": "No pulse.",
+   "dur": 1.12,
+   "gap": 0.45
+  },
+  {
+   "i": 7,
+   "text": "Vee-fib is a shockable rhythm.",
+   "dur": 2.1,
+   "gap": 0.35
+  },
+  {
+   "i": 8,
+   "text": "Start CPR, and defibrillate as soon as possible.",
+   "dur": 3.24,
+   "gap": 0.5
+  },
+  {
+   "i": 9,
+   "text": "Practice it on A-C-L-S med Sim.",
+   "dur": 2.06,
+   "gap": 0.35
+  },
+  {
+   "i": 10,
+   "text": "A-C-L-S med dot com.",
+   "dur": 2.26,
+   "gap": 1.2
+  }
+ ]
+}
