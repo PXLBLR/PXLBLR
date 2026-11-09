@@ -183,6 +183,8 @@ export const HeartRhythm: React.FC = () => {
       {/* end card */}
       <AbsoluteFill style={{ opacity: end, background: `radial-gradient(80% 50% at 50% 45%, #142355 0%, ${NAVY} 62%, #000 100%)`,
         alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 26 }}>
+        <Img src={staticFile('app-icon.png')} style={{ width: 240, height: 240, borderRadius: 54, marginBottom: 18,
+          transform: `scale(${0.85 + 0.15 * end})`, boxShadow: '0 0 0 2px rgba(255,255,255,0.12), 0 30px 90px rgba(239,68,68,0.45)' }} />
         <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 28, letterSpacing: '0.2em', color: CYAN }}>PRACTICE IT ON</div>
         <div style={{ fontFamily: OUTFIT, fontWeight: 900, fontSize: 96, color: '#fff', letterSpacing: '-0.03em' }}>
           ACLS<span style={{ color: RED }}>MED</span> <span style={{ color: CYAN }}>SIM</span>
