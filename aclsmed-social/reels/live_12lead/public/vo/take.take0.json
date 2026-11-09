@@ -1,0 +1,126 @@
+{
+ "take": 0,
+ "sent": "This is a live twelve-lead, on a code simulator. [pause 0.45] Tap the E-C-G and pick any lead. [pause 0.6] Lead two. [pause 0.6] V one. [pause 0.6] A-V-F. [pause 0.45] Or choose all twelve leads, and watch every one sweep live. [pause 0.6] Sinus bradycardia, forty-eight a minute. [pause 0.35] Slow and regular, with a P wave before every Q-R-S, in every lead. [pause 0.6] Now the instructor changes the rhythm. [pause 1.0] Sinus tachycardia at one hundred and eight, with an anterior STEM-ee. [pause 0.6] S-T elevation in V one to V four, and in one and A-V-L. [pause 0.6] Now look at three and A-V-F. [pause 0.35] The S-T goes down. [pause 0.35] That's the reciprocal change, and you only catch it with all twelve leads on screen. [pause 0.6] Pause to freeze the trace. [pause 1.0] Print for the full twelve-lead. [pause 0.8] Most code simulators give you one lead. [pause 0.35] A-C-L-S med Sim gives you all twelve, live. [pause 0.5] Practice it on A-C-L-S med Sim. [pause 0.35] A-C-L-S med dot com. [pause 1.2]",
+ "chunks": [
+  {
+   "i": 0,
+   "text": "This is a live twelve-lead, on a code simulator.",
+   "dur": 2.79,
+   "gap": 0.45
+  },
+  {
+   "i": 1,
+   "text": "Tap the E-C-G and pick any lead.",
+   "dur": 2.52,
+   "gap": 0.6
+  },
+  {
+   "i": 2,
+   "text": "Lead two.",
+   "dur": 0.82,
+   "gap": 0.6
+  },
+  {
+   "i": 3,
+   "text": "V one.",
+   "dur": 0.7,
+   "gap": 0.6
+  },
+  {
+   "i": 4,
+   "text": "A-V-F.",
+   "dur": 1.13,
+   "gap": 0.45
+  },
+  {
+   "i": 5,
+   "text": "Or choose all twelve leads, and watch every one sweep live.",
+   "dur": 3.47,
+   "gap": 0.6
+  },
+  {
+   "i": 6,
+   "text": "Sinus bradycardia, forty-eight a minute.",
+   "dur": 2.86,
+   "gap": 0.35
+  },
+  {
+   "i": 7,
+   "text": "Slow and regular, with a P wave before every Q-R-S, in every lead.",
+   "dur": 4.01,
+   "gap": 0.6
+  },
+  {
+   "i": 8,
+   "text": "Now the instructor changes the rhythm.",
+   "dur": 1.91,
+   "gap": 1.0
+  },
+  {
+   "i": 9,
+   "text": "Sinus tachycardia at one hundred and eight, with an anterior STEM-ee.",
+   "dur": 4.42,
+   "gap": 0.6
+  },
+  {
+   "i": 10,
+   "text": "S-T elevation in V one to V four, and in one and A-V-L.",
+   "dur": 4.49,
+   "gap": 0.6
+  },
+  {
+   "i": 11,
+   "text": "Now look at three and A-V-F.",
+   "dur": 1.91,
+   "gap": 0.35
+  },
+  {
+   "i": 12,
+   "text": "The S-T goes down.",
+   "dur": 1.28,
+   "gap": 0.35
+  },
+  {
+   "i": 13,
+   "text": "That's the reciprocal change, and you only catch it with all twelve leads on screen.",
+   "dur": 4.6,
+   "gap": 0.6
+  },
+  {
+   "i": 14,
+   "text": "Pause to freeze the trace.",
+   "dur": 1.47,
+   "gap": 1.0
+  },
+  {
+   "i": 15,
+   "text": "Print for the full twelve-lead.",
+   "dur": 1.73,
+   "gap": 0.8
+  },
+  {
+   "i": 16,
+   "text": "Most code simulators give you one lead.",
+   "dur": 2.22,
+   "gap": 0.35
+  },
+  {
+   "i": 17,
+   "text": "A-C-L-S med Sim gives you all twelve, live.",
+   "dur": 3.32,
+   "gap": 0.5
+  },
+  {
+   "i": 18,
+   "text": "Practice it on A-C-L-S med Sim.",
+   "dur": 2.06,
+   "gap": 0.35
+  },
+  {
+   "i": 19,
+   "text": "A-C-L-S med dot com.",
+   "dur": 2.26,
+   "gap": 1.2
+  }
+ ]
+}

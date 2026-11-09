@@ -1,0 +1,36 @@
+{
+ "id": "L12_live",
+ "voice": "Mikko (narration) v2",
+ "direction": "Calm, warm, confident educator, ~150 wpm. Lead names crisp; a beat after each tap.",
+ "spoken": [
+  ["all 12 leads", "all twelve leads"],
+  ["all 12", "all twelve"],
+  ["12-lead", "twelve-lead"],
+  ["Lead II", "Lead two"],
+  ["V1 to V4", "V one to V four"],
+  ["V1", "V one"],
+  ["III and aVF", "three and A-V-F"],
+  ["I and aVL", "one and A-V-L"],
+  ["aVF", "A-V-F"],
+  ["aVL", "A-V-L"],
+  ["QRS", "Q-R-S"],
+  ["STEMI", "STEM-ee"],
+  ["ST", "S-T"],
+  ["ECG", "E-C-G"],
+  ["108", "one hundred and eight"],
+  ["48", "forty-eight"]
+ ],
+ "lines": [
+  {"id": "l1", "cue": "hook",   "text": "This is a live 12-lead, on a code simulator.", "gap_after": 0.45},
+  {"id": "l2", "cue": "leads",  "text": "Tap the ECG and pick any lead. Lead II. V1. aVF.", "in_line": 0.6, "gap_after": 0.45},
+  {"id": "l3", "cue": "open",   "text": "Or choose all 12 leads, and watch every one sweep live.", "gap_after": 0.6},
+  {"id": "l4", "cue": "brady",  "text": "Sinus bradycardia, 48 a minute. Slow and regular, with a P wave before every QRS, in every lead.", "gap_after": 0.6},
+  {"id": "l5", "cue": "change", "text": "Now the instructor changes the rhythm. Sinus tachycardia at 108, with an anterior STEMI.", "in_line": 1.0, "gap_after": 0.6},
+  {"id": "l6", "cue": "key",    "text": "ST elevation in V1 to V4, and in I and aVL.", "gap_after": 0.6},
+  {"id": "l7", "cue": "recip",  "text": "Now look at III and aVF. The ST goes down. That's the reciprocal change, and you only catch it with all 12 leads on screen.", "gap_after": 0.6},
+  {"id": "l8", "cue": "pause",  "text": "Pause to freeze the trace. Print for the full 12-lead.", "in_line": 1.0, "gap_after": 0.8},
+  {"id": "l9", "cue": "claim",  "text": "Most code simulators give you one lead. ACLSMED Sim gives you all 12, live.", "gap_after": 0.5},
+  {"id": "l10", "cue": "end",   "text": "Practice it on ACLSMED Sim. ACLSmed dot com.", "gap_after": 1.2}
+ ],
+ "review": "Script approved by the owner 2026-11-09; awaiting RN sign-off on the cut."
+}
